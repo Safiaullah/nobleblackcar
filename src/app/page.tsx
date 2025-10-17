@@ -300,29 +300,37 @@ export default function Home() {
               <div key={index} className="bg-white/5 border border-white/20 rounded-lg p-6 hover:border-white/40 transition-all">
                 <div className="bg-white rounded-lg h-48 flex items-center justify-center mb-4 overflow-hidden">
                   {vehicle.category === "LUX SEDAN" ? (
-                    <img 
-                      src="/images/Black-Raven.jpg" 
-                      alt="Lux Sedan - Cadillac CT6"
-                      className="w-full h-full object-contain rounded-lg"
-                    />
+                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
+                      <img 
+                        src="/images/Black-Raven.jpg" 
+                        alt="Lux Sedan - Cadillac CT6"
+                        className="max-w-full max-h-full object-contain rounded-lg"
+                      />
+                    </div>
                   ) : vehicle.category === "LUX SUV" ? (
-                    <img 
-                      src="/images/025-suburban-ck10906-1lt-gba-trimselector.avif" 
-                      alt="Lux SUV - Chevy Suburban"
-                      className="w-full h-full object-contain rounded-lg"
-                    />
+                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
+                      <img 
+                        src="/images/025-suburban-ck10906-1lt-gba-trimselector.avif" 
+                        alt="Lux SUV - Chevy Suburban"
+                        className="max-w-full max-h-full object-contain rounded-lg"
+                      />
+                    </div>
                   ) : vehicle.category === "VIP SEDAN" ? (
-                    <img 
-                      src="/images/2025-Mercedes-Benz-S-Class-MaybachS680.webp" 
-                      alt="VIP Sedan - Mercedes S-Class Maybach"
-                      className="w-full h-full object-contain rounded-lg"
-                    />
+                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
+                      <img 
+                        src="/images/2025-Mercedes-Benz-S-Class-MaybachS680.webp" 
+                        alt="VIP Sedan - Mercedes S-Class Maybach"
+                        className="max-w-full max-h-full object-contain rounded-lg"
+                      />
+                    </div>
                   ) : vehicle.category === "VIP SUV" ? (
-                    <img 
-                      src="/images/25-escalade-1sg-gba-l-v3.avif" 
-                      alt="VIP SUV - Cadillac Escalade ESV"
-                      className="w-full h-full object-contain rounded-lg"
-                    />
+                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
+                      <img 
+                        src="/images/25-escalade-1sg-gba-l-v3.avif" 
+                        alt="VIP SUV - Cadillac Escalade ESV"
+                        className="max-w-full max-h-full object-contain rounded-lg"
+                      />
+                    </div>
                   ) : (
                     <span className="text-6xl">🚗</span>
                   )}
