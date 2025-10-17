@@ -276,20 +276,6 @@ export default function Home() {
                 rate: "$145"
               },
               {
-                category: "LUX EV SEDAN",
-                models: "Cadillac LYRIQ",
-                passengers: "Up to 3",
-                luggage: "3",
-                rate: "$95"
-              },
-              {
-                category: "LUX EV SUV",
-                models: "Tesla Model X",
-                passengers: "Up to 4",
-                luggage: "3",
-                rate: "$125"
-              },
-              {
                 category: "EXECUTIVE SPRINTER",
                 models: "Mercedes Executive Sprinter",
                 passengers: "Up to 14",
