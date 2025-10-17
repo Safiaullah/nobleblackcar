@@ -311,7 +311,7 @@ export default function Home() {
                     </button>
                   </div>
                 </div>
-                <div className="bg-white rounded-xl h-96 flex items-center justify-center">
+                <div className="bg-white rounded-xl h-64 flex items-center justify-center">
                   <img 
                     src="/images/2025-Mercedes-Benz-S-Class-MaybachS680.webp" 
                     alt="Mercedes-Benz S Class"
@@ -325,7 +325,7 @@ export default function Home() {
             <div className="bg-white/5 border border-white/20 rounded-2xl p-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1">
-                  <div className="bg-white rounded-xl h-96 flex items-center justify-center">
+                  <div className="bg-white rounded-xl h-64 flex items-center justify-center">
                     <img 
                       src="/images/25-escalade-1sg-gba-l-v3.avif" 
                       alt="Cadillac Escalade"
@@ -399,7 +399,7 @@ export default function Home() {
                     </button>
                   </div>
                 </div>
-                <div className="bg-white rounded-xl h-96 flex items-center justify-center">
+                <div className="bg-white rounded-xl h-64 flex items-center justify-center">
                   <img 
                     src="/images/025-suburban-ck10906-1lt-gba-trimselector.avif" 
                     alt="Chevrolet Suburban"
@@ -413,7 +413,7 @@ export default function Home() {
             <div className="bg-white/5 border border-white/20 rounded-2xl p-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1">
-                  <div className="bg-white rounded-xl h-96 flex items-center justify-center">
+                  <div className="bg-white rounded-xl h-64 flex items-center justify-center">
                     <span className="text-8xl">🚐</span>
                   </div>
                 </div>
