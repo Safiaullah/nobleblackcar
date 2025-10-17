@@ -306,7 +306,6 @@ export default function Home() {
                     </ul>
                   </div>
                   <div className="flex items-center gap-6">
-                    <p className="text-3xl font-bold text-white">Starting at $125</p>
                     <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors">
                       Reserve Now
                     </button>
@@ -359,7 +358,6 @@ export default function Home() {
                     </ul>
                   </div>
                   <div className="flex items-center gap-6">
-                    <p className="text-3xl font-bold text-white">Starting at $145</p>
                     <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors">
                       Reserve Now
                     </button>
@@ -396,7 +394,6 @@ export default function Home() {
                     </ul>
                   </div>
                   <div className="flex items-center gap-6">
-                    <p className="text-3xl font-bold text-white">Starting at $95</p>
                     <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors">
                       Reserve Now
                     </button>
@@ -445,7 +442,6 @@ export default function Home() {
                     </ul>
                   </div>
                   <div className="flex items-center gap-6">
-                    <p className="text-3xl font-bold text-white">Starting at $250</p>
                     <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors">
                       Reserve Now
                     </button>
