@@ -77,7 +77,7 @@ export default function Home() {
       {/* Quick Reservation Form */}
       <section className="py-16 bg-white/5 border-y border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl font-bold text-center mb-8 text-white">Reserve Your Perfect Ride Now</h3>
+          <h3 className="text-3xl font-bold text-center mb-8 text-white">Reserve Your Noble Ride Now</h3>
           <div className="bg-black border border-white/20 rounded-lg p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <input
