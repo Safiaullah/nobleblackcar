@@ -31,7 +31,7 @@ export default function Home() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
               <h1 className="text-3xl font-bold text-white">Noble Black Car</h1>
-              <span className="ml-4 text-sm text-white/60">EST. 2002</span>
+              <span className="ml-4 text-sm text-white/60">EST. 2015</span>
             </div>
             <div className="hidden lg:flex items-center space-x-8">
               <a href="#services" className="text-white/80 hover:text-white transition-colors">Services</a>
@@ -65,9 +65,9 @@ export default function Home() {
               <a href="#contact" className="bg-white text-black px-8 py-4 rounded font-bold text-lg hover:bg-white/90 transition-colors">
                 RESERVE NOW
               </a>
-              <a href="tel:+18882093095" className="flex items-center gap-2 text-white text-xl font-semibold hover:text-white/80 transition-colors">
+              <a href="tel:+14045138803" className="flex items-center gap-2 text-white text-xl font-semibold hover:text-white/80 transition-colors">
                 <PhoneIcon className="h-6 w-6" />
-                +1 (888) 209-3095
+                +1 (404) 513-8803
               </a>
             </div>
                 </div>
@@ -447,8 +447,8 @@ export default function Home() {
           </div>
           <div className="text-center mt-8">
             <p className="text-2xl font-bold text-white mb-2">
-              <a href="tel:+18882093095" className="hover:text-white/80 transition-colors">
-                +1 (888) 209-3095
+              <a href="tel:+14045138803" className="hover:text-white/80 transition-colors">
+                +1 (404) 513-8803
               </a>
             </p>
             <p className="text-white/70">Available 24/7 for your convenience</p>
@@ -463,7 +463,7 @@ export default function Home() {
             <div>
               <h3 className="text-2xl font-bold mb-4 text-white">Noble Black Car</h3>
               <p className="text-white/70 text-sm">
-                Providing affordable 1st class transportation services since 2002.
+                Providing affordable 1st class transportation services since 2015.
               </p>
             </div>
             <div>
@@ -487,8 +487,8 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4 text-white">Contact</h4>
               <ul className="space-y-2 text-white/70 text-sm">
-                <li>Phone: (888) 209-3095</li>
-                <li>Email: info@noblecar.com</li>
+                <li>Phone: (404) 513-8803</li>
+                <li>Email: info@nobleblackcar.com</li>
                 <li>New York, NY</li>
               </ul>
             </div>
