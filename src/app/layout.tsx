@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Noble Car | Affordable 1st Class Transportation Services NYC",
+  title: "Noble Black Car | Affordable 1st Class Transportation Services NYC",
   description: "Providing affordable 1st class transportation services since 2002. Airport transfers, corporate shuttles, and luxury car service in NYC. It's not just the ride, it's the experience!",
   keywords: "nyc car service, airport transfer, corporate transportation, luxury car service, black car service nyc, jfk airport transfer, laguardia airport transfer, newark airport transfer",
 };

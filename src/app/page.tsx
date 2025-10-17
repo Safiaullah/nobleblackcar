@@ -30,7 +30,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
-              <h1 className="text-3xl font-bold text-white">Noble Car</h1>
+              <h1 className="text-3xl font-bold text-white">Noble Black Car</h1>
               <span className="ml-4 text-sm text-white/60">EST. 2002</span>
             </div>
             <div className="hidden lg:flex items-center space-x-8">
@@ -41,7 +41,7 @@ export default function Home() {
               <a href="#contact" className="bg-white text-black px-6 py-2 rounded font-semibold hover:bg-white/90 transition-colors">
                 Reserve Now
               </a>
-            </div>
+              </div>
             <div className="lg:hidden">
               <PhoneIcon className="h-6 w-6 text-white" />
             </div>
@@ -70,8 +70,8 @@ export default function Home() {
                 +1 (888) 209-3095
               </a>
             </div>
-          </div>
-        </div>
+                </div>
+              </div>
       </section>
 
       {/* Quick Reservation Form */}
@@ -129,7 +129,7 @@ export default function Home() {
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">
-            Why Noble Car is the Best Choice for Your Transfer
+            Why Noble Black Car is the Best Choice for Your Transfer
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -238,7 +238,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
+            </div>
       </section>
 
       {/* Fleet Section */}
@@ -314,14 +314,14 @@ export default function Home() {
               <div key={index} className="bg-white/5 border border-white/20 rounded-lg p-6 hover:border-white/40 transition-all">
                 <div className="bg-white/10 rounded-lg h-48 flex items-center justify-center mb-4">
                   <span className="text-6xl">🚗</span>
-                </div>
+              </div>
                 <h3 className="text-2xl font-bold mb-2 text-white">{vehicle.category}</h3>
                 <p className="text-white/60 text-sm mb-4">{vehicle.models}</p>
                 <div className="space-y-2 text-sm text-white/80">
                   <p><span className="font-semibold">Passengers:</span> {vehicle.passengers}</p>
                   <p><span className="font-semibold">Luggage:</span> {vehicle.luggage}</p>
                   <p className="text-lg font-bold text-white mt-4">Starting at {vehicle.rate}</p>
-                </div>
+            </div>
                 <button className="w-full mt-4 bg-white text-black px-4 py-2 rounded font-semibold hover:bg-white/90 transition-colors">
                   RESERVE NOW
                 </button>
@@ -354,7 +354,7 @@ export default function Home() {
                 ].map((route, index) => (
                   <div key={index} className="bg-black border border-white/20 rounded px-4 py-3 text-white hover:border-white/40 transition-all">
                     {route}
-                  </div>
+          </div>
                 ))}
               </div>
             </div>
@@ -373,7 +373,7 @@ export default function Home() {
                 ].map((route, index) => (
                   <div key={index} className="bg-black border border-white/20 rounded px-4 py-3 text-white hover:border-white/40 transition-all">
                     {route}
-                  </div>
+              </div>
                 ))}
               </div>
             </div>
@@ -398,7 +398,7 @@ export default function Home() {
                 </div>
                 <p className="text-white/80 mb-4">
                   "Excellent service! Professional drivers, clean vehicles, and always on time. 
-                  Highly recommend Noble Car for all your transportation needs in NYC."
+                  Highly recommend Noble Black Car for all your transportation needs in NYC."
                 </p>
                 <p className="text-white font-semibold">- Satisfied Customer</p>
               </div>
@@ -461,7 +461,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Noble Car</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Noble Black Car</h3>
               <p className="text-white/70 text-sm">
                 Providing affordable 1st class transportation services since 2002.
               </p>
@@ -494,7 +494,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/60 text-sm">
-            <p>Copyright © 2025 Noble Car. All rights reserved.</p>
+            <p>Copyright © 2025 Noble Black Car. All rights reserved.</p>
           </div>
         </div>
       </footer>
