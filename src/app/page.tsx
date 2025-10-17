@@ -305,16 +305,7 @@ export default function Home() {
                         <img 
                           src="/images/Black-Raven.jpg" 
                           alt="Lux Sedan - Cadillac CT6"
-                          className="max-w-full max-h-full object-contain rounded-lg transition-all duration-500 ease-in-out hover:scale-105 cursor-pointer"
-                          style={{
-                            transformStyle: 'preserve-3d'
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.transform = 'rotateY(45deg) scale(1.05)';
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.transform = 'rotateY(0deg) scale(1)';
-                          }}
+                          className="max-w-full max-h-full object-contain rounded-lg"
                         />
                       </div>
                     </div>
