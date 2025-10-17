@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Noble Black | Luxury Transportation in Manhattan NY",
-  description: "Experience luxury transportation services in Manhattan NY with Noble Black. Timely and comfortable rides for business & leisure.",
-  keywords: "luxury transportation services in manhattan ny, black car service, chauffeur service, airport transfer, business travel",
+  title: "Noble Car | Affordable 1st Class Transportation Services NYC",
+  description: "Providing affordable 1st class transportation services since 2002. Airport transfers, corporate shuttles, and luxury car service in NYC. It's not just the ride, it's the experience!",
+  keywords: "nyc car service, airport transfer, corporate transportation, luxury car service, black car service nyc, jfk airport transfer, laguardia airport transfer, newark airport transfer",
 };
 
 export default function RootLayout({
