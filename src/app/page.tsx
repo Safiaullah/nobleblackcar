@@ -248,90 +248,89 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                category: "LUX SEDAN",
-                models: "Mercedes E Class, Cadillac CT6 or similar",
-                passengers: "Up to 3",
-                luggage: "Up to 2",
-                rate: "$75"
-              },
-              {
-                category: "LUX SUV",
-                models: "Chevy Suburban, GMC Yukon XL or similar",
-                passengers: "Up to 6",
-                luggage: "5-6 Standard Size",
-                rate: "$95"
-              },
-              {
-                category: "VIP SEDAN",
-                models: "Mercedes S Class, BMW 7 Series",
-                passengers: "Up to 3",
-                luggage: "Up to 2",
+                category: "MERCEDES-BENZ S CLASS",
+                models: "Luxury Sedan",
+                passengers: "3 passengers",
+                luggage: "3 bags",
+                features: "Complimentary water and Wi-Fi",
                 rate: "$125"
               },
               {
-                category: "VIP SUV",
-                models: "Cadillac Escalade ESV",
-                passengers: "Up to 6",
-                luggage: "5-6 Standard Size",
+                category: "CADILLAC ESCALADE",
+                models: "Luxury SUV",
+                passengers: "6 passengers",
+                luggage: "6 bags",
+                features: "Complimentary water and Wi-Fi",
                 rate: "$145"
               },
               {
-                category: "EXECUTIVE SPRINTER",
-                models: "Mercedes Executive Sprinter",
-                passengers: "Up to 14",
-                luggage: "Up to 10",
+                category: "CHEVROLET SUBURBAN",
+                models: "Premium SUV",
+                passengers: "6 passengers",
+                luggage: "6 bags",
+                features: "Complimentary water and Wi-Fi",
+                rate: "$95"
+              },
+              {
+                category: "SPRINTER VANS",
+                models: "Executive Transport",
+                passengers: "14 passengers",
+                luggage: "10 bags",
+                features: "Complimentary water and Wi-Fi",
                 rate: "$250"
               },
               {
-                category: "MAYBACH JET VAN",
-                models: "Sprinter JetVan Limo",
-                passengers: "Up to 12",
-                luggage: "Up to 9",
-                rate: "$350"
+                category: "LUXURY SEDAN",
+                models: "Cadillac CT6 or similar",
+                passengers: "3 passengers",
+                luggage: "3 bags",
+                features: "Complimentary water and Wi-Fi",
+                rate: "$75"
               },
               {
                 category: "EXECUTIVE COACH",
                 models: "Custom Coach Buses",
-                passengers: "24-54",
-                luggage: "24-70",
+                passengers: "24-54 passengers",
+                luggage: "24-70 bags",
+                features: "Premium amenities",
                 rate: "Custom"
               }
             ].map((vehicle, index) => (
               <div key={index} className="bg-white/5 border border-white/20 rounded-lg p-6 hover:border-white/40 transition-all">
                 <div className="bg-white rounded-lg h-48 flex items-center justify-center mb-4 overflow-hidden">
-                  {vehicle.category === "LUX SEDAN" ? (
+                  {vehicle.category === "MERCEDES-BENZ S CLASS" ? (
+                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
+                      <img 
+                        src="/images/2025-Mercedes-Benz-S-Class-MaybachS680.webp" 
+                        alt="Mercedes-Benz S Class"
+                        className="max-w-full max-h-full object-contain rounded-lg"
+                      />
+                    </div>
+                  ) : vehicle.category === "CADILLAC ESCALADE" ? (
+                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
+                      <img 
+                        src="/images/25-escalade-1sg-gba-l-v3.avif" 
+                        alt="Cadillac Escalade"
+                        className="max-w-full max-h-full object-contain rounded-lg"
+                      />
+                    </div>
+                  ) : vehicle.category === "CHEVROLET SUBURBAN" ? (
+                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
+                      <img 
+                        src="/images/025-suburban-ck10906-1lt-gba-trimselector.avif" 
+                        alt="Chevrolet Suburban"
+                        className="max-w-full max-h-full object-contain rounded-lg"
+                      />
+                    </div>
+                  ) : vehicle.category === "LUXURY SEDAN" ? (
                     <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
                       <div className="bg-white p-4 rounded-lg">
                         <img 
                           src="/images/Black-Raven.jpg" 
-                          alt="Lux Sedan - Cadillac CT6"
+                          alt="Luxury Sedan - Cadillac CT6"
                           className="max-w-full max-h-full object-contain rounded-lg"
                         />
                       </div>
-                    </div>
-                  ) : vehicle.category === "LUX SUV" ? (
-                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
-                      <img 
-                        src="/images/025-suburban-ck10906-1lt-gba-trimselector.avif" 
-                        alt="Lux SUV - Chevy Suburban"
-                        className="max-w-full max-h-full object-contain rounded-lg"
-                      />
-                    </div>
-                  ) : vehicle.category === "VIP SEDAN" ? (
-                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
-                      <img 
-                        src="/images/2025-Mercedes-Benz-S-Class-MaybachS680.webp" 
-                        alt="VIP Sedan - Mercedes S-Class Maybach"
-                        className="max-w-full max-h-full object-contain rounded-lg"
-                      />
-                    </div>
-                  ) : vehicle.category === "VIP SUV" ? (
-                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
-                      <img 
-                        src="/images/25-escalade-1sg-gba-l-v3.avif" 
-                        alt="VIP SUV - Cadillac Escalade ESV"
-                        className="max-w-full max-h-full object-contain rounded-lg"
-                      />
                     </div>
                   ) : (
                     <span className="text-6xl">🚗</span>
@@ -342,8 +341,9 @@ export default function Home() {
                 <div className="space-y-2 text-sm text-white/80">
                   <p><span className="font-semibold">Passengers:</span> {vehicle.passengers}</p>
                   <p><span className="font-semibold">Luggage:</span> {vehicle.luggage}</p>
+                  <p><span className="font-semibold">Features:</span> {vehicle.features}</p>
                   <p className="text-lg font-bold text-white mt-4">Starting at {vehicle.rate}</p>
-            </div>
+                </div>
                 <button className="w-full mt-4 bg-white text-black px-4 py-2 rounded font-semibold hover:bg-white/90 transition-colors">
                   RESERVE NOW
                 </button>
