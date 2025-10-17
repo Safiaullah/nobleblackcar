@@ -54,7 +54,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-              Providing Affordable
+              Providing Premium
               <br />
               <span className="text-white/80">1st Class Transportation Services</span>
             </h2>
@@ -485,7 +485,7 @@ export default function Home() {
             <div>
               <h3 className="text-2xl font-bold mb-4 text-white">Noble Black Car</h3>
               <p className="text-white/70 text-sm">
-                Providing affordable 1st class transportation services since 2015.
+                Providing premium 1st class transportation services since 2015.
               </p>
             </div>
             <div>
