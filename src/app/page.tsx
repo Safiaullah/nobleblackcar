@@ -301,11 +301,13 @@ export default function Home() {
                 <div className="bg-black rounded-lg h-48 flex items-center justify-center mb-4 overflow-hidden">
                   {vehicle.category === "LUX SEDAN" ? (
                     <div className="bg-black w-full h-full flex items-center justify-center rounded-lg">
-                      <img 
-                        src="/images/Black-Raven.jpg" 
-                        alt="Lux Sedan - Cadillac CT6"
-                        className="max-w-full max-h-full object-contain rounded-lg"
-                      />
+                      <div className="bg-black p-4 rounded-lg">
+                        <img 
+                          src="/images/Black-Raven.jpg" 
+                          alt="Lux Sedan - Cadillac CT6"
+                          className="max-w-full max-h-full object-contain rounded-lg"
+                        />
+                      </div>
                     </div>
                   ) : vehicle.category === "LUX SUV" ? (
                     <div className="bg-black w-full h-full flex items-center justify-center rounded-lg">
