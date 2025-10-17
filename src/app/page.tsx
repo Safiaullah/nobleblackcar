@@ -327,6 +327,22 @@ export default function Home() {
                         className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
+                  ) : vehicle.category === "VIP SEDAN" ? (
+                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
+                      <img 
+                        src="/images/2025-Mercedes-Benz-S-Class-MaybachS680.webp" 
+                        alt="VIP Sedan - Mercedes S-Class Maybach"
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                    </div>
+                  ) : vehicle.category === "VIP SUV" ? (
+                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
+                      <img 
+                        src="/images/25-escalade-1sg-gba-l-v3.avif" 
+                        alt="VIP SUV - Cadillac Escalade ESV"
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                    </div>
                   ) : (
                     <span className="text-6xl">🚗</span>
                   )}
