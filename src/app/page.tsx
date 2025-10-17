@@ -244,111 +244,215 @@ export default function Home() {
       {/* Fleet Section */}
       <section id="fleet" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16 text-white">Our Premium Fleet</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold mb-6 text-white">Fleet solutions that actually scale</h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              Whether one vehicle or a hundred, our operations, reporting, and staffing adapt to fit your growth — no surprises.
+            </p>
+          </div>
+
+          {/* Vehicle Category Navigation */}
+          <div className="flex flex-wrap justify-center gap-3 mb-16">
             {[
-              {
-                category: "MERCEDES-BENZ S CLASS",
-                models: "Luxury Sedan",
-                passengers: "3 passengers",
-                luggage: "3 bags",
-                features: "Complimentary water and Wi-Fi",
-                rate: "$125"
-              },
-              {
-                category: "CADILLAC ESCALADE",
-                models: "Luxury SUV",
-                passengers: "6 passengers",
-                luggage: "6 bags",
-                features: "Complimentary water and Wi-Fi",
-                rate: "$145"
-              },
-              {
-                category: "CHEVROLET SUBURBAN",
-                models: "Premium SUV",
-                passengers: "6 passengers",
-                luggage: "6 bags",
-                features: "Complimentary water and Wi-Fi",
-                rate: "$95"
-              },
-              {
-                category: "SPRINTER VANS",
-                models: "Executive Transport",
-                passengers: "14 passengers",
-                luggage: "10 bags",
-                features: "Complimentary water and Wi-Fi",
-                rate: "$250"
-              },
-              {
-                category: "LUXURY SEDAN",
-                models: "Cadillac CT6 or similar",
-                passengers: "3 passengers",
-                luggage: "3 bags",
-                features: "Complimentary water and Wi-Fi",
-                rate: "$75"
-              },
-              {
-                category: "EXECUTIVE COACH",
-                models: "Custom Coach Buses",
-                passengers: "24-54 passengers",
-                luggage: "24-70 bags",
-                features: "Premium amenities",
-                rate: "Custom"
-              }
-            ].map((vehicle, index) => (
-              <div key={index} className="bg-white/5 border border-white/20 rounded-lg p-6 hover:border-white/40 transition-all">
-                <div className="bg-white rounded-lg h-48 flex items-center justify-center mb-4 overflow-hidden">
-                  {vehicle.category === "MERCEDES-BENZ S CLASS" ? (
-                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
-                      <img 
-                        src="/images/2025-Mercedes-Benz-S-Class-MaybachS680.webp" 
-                        alt="Mercedes-Benz S Class"
-                        className="max-w-full max-h-full object-contain rounded-lg"
-                      />
-                    </div>
-                  ) : vehicle.category === "CADILLAC ESCALADE" ? (
-                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
-                      <img 
-                        src="/images/25-escalade-1sg-gba-l-v3.avif" 
-                        alt="Cadillac Escalade"
-                        className="max-w-full max-h-full object-contain rounded-lg"
-                      />
-                    </div>
-                  ) : vehicle.category === "CHEVROLET SUBURBAN" ? (
-                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
-                      <img 
-                        src="/images/025-suburban-ck10906-1lt-gba-trimselector.avif" 
-                        alt="Chevrolet Suburban"
-                        className="max-w-full max-h-full object-contain rounded-lg"
-                      />
-                    </div>
-                  ) : vehicle.category === "LUXURY SEDAN" ? (
-                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
-                      <div className="bg-white p-4 rounded-lg">
-                        <img 
-                          src="/images/Black-Raven.jpg" 
-                          alt="Luxury Sedan - Cadillac CT6"
-                          className="max-w-full max-h-full object-contain rounded-lg"
-                        />
-                      </div>
-                    </div>
-                  ) : (
-                    <span className="text-6xl">🚗</span>
-                  )}
-                </div>
-                <h3 className="text-2xl font-bold mb-2 text-white">{vehicle.category}</h3>
-                <p className="text-white/60 text-sm mb-4">{vehicle.models}</p>
-                <div className="space-y-2 text-sm text-white/80">
-                  <p><span className="font-semibold">Passengers:</span> {vehicle.passengers}</p>
-                  <p><span className="font-semibold">Luggage:</span> {vehicle.luggage}</p>
-                  <p><span className="font-semibold">Features:</span> {vehicle.features}</p>
-                  <p className="text-lg font-bold text-white mt-4">Starting at {vehicle.rate}</p>
-                </div>
-                <button className="w-full mt-4 bg-white text-black px-4 py-2 rounded font-semibold hover:bg-white/90 transition-colors">
-                  RESERVE NOW
-                </button>
-              </div>
+              { name: "Business", active: true },
+              { name: "First", active: false },
+              { name: "SUV", active: false },
+              { name: "Luxe", active: false },
+              { name: "Sprinter", active: false },
+              { name: "Mini Coach", active: false },
+              { name: "Coach", active: false },
+              { name: "Armored", active: false }
+            ].map((category, index) => (
+              <button
+                key={index}
+                className={`px-6 py-3 rounded-full font-medium transition-all ${
+                  category.active
+                    ? "bg-white text-black"
+                    : "bg-transparent text-white border border-white/30 hover:border-white hover:bg-white/10"
+                }`}
+              >
+                {category.name}
+              </button>
             ))}
+          </div>
+
+          {/* Business Category - Main Fleet */}
+          <div className="space-y-16">
+            {/* Mercedes-Benz S Class Section */}
+            <div className="bg-white/5 border border-white/20 rounded-2xl p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h3 className="text-4xl font-bold mb-6 text-white">Mercedes-Benz S Class</h3>
+                  <p className="text-lg text-white/70 mb-8">
+                    The pinnacle of luxury sedans, offering unmatched comfort and sophistication for discerning clients.
+                  </p>
+                  <div className="grid grid-cols-2 gap-6 mb-8">
+                    <div>
+                      <p className="text-sm text-white/60 mb-1">Passengers</p>
+                      <p className="text-2xl font-bold text-white">3</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-white/60 mb-1">Luggage</p>
+                      <p className="text-2xl font-bold text-white">3 bags</p>
+                    </div>
+                  </div>
+                  <div className="mb-8">
+                    <p className="text-sm text-white/60 mb-2">Features</p>
+                    <ul className="space-y-2 text-white/80">
+                      <li>• Complimentary water and Wi-Fi</li>
+                      <li>• Premium leather seating</li>
+                      <li>• Climate control</li>
+                      <li>• Professional chauffeur</li>
+                    </ul>
+                  </div>
+                  <div className="flex items-center gap-6">
+                    <p className="text-3xl font-bold text-white">Starting at $125</p>
+                    <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors">
+                      Reserve Now
+                    </button>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl h-96 flex items-center justify-center">
+                  <img 
+                    src="/images/2025-Mercedes-Benz-S-Class-MaybachS680.webp" 
+                    alt="Mercedes-Benz S Class"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Cadillac Escalade Section */}
+            <div className="bg-white/5 border border-white/20 rounded-2xl p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="order-2 lg:order-1">
+                  <div className="bg-white rounded-xl h-96 flex items-center justify-center">
+                    <img 
+                      src="/images/25-escalade-1sg-gba-l-v3.avif" 
+                      alt="Cadillac Escalade"
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                </div>
+                <div className="order-1 lg:order-2">
+                  <h3 className="text-4xl font-bold mb-6 text-white">Cadillac Escalade</h3>
+                  <p className="text-lg text-white/70 mb-8">
+                    Spacious luxury SUV perfect for groups, featuring premium amenities and exceptional comfort.
+                  </p>
+                  <div className="grid grid-cols-2 gap-6 mb-8">
+                    <div>
+                      <p className="text-sm text-white/60 mb-1">Passengers</p>
+                      <p className="text-2xl font-bold text-white">6</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-white/60 mb-1">Luggage</p>
+                      <p className="text-2xl font-bold text-white">6 bags</p>
+                    </div>
+                  </div>
+                  <div className="mb-8">
+                    <p className="text-sm text-white/60 mb-2">Features</p>
+                    <ul className="space-y-2 text-white/80">
+                      <li>• Complimentary water and Wi-Fi</li>
+                      <li>• Spacious interior</li>
+                      <li>• Entertainment system</li>
+                      <li>• Professional chauffeur</li>
+                    </ul>
+                  </div>
+                  <div className="flex items-center gap-6">
+                    <p className="text-3xl font-bold text-white">Starting at $145</p>
+                    <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors">
+                      Reserve Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Chevrolet Suburban Section */}
+            <div className="bg-white/5 border border-white/20 rounded-2xl p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h3 className="text-4xl font-bold mb-6 text-white">Chevrolet Suburban</h3>
+                  <p className="text-lg text-white/70 mb-8">
+                    Reliable and spacious SUV ideal for family trips and group transportation with premium comfort.
+                  </p>
+                  <div className="grid grid-cols-2 gap-6 mb-8">
+                    <div>
+                      <p className="text-sm text-white/60 mb-1">Passengers</p>
+                      <p className="text-2xl font-bold text-white">6</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-white/60 mb-1">Luggage</p>
+                      <p className="text-2xl font-bold text-white">6 bags</p>
+                    </div>
+                  </div>
+                  <div className="mb-8">
+                    <p className="text-sm text-white/60 mb-2">Features</p>
+                    <ul className="space-y-2 text-white/80">
+                      <li>• Complimentary water and Wi-Fi</li>
+                      <li>• Generous cargo space</li>
+                      <li>• Comfortable seating</li>
+                      <li>• Professional chauffeur</li>
+                    </ul>
+                  </div>
+                  <div className="flex items-center gap-6">
+                    <p className="text-3xl font-bold text-white">Starting at $95</p>
+                    <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors">
+                      Reserve Now
+                    </button>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl h-96 flex items-center justify-center">
+                  <img 
+                    src="/images/025-suburban-ck10906-1lt-gba-trimselector.avif" 
+                    alt="Chevrolet Suburban"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Sprinter Vans Section */}
+            <div className="bg-white/5 border border-white/20 rounded-2xl p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="order-2 lg:order-1">
+                  <div className="bg-white rounded-xl h-96 flex items-center justify-center">
+                    <span className="text-8xl">🚐</span>
+                  </div>
+                </div>
+                <div className="order-1 lg:order-2">
+                  <h3 className="text-4xl font-bold mb-6 text-white">Sprinter Vans</h3>
+                  <p className="text-lg text-white/70 mb-8">
+                    Executive transport solution for larger groups, featuring premium amenities and spacious comfort.
+                  </p>
+                  <div className="grid grid-cols-2 gap-6 mb-8">
+                    <div>
+                      <p className="text-sm text-white/60 mb-1">Passengers</p>
+                      <p className="text-2xl font-bold text-white">14</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-white/60 mb-1">Luggage</p>
+                      <p className="text-2xl font-bold text-white">10 bags</p>
+                    </div>
+                  </div>
+                  <div className="mb-8">
+                    <p className="text-sm text-white/60 mb-2">Features</p>
+                    <ul className="space-y-2 text-white/80">
+                      <li>• Complimentary water and Wi-Fi</li>
+                      <li>• Spacious interior</li>
+                      <li>• Entertainment system</li>
+                      <li>• Professional chauffeur</li>
+                    </ul>
+                  </div>
+                  <div className="flex items-center gap-6">
+                    <p className="text-3xl font-bold text-white">Starting at $250</p>
+                    <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors">
+                      Reserve Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
