@@ -320,11 +320,13 @@ export default function Home() {
                       className="w-full h-full object-cover rounded-lg"
                     />
                   ) : vehicle.category === "LUX SUV" ? (
-                    <img 
-                      src="/images/025-suburban-ck10906-1lt-gba-trimselector.avif" 
-                      alt="Lux SUV - Chevy Suburban"
-                      className="w-full h-full object-cover rounded-lg"
-                    />
+                    <div className="bg-white w-full h-full flex items-center justify-center rounded-lg">
+                      <img 
+                        src="/images/025-suburban-ck10906-1lt-gba-trimselector.avif" 
+                        alt="Lux SUV - Chevy Suburban"
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                    </div>
                   ) : (
                     <span className="text-6xl">🚗</span>
                   )}
