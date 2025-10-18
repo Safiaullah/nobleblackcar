@@ -1,15 +1,17 @@
 'use client';
 
-import { useState } from 'react';
-import { 
-  PhoneIcon, 
-  ClockIcon, 
-  ShieldCheckIcon, 
+import React, { useState } from 'react';
+import {
+  PhoneIcon,
+  ClockIcon,
+  ShieldCheckIcon,
   UserGroupIcon,
   CheckBadgeIcon,
   CalendarIcon,
   MapPinIcon,
-  StarIcon
+  StarIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
@@ -23,49 +25,190 @@ export default function Home() {
     service: 'airport'
   });
 
+  const [activeCategory, setActiveCategory] = useState('Business Sedan');
+  const scrollContainerRef = React.useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: -344,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: 344,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const fleetData = {
+    "Business Sedan": [
+      {
+        name: "Mercedes-Benz E-Class",
+        description: "Premium business sedan",
+        image: "/images/Mercedes benz E class.png",
+        rotated: true
+      },
+      {
+        name: "Cadillac CT6",
+        description: "Luxury executive sedan",
+        image: "/images/CT6.jpg",
+        rotated: true
+      },
+      {
+        name: "Cadillac XT6",
+        description: "Luxury crossover SUV",
+        image: "/images/XT6.avif",
+        rotated: true
+      },
+      {
+        name: "Cadillac Lyriq",
+        description: "Premium electric luxury SUV",
+        image: "/images/Lyriq.avif",
+        rotated: true
+      }
+    ],
+    "First Class Sedan": [
+      {
+        name: "Mercedes-Benz S-Class",
+        description: "Ultimate luxury sedan",
+        image: "/images/mercedes-s-class.png",
+        rotated: true
+      },
+      {
+        name: "BMW 7 Series",
+        description: "Premium executive experience",
+        image: "/images/bmw-7-series.webp",
+        rotated: true
+      }
+    ],
+    SUV: [
+      {
+        name: "Cadillac Escalade",
+        description: "Luxury SUV with premium amenities",
+        image: "/images/Escalade.webp",
+        rotated: true,
+        scale: 1.4
+      },
+      {
+        name: "Chevrolet Suburban",
+        description: "Spacious SUV for group travel",
+        image: "/images/Suburban.jpeg",
+        rotated: true,
+        scale: 1.0
+      },
+      {
+        name: "GMC Yukon",
+        description: "Premium full-size SUV",
+        image: "/images/yukon xl.jpg",
+        rotated: true,
+        scale: 1.15
+      },
+      {
+        name: "Lincoln Navigator",
+        description: "Luxury full-size SUV with refined comfort",
+        image: "/images/Navigator.avif",
+        rotated: false,
+        scale: 1.0
+      }
+    ],
+    Luxe: [
+      {
+        name: "Mercedes-Benz S-Class",
+        description: "Ultimate luxury sedan",
+        image: "/images/2025-Mercedes-Benz-S-Class-MaybachS680.webp",
+        rotated: false
+      },
+      {
+        name: "BMW 7 Series",
+        description: "Premium executive experience",
+        image: "/images/25-escalade-1sg-gba-l-v3.avif",
+        rotated: false
+      }
+    ],
+    Sprinter: [
+      {
+        name: "Jet Sprinter",
+        description: "Ultra-luxury with entertainment",
+        image: "/images/jet-sprinter.png",
+        rotated: true
+      },
+      {
+        name: "Executive Sprinter",
+        description: "Corporate group travel",
+        image: "/images/executive-sprinter.png",
+        rotated: true
+      },
+      {
+        name: "Limo Sprinter",
+        description: "Celebrations & parties",
+        image: "/images/limo-sprinter.png",
+        rotated: true
+      },
+      {
+        name: "WAV - ADA Sprinter",
+        description: "Wheelchair accessible",
+        image: "/images/ada-sprinter.png",
+        rotated: true
+      }
+    ]
+  };
+
+  const currentVehicles = fleetData[activeCategory as keyof typeof fleetData] || fleetData["Business Sedan"];
+
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
+      <style jsx global>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
       {/* Navigation */}
-      <nav className="bg-black border-b border-white/20 sticky top-0 z-50">
+      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
-              <h1 className="text-3xl font-bold text-white">Noble Black Car</h1>
-              <span className="ml-4 text-sm text-white/60">EST. 2015</span>
+              <h1 className="text-3xl font-bold text-black">Noble Black Car</h1>
+              <span className="ml-4 text-sm text-gray-600">EST. 2015</span>
             </div>
             <div className="hidden lg:flex items-center space-x-8">
-              <a href="#services" className="text-white/80 hover:text-white transition-colors">Services</a>
-              <a href="#fleet" className="text-white/80 hover:text-white transition-colors">Fleet</a>
-              <a href="#routes" className="text-white/80 hover:text-white transition-colors">Routes</a>
-              <a href="#testimonials" className="text-white/80 hover:text-white transition-colors">Testimonials</a>
-              <a href="#contact" className="bg-white text-black px-6 py-2 rounded font-semibold hover:bg-white/90 transition-colors">
+              <a href="#services" className="text-gray-700 hover:text-black transition-colors">Services</a>
+              <a href="#fleet" className="text-gray-700 hover:text-black transition-colors">Fleet</a>
+              <a href="#routes" className="text-gray-700 hover:text-black transition-colors">Routes</a>
+              <a href="#testimonials" className="text-gray-700 hover:text-black transition-colors">Testimonials</a>
+              <a href="#contact" className="bg-black text-white px-6 py-2 rounded font-semibold hover:bg-gray-800 transition-colors">
                 Reserve Now
               </a>
               </div>
             <div className="lg:hidden">
-              <PhoneIcon className="h-6 w-6 text-white" />
+              <PhoneIcon className="h-6 w-6 text-black" />
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-black py-24">
+      <section className="relative bg-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-5xl lg:text-7xl font-bold text-white mb-6">
+            <h2 className="text-5xl lg:text-7xl font-bold text-black mb-6">
               Providing Premium
               <br />
-              <span className="text-white/80">1st Class Transportation Services</span>
+              <span className="text-gray-700">1st Class Transportation Services</span>
             </h2>
-            <p className="text-xl text-white/70 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               It's Not Just The Ride, It's The Experience!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="#contact" className="bg-white text-black px-8 py-4 rounded font-bold text-lg hover:bg-white/90 transition-colors">
+              <a href="#contact" className="bg-black text-white px-8 py-4 rounded font-bold text-lg hover:bg-gray-800 transition-colors">
                 RESERVE NOW
               </a>
-              <a href="tel:+14045138803" className="flex items-center gap-2 text-white text-xl font-semibold hover:text-white/80 transition-colors">
+              <a href="tel:+14045138803" className="flex items-center gap-2 text-black text-xl font-semibold hover:text-gray-700 transition-colors">
                 <PhoneIcon className="h-6 w-6" />
                 +1 (404) 513-8803
               </a>
@@ -75,39 +218,39 @@ export default function Home() {
       </section>
 
       {/* Quick Reservation Form */}
-      <section className="py-16 bg-white/5 border-y border-white/10">
+      <section className="py-16 bg-gray-50 border-y border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl font-bold text-center mb-8 text-white">Reserve Your Noble Ride Now</h3>
-          <div className="bg-black border border-white/20 rounded-lg p-6">
+          <h3 className="text-3xl font-bold text-center mb-8 text-black">Reserve Your Noble Ride Now</h3>
+          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <input
                 type="text"
                 placeholder="Pickup Location"
-                className="bg-white/10 border border-white/20 text-white px-4 py-3 rounded focus:outline-none focus:border-white placeholder-white/50"
+                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black placeholder-gray-400"
                 value={formData.pickupLocation}
                 onChange={(e) => setFormData({...formData, pickupLocation: e.target.value})}
               />
               <input
                 type="text"
                 placeholder="Drop-off Location"
-                className="bg-white/10 border border-white/20 text-white px-4 py-3 rounded focus:outline-none focus:border-white placeholder-white/50"
+                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black placeholder-gray-400"
                 value={formData.dropoffLocation}
                 onChange={(e) => setFormData({...formData, dropoffLocation: e.target.value})}
               />
               <input
                 type="date"
-                className="bg-white/10 border border-white/20 text-white px-4 py-3 rounded focus:outline-none focus:border-white"
+                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black"
                 value={formData.date}
                 onChange={(e) => setFormData({...formData, date: e.target.value})}
               />
               <input
                 type="time"
-                className="bg-white/10 border border-white/20 text-white px-4 py-3 rounded focus:outline-none focus:border-white"
+                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black"
                 value={formData.time}
                 onChange={(e) => setFormData({...formData, time: e.target.value})}
               />
               <select
-                className="bg-white/10 border border-white/20 text-white px-4 py-3 rounded focus:outline-none focus:border-white"
+                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black"
                 value={formData.passengers}
                 onChange={(e) => setFormData({...formData, passengers: e.target.value})}
               >
@@ -117,7 +260,7 @@ export default function Home() {
                 <option value="4">4-6 Passengers</option>
                 <option value="7">7+ Passengers</option>
               </select>
-              <button className="bg-white text-black px-6 py-3 rounded font-bold hover:bg-white/90 transition-colors">
+              <button className="bg-black text-white px-6 py-3 rounded font-bold hover:bg-gray-800 transition-colors">
                 GET QUOTE
               </button>
             </div>
@@ -126,9 +269,9 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16 text-white">
+          <h2 className="text-4xl font-bold text-center mb-16 text-black">
             Why Noble Black Car is the Best Choice for Your Transfer
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -175,11 +318,11 @@ export default function Home() {
               }
             ].map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="bg-white/10 border border-white/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 text-white">
+                <div className="bg-gray-100 border border-gray-200 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 text-black">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
-                <p className="text-white/70 text-sm">{feature.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-black">{feature.title}</h3>
+                <p className="text-gray-600 text-sm">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -187,9 +330,9 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section id="services" className="py-20 bg-white/5 border-y border-white/10">
+      <section id="services" className="py-20 bg-gray-50 border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16 text-white">Our Premium Services</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-black">Our Premium Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -229,10 +372,10 @@ export default function Home() {
                 description: "Enjoy wine country tours with professional chauffeur service."
               }
             ].map((service, index) => (
-              <div key={index} className="bg-black border border-white/20 rounded-lg p-6 hover:border-white/40 transition-all">
-                <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
-                <p className="text-white/70 mb-4">{service.description}</p>
-                <a href="#contact" className="text-white font-semibold hover:text-white/80 transition-colors">
+              <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 hover:shadow-md transition-all">
+                <h3 className="text-2xl font-bold mb-4 text-black">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                <a href="#contact" className="text-black font-semibold hover:text-gray-700 transition-colors">
                   Learn More →
                 </a>
               </div>
@@ -242,227 +385,94 @@ export default function Home() {
       </section>
 
       {/* Fleet Section */}
-      <section id="fleet" className="py-20 bg-black">
+      <section id="fleet" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 text-white">Fleet solutions that actually scale</h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Whether one vehicle or a hundred, our operations, reporting, and staffing adapt to fit your growth — no surprises.
-            </p>
-          </div>
+          {/* Section Title */}
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-black mb-8">Our Fleet</h2>
 
           {/* Vehicle Category Navigation */}
-          <div className="flex flex-wrap justify-center gap-3 mb-16">
-            {[
-              { name: "Business", active: true },
-              { name: "First", active: false },
-              { name: "SUV", active: false },
-              { name: "Luxe", active: false },
-              { name: "Sprinter", active: false },
-              { name: "Mini Coach", active: false },
-              { name: "Coach", active: false },
-              { name: "Armored", active: false }
-            ].map((category, index) => (
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {["Business Sedan", "First Class Sedan", "SUV", "Sprinter"].map((category) => (
               <button
-                key={index}
-                className={`px-6 py-3 rounded-full font-medium transition-all ${
-                  category.active
-                    ? "bg-white text-black"
-                    : "bg-transparent text-white border border-white/30 hover:border-white hover:bg-white/10"
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                  activeCategory === category
+                    ? "bg-black text-white"
+                    : "bg-transparent text-black border border-gray-300 hover:border-black hover:bg-gray-100"
                 }`}
               >
-                {category.name}
+                {category}
               </button>
             ))}
           </div>
 
-          {/* Business Category - Main Fleet */}
-          <div className="space-y-16">
-            {/* Mercedes-Benz S Class Section */}
-            <div className="bg-white/5 border border-white/20 rounded-2xl p-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h3 className="text-4xl font-bold mb-6 text-white">Mercedes-Benz S Class</h3>
-                  <p className="text-lg text-white/70 mb-8">
-                    The pinnacle of luxury sedans, offering unmatched comfort and sophistication for discerning clients.
-                  </p>
-                  <div className="grid grid-cols-2 gap-6 mb-8">
-                    <div>
-                      <p className="text-sm text-white/60 mb-1">Passengers</p>
-                      <p className="text-2xl font-bold text-white">3</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-white/60 mb-1">Luggage</p>
-                      <p className="text-2xl font-bold text-white">3 bags</p>
-                    </div>
-                  </div>
-                  <div className="mb-8">
-                    <p className="text-sm text-white/60 mb-2">Features</p>
-                    <ul className="space-y-2 text-white/80">
-                      <li>• Complimentary water and Wi-Fi</li>
-                      <li>• Premium leather seating</li>
-                      <li>• Climate control</li>
-                      <li>• Professional chauffeur</li>
-                    </ul>
-                  </div>
-                  <div className="flex items-center gap-6">
-                    <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors">
-                      Reserve Now
-                    </button>
-                  </div>
-                </div>
-                <div className="bg-white rounded-xl h-64 flex items-center justify-center">
-                  <img 
-                    src="/images/2025-Mercedes-Benz-S-Class-MaybachS680.webp" 
-                    alt="Mercedes-Benz S Class"
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-              </div>
-            </div>
+          {/* Vehicle Cards Grid */}
+          <div className="relative px-12">
+            {/* Navigation Arrows */}
+            <button
+              onClick={scrollLeft}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-10 z-10 bg-gray-100 border border-gray-300 rounded-full p-2 hover:bg-gray-200 transition-colors"
+            >
+              <ChevronLeftIcon className="h-5 w-5 text-black" />
+            </button>
+            <button
+              onClick={scrollRight}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-10 z-10 bg-gray-100 border border-gray-300 rounded-full p-2 hover:bg-gray-200 transition-colors"
+            >
+              <ChevronRightIcon className="h-5 w-5 text-black" />
+            </button>
 
-            {/* Cadillac Escalade Section */}
-            <div className="bg-white/5 border border-white/20 rounded-2xl p-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="order-2 lg:order-1">
-                  <div className="bg-white rounded-xl h-64 flex items-center justify-center">
-                    <img 
-                      src="/images/25-escalade-1sg-gba-l-v3.avif" 
-                      alt="Cadillac Escalade"
-                      className="max-w-full max-h-full object-contain"
+            {/* Cards Container */}
+            <div
+              ref={scrollContainerRef}
+              className="flex gap-6 overflow-x-auto pb-4 px-4 scrollbar-hide"
+              style={{
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none'
+              }}
+            >
+              {currentVehicles.map((vehicle, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl hover:border-gray-300 transition-all duration-300 cursor-pointer flex-shrink-0 w-[320px]"
+                  onClick={() => window.location.href = '#contact'}
+                >
+                  <div className="bg-white p-6 flex items-center justify-center h-[220px] overflow-hidden">
+                    <img
+                      src={vehicle.image}
+                      alt={vehicle.name}
+                      className="w-full h-full object-contain transition-transform duration-300 hover:scale-110"
+                      style={{
+                        objectFit: 'contain',
+                        transform: `scaleX(${vehicle.rotated ? -1 : 1}) ${vehicle.scale ? `scale(${vehicle.scale})` : 'scale(1)'}`
+                      }}
                     />
                   </div>
-                </div>
-                <div className="order-1 lg:order-2">
-                  <h3 className="text-4xl font-bold mb-6 text-white">Cadillac Escalade</h3>
-                  <p className="text-lg text-white/70 mb-8">
-                    Spacious luxury SUV perfect for groups, featuring premium amenities and exceptional comfort.
-                  </p>
-                  <div className="grid grid-cols-2 gap-6 mb-8">
-                    <div>
-                      <p className="text-sm text-white/60 mb-1">Passengers</p>
-                      <p className="text-2xl font-bold text-white">6</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-white/60 mb-1">Luggage</p>
-                      <p className="text-2xl font-bold text-white">6 bags</p>
-                    </div>
-                  </div>
-                  <div className="mb-8">
-                    <p className="text-sm text-white/60 mb-2">Features</p>
-                    <ul className="space-y-2 text-white/80">
-                      <li>• Complimentary water and Wi-Fi</li>
-                      <li>• Spacious interior</li>
-                      <li>• Entertainment system</li>
-                      <li>• Professional chauffeur</li>
-                    </ul>
-                  </div>
-                  <div className="flex items-center gap-6">
-                    <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors">
-                      Reserve Now
-                    </button>
+                  <div className="p-4 text-center">
+                    <h3 className="text-lg font-bold text-black mb-2 h-12 flex items-center justify-center leading-tight">{vehicle.name}</h3>
+                    <p className="text-sm text-gray-600 mb-3 h-10 flex items-center justify-center leading-relaxed">{vehicle.description}</p>
+                    <span className="inline-block bg-gray-100 text-black px-3 py-1 rounded-full text-xs font-medium">
+                      {activeCategory}
+                    </span>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Chevrolet Suburban Section */}
-            <div className="bg-white/5 border border-white/20 rounded-2xl p-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h3 className="text-4xl font-bold mb-6 text-white">Chevrolet Suburban</h3>
-                  <p className="text-lg text-white/70 mb-8">
-                    Reliable and spacious SUV ideal for family trips and group transportation with premium comfort.
-                  </p>
-                  <div className="grid grid-cols-2 gap-6 mb-8">
-                    <div>
-                      <p className="text-sm text-white/60 mb-1">Passengers</p>
-                      <p className="text-2xl font-bold text-white">6</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-white/60 mb-1">Luggage</p>
-                      <p className="text-2xl font-bold text-white">6 bags</p>
-                    </div>
-                  </div>
-                  <div className="mb-8">
-                    <p className="text-sm text-white/60 mb-2">Features</p>
-                    <ul className="space-y-2 text-white/80">
-                      <li>• Complimentary water and Wi-Fi</li>
-                      <li>• Generous cargo space</li>
-                      <li>• Comfortable seating</li>
-                      <li>• Professional chauffeur</li>
-                    </ul>
-                  </div>
-                  <div className="flex items-center gap-6">
-                    <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors">
-                      Reserve Now
-                    </button>
-                  </div>
-                </div>
-                <div className="bg-white rounded-xl h-64 flex items-center justify-center">
-                  <img 
-                    src="/images/025-suburban-ck10906-1lt-gba-trimselector.avif" 
-                    alt="Chevrolet Suburban"
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Sprinter Vans Section */}
-            <div className="bg-white/5 border border-white/20 rounded-2xl p-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="order-2 lg:order-1">
-                  <div className="bg-white rounded-xl h-64 flex items-center justify-center">
-                    <span className="text-8xl">🚐</span>
-                  </div>
-                </div>
-                <div className="order-1 lg:order-2">
-                  <h3 className="text-4xl font-bold mb-6 text-white">Sprinter Vans</h3>
-                  <p className="text-lg text-white/70 mb-8">
-                    Executive transport solution for larger groups, featuring premium amenities and spacious comfort.
-                  </p>
-                  <div className="grid grid-cols-2 gap-6 mb-8">
-                    <div>
-                      <p className="text-sm text-white/60 mb-1">Passengers</p>
-                      <p className="text-2xl font-bold text-white">14</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-white/60 mb-1">Luggage</p>
-                      <p className="text-2xl font-bold text-white">10 bags</p>
-                    </div>
-                  </div>
-                  <div className="mb-8">
-                    <p className="text-sm text-white/60 mb-2">Features</p>
-                    <ul className="space-y-2 text-white/80">
-                      <li>• Complimentary water and Wi-Fi</li>
-                      <li>• Spacious interior</li>
-                      <li>• Entertainment system</li>
-                      <li>• Professional chauffeur</li>
-                    </ul>
-                  </div>
-                  <div className="flex items-center gap-6">
-                    <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors">
-                      Reserve Now
-                    </button>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* Service Routes */}
-      <section id="routes" className="py-20 bg-white/5 border-y border-white/10">
+      <section id="routes" className="py-20 bg-gray-50 border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-4 text-white">Service Routes</h2>
-          <p className="text-center text-white/70 mb-16 text-lg">
+          <h2 className="text-4xl font-bold text-center mb-4 text-black">Service Routes</h2>
+          <p className="text-center text-gray-600 mb-16 text-lg">
             Offering reliable, on-time transportation across all service routes
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-white">Major Airports</h3>
+              <h3 className="text-2xl font-bold mb-6 text-black">Major Airports</h3>
               <div className="space-y-3">
                 {[
                   "NYC to & from JFK Airport",
@@ -474,14 +484,14 @@ export default function Home() {
                   "NYC to & from Islip (ISP)",
                   "NYC to & from Stewart (SWF)"
                 ].map((route, index) => (
-                  <div key={index} className="bg-black border border-white/20 rounded px-4 py-3 text-white hover:border-white/40 transition-all">
+                  <div key={index} className="bg-white border border-gray-200 rounded px-4 py-3 text-black hover:border-gray-300 hover:shadow-sm transition-all">
                     {route}
           </div>
                 ))}
               </div>
             </div>
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-white">Popular Routes</h3>
+              <h3 className="text-2xl font-bold mb-6 text-black">Popular Routes</h3>
               <div className="space-y-3">
                 {[
                   "NYC to & from Hamptons",
@@ -493,7 +503,7 @@ export default function Home() {
                   "NYC to & from Connecticut",
                   "NYC to & from Maryland"
                 ].map((route, index) => (
-                  <div key={index} className="bg-black border border-white/20 rounded px-4 py-3 text-white hover:border-white/40 transition-all">
+                  <div key={index} className="bg-white border border-gray-200 rounded px-4 py-3 text-black hover:border-gray-300 hover:shadow-sm transition-all">
                     {route}
               </div>
                 ))}
@@ -504,25 +514,25 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section id="testimonials" className="py-20 bg-black">
+      <section id="testimonials" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-4 text-white">What Our Customers Say</h2>
-          <p className="text-center text-white/70 mb-16 text-lg">
+          <h2 className="text-4xl font-bold text-center mb-4 text-black">What Our Customers Say</h2>
+          <p className="text-center text-gray-600 mb-16 text-lg">
             Customer testimonials from Google & TripAdvisor
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-white/5 border border-white/20 rounded-lg p-6">
+              <div key={i} className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, index) => (
-                    <StarIcon key={index} className="h-5 w-5 text-white fill-white" />
+                    <StarIcon key={index} className="h-5 w-5 text-black fill-black" />
                   ))}
                 </div>
-                <p className="text-white/80 mb-4">
-                  "Excellent service! Professional drivers, clean vehicles, and always on time. 
+                <p className="text-gray-700 mb-4">
+                  "Excellent service! Professional drivers, clean vehicles, and always on time.
                   Highly recommend Noble Black Car for all your transportation needs in NYC."
                 </p>
-                <p className="text-white font-semibold">- Satisfied Customer</p>
+                <p className="text-black font-semibold">- Satisfied Customer</p>
               </div>
             ))}
           </div>
@@ -530,27 +540,27 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white/5 border-y border-white/10">
+      <section id="contact" className="py-20 bg-gray-50 border-y border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-white">Contact Us</h2>
-          <div className="bg-black border border-white/20 rounded-lg p-8">
+          <h2 className="text-4xl font-bold text-center mb-12 text-black">Contact Us</h2>
+          <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <input
                 type="text"
                 placeholder="Your Name"
-                className="bg-white/10 border border-white/20 text-white px-4 py-3 rounded focus:outline-none focus:border-white placeholder-white/50"
+                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black placeholder-gray-400"
               />
               <input
                 type="email"
                 placeholder="Your Email"
-                className="bg-white/10 border border-white/20 text-white px-4 py-3 rounded focus:outline-none focus:border-white placeholder-white/50"
+                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black placeholder-gray-400"
               />
               <input
                 type="tel"
                 placeholder="Phone Number"
-                className="bg-white/10 border border-white/20 text-white px-4 py-3 rounded focus:outline-none focus:border-white placeholder-white/50"
+                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black placeholder-gray-400"
               />
-              <select className="bg-white/10 border border-white/20 text-white px-4 py-3 rounded focus:outline-none focus:border-white">
+              <select className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black">
                 <option value="">Select a Service</option>
                 <option value="airport">Airport Transfer</option>
                 <option value="corporate">Corporate Service</option>
@@ -561,45 +571,45 @@ export default function Home() {
             <textarea
               placeholder="Your Message"
               rows={4}
-              className="w-full mt-6 bg-white/10 border border-white/20 text-white px-4 py-3 rounded focus:outline-none focus:border-white placeholder-white/50"
+              className="w-full mt-6 bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black placeholder-gray-400"
             />
-            <button className="w-full mt-6 bg-white text-black px-6 py-4 rounded font-bold text-lg hover:bg-white/90 transition-colors">
+            <button className="w-full mt-6 bg-black text-white px-6 py-4 rounded font-bold text-lg hover:bg-gray-800 transition-colors">
               SEND MESSAGE
             </button>
           </div>
           <div className="text-center mt-8">
-            <p className="text-2xl font-bold text-white mb-2">
-              <a href="tel:+14045138803" className="hover:text-white/80 transition-colors">
+            <p className="text-2xl font-bold text-black mb-2">
+              <a href="tel:+14045138803" className="hover:text-gray-700 transition-colors">
                 +1 (404) 513-8803
               </a>
             </p>
-            <p className="text-white/70">Available 24/7 for your convenience</p>
+            <p className="text-gray-600">Available 24/7 for your convenience</p>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-black border-t border-white/20 py-12">
+      <footer className="bg-white border-t border-gray-200 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Noble Black Car</h3>
-              <p className="text-white/70 text-sm">
+              <h3 className="text-2xl font-bold mb-4 text-black">Noble Black Car</h3>
+              <p className="text-gray-600 text-sm">
                 Providing premium 1st class transportation services since 2015.
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Services</h4>
-              <ul className="space-y-2 text-white/70 text-sm">
-                <li><a href="#services" className="hover:text-white transition-colors">Airport Transfers</a></li>
-                <li><a href="#services" className="hover:text-white transition-colors">Corporate Service</a></li>
-                <li><a href="#services" className="hover:text-white transition-colors">Sightseeing Tours</a></li>
-                <li><a href="#services" className="hover:text-white transition-colors">Event Transportation</a></li>
+              <h4 className="text-lg font-semibold mb-4 text-black">Services</h4>
+              <ul className="space-y-2 text-gray-600 text-sm">
+                <li><a href="#services" className="hover:text-black transition-colors">Airport Transfers</a></li>
+                <li><a href="#services" className="hover:text-black transition-colors">Corporate Service</a></li>
+                <li><a href="#services" className="hover:text-black transition-colors">Sightseeing Tours</a></li>
+                <li><a href="#services" className="hover:text-black transition-colors">Event Transportation</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">NYC Airports</h4>
-              <ul className="space-y-2 text-white/70 text-sm">
+              <h4 className="text-lg font-semibold mb-4 text-black">NYC Airports</h4>
+              <ul className="space-y-2 text-gray-600 text-sm">
                 <li>JFK Airport</li>
                 <li>LaGuardia Airport</li>
                 <li>Newark Airport</li>
@@ -607,15 +617,15 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Contact</h4>
-              <ul className="space-y-2 text-white/70 text-sm">
+              <h4 className="text-lg font-semibold mb-4 text-black">Contact</h4>
+              <ul className="space-y-2 text-gray-600 text-sm">
                 <li>Phone: (404) 513-8803</li>
                 <li>Email: info@nobleblackcar.com</li>
                 <li>New York, NY</li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/60 text-sm">
+          <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-500 text-sm">
             <p>Copyright © 2025 Noble Black Car. All rights reserved.</p>
           </div>
         </div>
