@@ -26,6 +26,7 @@ export default function Home() {
   });
 
   const [activeCategory, setActiveCategory] = useState('Business Sedan');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const scrollContainerRef = React.useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
@@ -171,22 +172,83 @@ export default function Home() {
       {/* Navigation */}
       <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-16">
+            {/* Left Side - Company Name */}
             <div className="flex items-center">
-              <h1 className="text-3xl font-bold text-black">Noble Black Car</h1>
-              <span className="ml-4 text-sm text-gray-600">EST. 2015</span>
+              <h1 className="text-2xl font-bold text-black">Noble Black Car</h1>
+              <span className="ml-3 text-xs text-gray-600">EST. 2015</span>
             </div>
-            <div className="hidden lg:flex items-center space-x-8">
-              <a href="#services" className="text-gray-700 hover:text-black transition-colors">Services</a>
-              <a href="#fleet" className="text-gray-700 hover:text-black transition-colors">Fleet</a>
-              <a href="#routes" className="text-gray-700 hover:text-black transition-colors">Routes</a>
-              <a href="#testimonials" className="text-gray-700 hover:text-black transition-colors">Testimonials</a>
-              <a href="#contact" className="bg-black text-white px-6 py-2 rounded font-semibold hover:bg-gray-800 transition-colors">
-                Reserve Now
+
+            {/* Right Side - Navigation Elements */}
+            <div className="flex items-center gap-2">
+              {/* Phone Icon Button */}
+              <a
+                href="tel:+14045138803"
+                className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-black hover:bg-black hover:text-white transition-all group"
+              >
+                <PhoneIcon className="h-5 w-5 text-black group-hover:text-white" />
               </a>
-              </div>
-            <div className="lg:hidden">
-              <PhoneIcon className="h-6 w-6 text-black" />
+
+              {/* Book Now Button */}
+              <a
+                href="#contact"
+                className="bg-black text-white px-6 py-2 rounded-full font-semibold hover:bg-gray-800 transition-colors text-base"
+              >
+                Book Now
+              </a>
+
+              {/* Hamburger Menu */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="flex flex-col gap-1 w-10 h-10 items-center justify-center hover:bg-gray-100 rounded-lg transition-colors"
+              >
+                <span className={`w-5 h-0.5 bg-black transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+                <span className={`w-5 h-0.5 bg-black transition-opacity ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                <span className={`w-5 h-0.5 bg-black transition-transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className={`${isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 bg-white border-t border-gray-200`}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div className="flex flex-col space-y-4">
+              <a
+                href="#services"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-gray-700 hover:text-black transition-colors py-2 border-b border-gray-100"
+              >
+                Services
+              </a>
+              <a
+                href="#fleet"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-gray-700 hover:text-black transition-colors py-2 border-b border-gray-100"
+              >
+                Fleet
+              </a>
+              <a
+                href="#routes"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-gray-700 hover:text-black transition-colors py-2 border-b border-gray-100"
+              >
+                Routes
+              </a>
+              <a
+                href="#testimonials"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-gray-700 hover:text-black transition-colors py-2 border-b border-gray-100"
+              >
+                Testimonials
+              </a>
+              <a
+                href="#contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-gray-700 hover:text-black transition-colors py-2"
+              >
+                Contact
+              </a>
             </div>
           </div>
         </div>
@@ -199,7 +261,7 @@ export default function Home() {
             <h2 className="text-5xl lg:text-7xl font-bold text-black mb-6">
               Providing Premium
               <br />
-              <span className="text-gray-700">1st Class Transportation Services</span>
+              <span className="text-gray-700">Experience</span>
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               It's Not Just The Ride, It's The Experience!
@@ -208,9 +270,9 @@ export default function Home() {
               <a href="#contact" className="bg-black text-white px-8 py-4 rounded font-bold text-lg hover:bg-gray-800 transition-colors">
                 RESERVE NOW
               </a>
-              <a href="tel:+14045138803" className="flex items-center gap-2 text-black text-xl font-semibold hover:text-gray-700 transition-colors">
+              <a href="tel:+14045138803" className="flex items-center gap-2 bg-white border-2 border-black text-black px-8 py-4 rounded font-bold text-lg hover:bg-black hover:text-white transition-colors">
                 <PhoneIcon className="h-6 w-6" />
-                +1 (404) 513-8803
+                CALL NOW
               </a>
             </div>
                 </div>
@@ -578,12 +640,11 @@ export default function Home() {
             </button>
           </div>
           <div className="text-center mt-8">
-            <p className="text-2xl font-bold text-black mb-2">
-              <a href="tel:+14045138803" className="hover:text-gray-700 transition-colors">
-                +1 (404) 513-8803
-              </a>
-            </p>
-            <p className="text-gray-600">Available 24/7 for your convenience</p>
+            <a href="tel:+14045138803" className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded font-bold text-lg hover:bg-gray-800 transition-colors">
+              <PhoneIcon className="h-6 w-6" />
+              CALL NOW
+            </a>
+            <p className="text-gray-600 mt-4">Available 24/7 for your convenience</p>
           </div>
         </div>
       </section>
@@ -619,7 +680,11 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4 text-black">Contact</h4>
               <ul className="space-y-2 text-gray-600 text-sm">
-                <li>Phone: (404) 513-8803</li>
+                <li>
+                  <a href="tel:+14045138803" className="hover:text-black transition-colors">
+                    Call Us
+                  </a>
+                </li>
                 <li>Email: info@nobleblackcar.com</li>
                 <li>New York, NY</li>
               </ul>
