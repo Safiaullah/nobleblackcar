@@ -14,6 +14,7 @@ import {
   ChevronRightIcon
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Script from "next/script";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -25,9 +26,59 @@ export default function Home() {
     service: 'airport'
   });
 
+  const [contactForm, setContactForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const handleContactSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contactForm),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitMessage('Thank you! Your message has been sent successfully.');
+        // Reset form
+        setContactForm({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        setSubmitMessage('Sorry, there was an error sending your message. Please try again or call us directly.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitMessage('Sorry, there was an error sending your message. Please try again or call us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const [activeCategory, setActiveCategory] = useState('Business Sedan');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const scrollContainerRef = React.useRef<HTMLDivElement>(null);
+
+  const categories = ["Business Sedan", "First Class Sedan", "Business SUV", "First Class SUV", "Sprinter"];
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -53,13 +104,15 @@ export default function Home() {
         name: "Mercedes-Benz E-Class",
         description: "Premium business sedan",
         image: "/images/Mercedes benz E class.png",
-        rotated: true
+        rotated: true,
+        scale: 1.15
       },
       {
         name: "Cadillac CT6",
         description: "Luxury executive sedan",
         image: "/images/CT6.jpg",
-        rotated: true
+        rotated: true,
+        scale: 1.0
       },
       {
         name: "Cadillac XT6",
@@ -88,14 +141,7 @@ export default function Home() {
         rotated: true
       }
     ],
-    SUV: [
-      {
-        name: "Cadillac Escalade",
-        description: "Luxury SUV with premium amenities",
-        image: "/images/Escalade.webp",
-        rotated: true,
-        scale: 1.4
-      },
+    "Business SUV": [
       {
         name: "Chevrolet Suburban",
         description: "Spacious SUV for group travel",
@@ -116,6 +162,15 @@ export default function Home() {
         image: "/images/Navigator.avif",
         rotated: false,
         scale: 1.0
+      }
+    ],
+    "First Class SUV": [
+      {
+        name: "Cadillac Escalade ESV",
+        description: "Extended luxury SUV with premium features",
+        image: "/images/Escalade.webp",
+        rotated: true,
+        scale: 1.4
       }
     ],
     Luxe: [
@@ -168,6 +223,23 @@ export default function Home() {
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus,
+        textarea:-webkit-autofill:active,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus,
+        select:-webkit-autofill:active {
+          -webkit-box-shadow: 0 0 0 1000px white inset !important;
+          -webkit-text-fill-color: black !important;
+          background-color: white !important;
+          color: black !important;
+        }
       `}</style>
       {/* Navigation */}
       <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
@@ -217,28 +289,28 @@ export default function Home() {
               <a
                 href="#services"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-gray-700 hover:text-black transition-colors py-2 border-b border-gray-100"
+                className="text-gray-700 hover:text-black transition-colors py-2 border-b border-gray-200"
               >
                 Services
               </a>
               <a
                 href="#fleet"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-gray-700 hover:text-black transition-colors py-2 border-b border-gray-100"
+                className="text-gray-700 hover:text-black transition-colors py-2 border-b border-gray-200"
               >
                 Fleet
               </a>
               <a
                 href="#routes"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-gray-700 hover:text-black transition-colors py-2 border-b border-gray-100"
+                className="text-gray-700 hover:text-black transition-colors py-2 border-b border-gray-200"
               >
                 Routes
               </a>
               <a
                 href="#testimonials"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-gray-700 hover:text-black transition-colors py-2 border-b border-gray-100"
+                className="text-gray-700 hover:text-black transition-colors py-2 border-b border-gray-200"
               >
                 Testimonials
               </a>
@@ -254,78 +326,52 @@ export default function Home() {
         </div>
       </nav>
 
+      {/* Video Section */}
+      <section className="relative w-full h-[600px] overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/6462521_Drone Bridge Brooklyn Cityscape_By_Oprea_Maxim_Artlist_HD.mp4" type="video/mp4" />
+        </video>
+      </section>
+
       {/* Hero Section */}
-      <section className="relative bg-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-white py-12 overflow-hidden min-h-[400px]">
+        {/* Content */}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-5xl lg:text-7xl font-bold text-black mb-6">
               Providing Premium
               <br />
-              <span className="text-gray-700">Experience</span>
+              <span className="text-gray-800">Experience</span>
             </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-900 mb-8 max-w-3xl mx-auto italic">
               It's Not Just The Ride, It's The Experience!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="#contact" className="bg-black text-white px-8 py-4 rounded font-bold text-lg hover:bg-gray-800 transition-colors">
                 RESERVE NOW
               </a>
-              <a href="tel:+14045138803" className="flex items-center gap-2 bg-white border-2 border-black text-black px-8 py-4 rounded font-bold text-lg hover:bg-black hover:text-white transition-colors">
+              <a href="tel:+14045138803" className="flex items-center gap-2 bg-transparent border-2 border-black text-black px-8 py-4 rounded font-bold text-lg hover:bg-black hover:text-white transition-colors">
                 <PhoneIcon className="h-6 w-6" />
                 CALL NOW
               </a>
             </div>
-                </div>
-              </div>
+          </div>
+        </div>
       </section>
 
       {/* Quick Reservation Form */}
-      <section className="py-16 bg-gray-50 border-y border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl font-bold text-center mb-8 text-black">Reserve Your Noble Ride Now</h3>
-          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <input
-                type="text"
-                placeholder="Pickup Location"
-                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black placeholder-gray-400"
-                value={formData.pickupLocation}
-                onChange={(e) => setFormData({...formData, pickupLocation: e.target.value})}
-              />
-              <input
-                type="text"
-                placeholder="Drop-off Location"
-                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black placeholder-gray-400"
-                value={formData.dropoffLocation}
-                onChange={(e) => setFormData({...formData, dropoffLocation: e.target.value})}
-              />
-              <input
-                type="date"
-                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black"
-                value={formData.date}
-                onChange={(e) => setFormData({...formData, date: e.target.value})}
-              />
-              <input
-                type="time"
-                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black"
-                value={formData.time}
-                onChange={(e) => setFormData({...formData, time: e.target.value})}
-              />
-              <select
-                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black"
-                value={formData.passengers}
-                onChange={(e) => setFormData({...formData, passengers: e.target.value})}
-              >
-                <option value="1">1 Passenger</option>
-                <option value="2">2 Passengers</option>
-                <option value="3">3 Passengers</option>
-                <option value="4">4-6 Passengers</option>
-                <option value="7">7+ Passengers</option>
-              </select>
-              <button className="bg-black text-white px-6 py-3 rounded font-bold hover:bg-gray-800 transition-colors">
-                GET QUOTE
-              </button>
-            </div>
+      <section className="py-4 bg-white border-y border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="text-xl font-bold text-center mb-2 text-black">Reserve Your Noble Ride Now</h3>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-2 shadow-sm min-h-[600px]">
+            <a href="https://book.mylimobiz.com/v4/nobleblackcar" data-ores-widget="website" data-ores-alias="nobleblackcar" className="text-black">Online Reservations</a>
           </div>
         </div>
       </section>
@@ -380,7 +426,7 @@ export default function Home() {
               }
             ].map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="bg-gray-100 border border-gray-200 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 text-black">
+                <div className="bg-white border border-gray-300 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 text-black">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-black">{feature.title}</h3>
@@ -392,7 +438,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section id="services" className="py-20 bg-gray-50 border-y border-gray-200">
+      <section id="services" className="py-20 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16 text-black">Our Premium Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -434,10 +480,10 @@ export default function Home() {
                 description: "Enjoy wine country tours with professional chauffeur service."
               }
             ].map((service, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 hover:shadow-md transition-all">
+              <div key={index} className="bg-white border border-gray-300 rounded-lg p-6 hover:border-gray-400 hover:shadow-md transition-all">
                 <h3 className="text-2xl font-bold mb-4 text-black">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <a href="#contact" className="text-black font-semibold hover:text-gray-700 transition-colors">
+                <p className="text-gray-700 mb-4">{service.description}</p>
+                <a href="#contact" className="text-black font-semibold hover:text-gray-800 transition-colors">
                   Learn More →
                 </a>
               </div>
@@ -454,7 +500,7 @@ export default function Home() {
 
           {/* Vehicle Category Navigation */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {["Business Sedan", "First Class Sedan", "SUV", "Sprinter"].map((category) => (
+            {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
@@ -474,13 +520,13 @@ export default function Home() {
             {/* Navigation Arrows */}
             <button
               onClick={scrollLeft}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-10 z-10 bg-gray-100 border border-gray-300 rounded-full p-2 hover:bg-gray-200 transition-colors"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-10 z-10 bg-gray-50 border border-gray-300 rounded-full p-2 hover:bg-gray-200 transition-colors"
             >
               <ChevronLeftIcon className="h-5 w-5 text-black" />
             </button>
             <button
               onClick={scrollRight}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-10 z-10 bg-gray-100 border border-gray-300 rounded-full p-2 hover:bg-gray-200 transition-colors"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-10 z-10 bg-gray-50 border border-gray-300 rounded-full p-2 hover:bg-gray-200 transition-colors"
             >
               <ChevronRightIcon className="h-5 w-5 text-black" />
             </button>
@@ -514,7 +560,7 @@ export default function Home() {
                   <div className="p-4 text-center">
                     <h3 className="text-lg font-bold text-black mb-2 h-12 flex items-center justify-center leading-tight">{vehicle.name}</h3>
                     <p className="text-sm text-gray-600 mb-3 h-10 flex items-center justify-center leading-relaxed">{vehicle.description}</p>
-                    <span className="inline-block bg-gray-100 text-black px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="inline-block bg-gray-50 text-black px-3 py-1 rounded-full text-xs font-medium">
                       {activeCategory}
                     </span>
                   </div>
@@ -526,7 +572,7 @@ export default function Home() {
       </section>
 
       {/* Service Routes */}
-      <section id="routes" className="py-20 bg-gray-50 border-y border-gray-200">
+      <section id="routes" className="py-20 bg-white border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4 text-black">Service Routes</h2>
           <p className="text-center text-gray-600 mb-16 text-lg">
@@ -546,7 +592,7 @@ export default function Home() {
                   "NYC to & from Islip (ISP)",
                   "NYC to & from Stewart (SWF)"
                 ].map((route, index) => (
-                  <div key={index} className="bg-white border border-gray-200 rounded px-4 py-3 text-black hover:border-gray-300 hover:shadow-sm transition-all">
+                  <div key={index} className="bg-white border border-gray-300 rounded px-4 py-3 text-black hover:border-gray-400 hover:shadow-sm transition-all">
                     {route}
           </div>
                 ))}
@@ -565,7 +611,7 @@ export default function Home() {
                   "NYC to & from Connecticut",
                   "NYC to & from Maryland"
                 ].map((route, index) => (
-                  <div key={index} className="bg-white border border-gray-200 rounded px-4 py-3 text-black hover:border-gray-300 hover:shadow-sm transition-all">
+                  <div key={index} className="bg-white border border-gray-300 rounded px-4 py-3 text-black hover:border-gray-400 hover:shadow-sm transition-all">
                     {route}
               </div>
                 ))}
@@ -584,7 +630,7 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+              <div key={i} className="bg-white border border-gray-300 rounded-lg p-6 hover:shadow-md transition-all">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, index) => (
                     <StarIcon key={index} className="h-5 w-5 text-black fill-black" />
@@ -602,45 +648,70 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-50 border-y border-gray-200">
+      <section id="contact" className="py-20 bg-white border-y border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-12 text-black">Contact Us</h2>
-          <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+          <form onSubmit={handleContactSubmit} className="bg-white border border-gray-300 rounded-lg p-8 shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <input
                 type="text"
                 placeholder="Your Name"
-                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black placeholder-gray-400"
+                required
+                value={contactForm.name}
+                onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
+                className="bg-white border border-gray-400 text-black px-4 py-3 rounded focus:outline-none focus:border-white placeholder-gray-500"
               />
               <input
                 type="email"
                 placeholder="Your Email"
-                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black placeholder-gray-400"
+                required
+                value={contactForm.email}
+                onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
+                className="bg-white border border-gray-400 text-black px-4 py-3 rounded focus:outline-none focus:border-white placeholder-gray-500"
               />
               <input
                 type="tel"
                 placeholder="Phone Number"
-                className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black placeholder-gray-400"
+                required
+                value={contactForm.phone}
+                onChange={(e) => setContactForm({...contactForm, phone: e.target.value})}
+                className="bg-white border border-gray-400 text-black px-4 py-3 rounded focus:outline-none focus:border-white placeholder-gray-500"
               />
-              <select className="bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black">
+              <select
+                value={contactForm.service}
+                onChange={(e) => setContactForm({...contactForm, service: e.target.value})}
+                className="bg-white border border-gray-400 text-black px-4 py-3 rounded focus:outline-none focus:border-white"
+              >
                 <option value="">Select a Service</option>
-                <option value="airport">Airport Transfer</option>
-                <option value="corporate">Corporate Service</option>
-                <option value="hourly">Hourly Service</option>
-                <option value="event">Event Transportation</option>
+                <option value="Airport Transfer">Airport Transfer</option>
+                <option value="Corporate Service">Corporate Service</option>
+                <option value="Hourly Service">Hourly Service</option>
+                <option value="Event Transportation">Event Transportation</option>
               </select>
             </div>
             <textarea
               placeholder="Your Message"
               rows={4}
-              className="w-full mt-6 bg-white border border-gray-300 text-black px-4 py-3 rounded focus:outline-none focus:border-black placeholder-gray-400"
+              required
+              value={contactForm.message}
+              onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
+              className="w-full mt-6 bg-white border border-gray-400 text-black px-4 py-3 rounded focus:outline-none focus:border-white placeholder-gray-500"
             />
-            <button className="w-full mt-6 bg-black text-white px-6 py-4 rounded font-bold text-lg hover:bg-gray-800 transition-colors">
-              SEND MESSAGE
+            {submitMessage && (
+              <div className={`mt-4 p-4 rounded ${submitMessage.includes('successfully') ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                {submitMessage}
+              </div>
+            )}
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full mt-6 bg-black text-white px-6 py-4 rounded font-bold text-lg hover:bg-gray-800 transition-colors disabled:bg-gray-600 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}
             </button>
-          </div>
+          </form>
           <div className="text-center mt-8">
-            <a href="tel:+14045138803" className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded font-bold text-lg hover:bg-gray-800 transition-colors">
+            <a href="tel:+14045138803" className="inline-flex items-center gap-2 bg-transparent border-2 border-black text-black px-8 py-4 rounded font-bold text-lg hover:bg-black hover:text-white transition-colors">
               <PhoneIcon className="h-6 w-6" />
               CALL NOW
             </a>
@@ -695,6 +766,11 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <Script
+        src="https://book.mylimobiz.com/v4/widgets/widget-loader.js"
+        strategy="lazyOnload"
+      />
     </div>
   );
 }
