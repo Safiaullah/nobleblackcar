@@ -16,6 +16,15 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Script from "next/script";
+import StructuredData from "@/components/StructuredData";
+
+interface VehicleData {
+  name: string;
+  description: string;
+  image: string;
+  rotated: boolean;
+  scale?: number;
+}
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -100,7 +109,7 @@ export default function Home() {
     }
   };
 
-  const fleetData = {
+  const fleetData: Record<string, VehicleData[]> = {
     "Business Sedan": [
       {
         name: "Mercedes-Benz E-Class",
@@ -221,6 +230,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      {/* SEO: Schema.org Structured Data */}
+      <StructuredData />
+
       <style jsx global>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
@@ -251,7 +263,7 @@ export default function Home() {
             {/* Left Side - Company Name & Menu Items */}
             <div className="flex items-center gap-8">
               <div className="flex items-center">
-                <h1 className="text-2xl font-bold text-white">Noble Black Car</h1>
+                <span className="text-2xl font-bold text-white">Noble Black Car</span>
                 <span className="ml-3 text-xs text-gray-400">EST. 2015</span>
               </div>
 
@@ -272,12 +284,15 @@ export default function Home() {
                       onMouseEnter={() => setOpenDropdown('services-main')}
                       onMouseLeave={() => setOpenDropdown(null)}
                     >
-                      <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Private Airport Car Service</a>
-                      <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">NYC Corporate Shuttle Service</a>
-                      <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">NYC Executive Car Service</a>
-                      <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">NYC Private Sightseeing Tours</a>
-                      <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Point-to-Point Transportation</a>
-                      <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Cruise Terminal Car Service</a>
+                      <a href="/services/airport-transfer" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Airport Transfer Service</a>
+                      <a href="/services/corporate-shuttle" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Corporate Shuttle Service</a>
+                      <a href="/services/executive-car-service" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Executive Car Service</a>
+                      <a href="/services/wedding" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Wedding Transportation</a>
+                      <div className="border-t border-gray-700 my-2"></div>
+                      <div className="px-4 py-1 text-xs text-gray-500 font-semibold">AIRPORTS</div>
+                      <a href="/airports/jfk" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">JFK Airport</a>
+                      <a href="/airports/laguardia" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">LaGuardia Airport</a>
+                      <a href="/airports/newark" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Newark Airport</a>
                     </div>
                   )}
                 </div>
@@ -297,10 +312,10 @@ export default function Home() {
                       onMouseEnter={() => setOpenDropdown('business-main')}
                       onMouseLeave={() => setOpenDropdown(null)}
                     >
-                      <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Corporate Services</a>
-                      <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Executive Transportation</a>
-                      <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Business Meetings</a>
-                      <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Corporate Events</a>
+                      <a href="/services/corporate-shuttle" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Corporate Shuttle Service</a>
+                      <a href="/services/executive-car-service" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Executive Car Service</a>
+                      <a href="/services/airport-transfer" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Business Airport Transfer</a>
+                      <a href="#contact" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Corporate Events</a>
                     </div>
                   )}
                 </div>
@@ -320,10 +335,10 @@ export default function Home() {
                       onMouseEnter={() => setOpenDropdown('events-main')}
                       onMouseLeave={() => setOpenDropdown(null)}
                     >
-                      <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Sporting Event Transportation</a>
-                      <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Wedding Transportation</a>
-                      <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Wine Tour Transportation</a>
-                      <a href="#services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Special Events</a>
+                      <a href="/services/wedding" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Wedding Transportation</a>
+                      <a href="#contact" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Sporting Event Transportation</a>
+                      <a href="#contact" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Wine Tour Transportation</a>
+                      <a href="#contact" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors">Special Events</a>
                     </div>
                   )}
                 </div>
@@ -413,38 +428,49 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Video Section */}
-      <section className="relative w-full h-[600px] overflow-hidden">
+      {/* Hero Section with Video Background */}
+      <section className="relative w-full h-[600px] overflow-hidden bg-black" aria-label="Brooklyn Bridge NYC background video">
+        {/* Video Background */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          preload="metadata"
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
+          aria-label="NYC skyline with Brooklyn Bridge - Noble Black Car Service coverage area"
         >
           <source src="/videos/brooklyn bridge.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
-      </section>
 
-      {/* Hero Section */}
-      <section className="relative bg-black py-12 overflow-hidden min-h-[400px]">
-        {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-              Providing Premium
+        {/* Subtle dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+
+        {/* Hero Content Overlay */}
+        <div className="relative h-full flex items-center justify-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-4 leading-tight drop-shadow-2xl">
+              Premium NYC Black Car Service
               <br />
-              <span className="text-gray-200">Experience</span>
-            </h2>
-            <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto italic">
-              It's Not Just The Ride, It's The Experience!
+              <span className="text-4xl lg:text-6xl text-gray-100">Luxury Airport Transportation</span>
+              <br />
+              <span className="text-4xl lg:text-6xl text-gray-100">Since 2015</span>
+            </h1>
+            <p className="text-2xl lg:text-3xl text-white mb-10 max-w-4xl mx-auto italic font-light drop-shadow-lg">
+              It&apos;s Not Just The Ride, It&apos;s The Experience!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="#contact" className="bg-white text-black px-8 py-4 rounded font-bold text-lg hover:bg-gray-200 transition-colors">
+              <a
+                href="#contact"
+                className="bg-white text-black px-10 py-4 rounded-md font-bold text-lg hover:bg-gray-200 transition-all transform hover:scale-105 shadow-2xl min-w-[200px]"
+              >
                 RESERVE NOW
               </a>
-              <a href="tel:+14045138803" className="flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-black transition-colors">
+              <a
+                href="tel:+14045138803"
+                className="flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-white hover:text-black transition-all transform hover:scale-105 shadow-2xl min-w-[200px]"
+              >
                 <PhoneIcon className="h-6 w-6" />
                 CALL NOW
               </a>
@@ -636,8 +662,10 @@ export default function Home() {
                   <div className="bg-white p-6 flex items-center justify-center h-[220px] overflow-hidden">
                     <img
                       src={vehicle.image}
-                      alt={vehicle.name}
+                      alt={`${vehicle.name} - ${vehicle.description} - ${activeCategory} - Noble Black Car Service NYC`}
+                      title={`${vehicle.name} luxury black car service in NYC`}
                       className="w-full h-full object-contain transition-transform duration-300 hover:scale-110"
+                      loading="lazy"
                       style={{
                         objectFit: 'contain',
                         transform: `scaleX(${vehicle.rotated ? -1 : 1}) ${vehicle.scale ? `scale(${vehicle.scale})` : 'scale(1)'}`
