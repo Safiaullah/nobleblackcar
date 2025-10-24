@@ -907,7 +907,7 @@ export default function Home() {
 
       {/* Why Choose Us */}
       <section className="pt-20 pb-10 bg-black relative bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/images/why-choose-us-bg.jpg)'}}>
-        <div className="absolute inset-0 bg-black/90"></div>
+        <div className="absolute inset-0 bg-black/70"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">
             Why Noble Black Car is the Best Choice for Your Transfer
