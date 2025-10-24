@@ -28,6 +28,9 @@ interface VehicleData {
 }
 
 export default function Home() {
+  const [currentVideo, setCurrentVideo] = useState(0);
+  const videos = ['/videos/hero-video.mp4', '/videos/hero-video-2.mp4'];
+
   const [formData, setFormData] = useState({
     pickupLocation: '',
     dropoffLocation: '',
@@ -471,15 +474,16 @@ export default function Home() {
       <section className="relative w-full min-h-screen h-[100vh] overflow-hidden bg-black" aria-label="Brooklyn Bridge NYC background video">
         {/* Video Background */}
         <video
+          key={currentVideo}
           autoPlay
-          loop
           muted
           playsInline
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
           aria-label="NYC skyline with Brooklyn Bridge - Noble Black Car Service coverage area"
+          onEnded={() => setCurrentVideo((prev) => (prev + 1) % videos.length)}
         >
-          <source src="/videos/hero-video.mp4" type="video/mp4" />
+          <source src={videos[currentVideo]} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
