@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large video files
+public/videos/*.mp4
+public/videos/*.mov
+
+# Ahrefs reports
+ahrefs-report*/
+public/images/*.csv
+public/videos/*.csv
+public/images/*.zip
+public/videos/*.zip
