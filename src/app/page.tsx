@@ -508,10 +508,10 @@ export default function Home() {
         ))}
 
         {/* Subtle dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 z-20"></div>
 
         {/* Hero Content Overlay */}
-        <div className="relative h-full flex items-center justify-center pb-32">
+        <div className="relative h-full flex items-center justify-center pb-32 z-30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
               Premium NYC Black Car Service
