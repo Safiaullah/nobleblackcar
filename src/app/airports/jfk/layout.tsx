@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JFK Airport Car Service | Black Car to JFK NYC | Noble Black Car",
-  description: "Premium JFK airport car service to all 8 terminals. Professional chauffeurs, flight tracking, meet & greet. Flat rates from $85 to Manhattan. Book 24/7.",
+  title: "JFK Airport Car Service | Black Car to JFK | Noble",
+  description: "Premium JFK airport car service to all 8 terminals. Professional chauffeurs, flight tracking, meet & greet service. Competitive flat rates to Manhattan. Book 24/7.",
   keywords: [
     "jfk black car service",
     "jfk airport car service",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "JFK Airport Car Service | Professional Black Car to JFK | Noble",
-    description: "Premium car service to JFK Airport. All 8 terminals covered. Flight tracking, meet & greet, flat rates from $85. Available 24/7.",
+    description: "Premium car service to JFK Airport. All 8 terminals covered. Flight tracking, meet & greet, competitive flat rates. Available 24/7.",
     url: "https://nobleblackcarservice.com/airports/jfk",
     type: "website",
     images: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "JFK Airport Car Service | Black Car to JFK NYC",
-    description: "Professional JFK airport car service. All terminals, flight tracking, meet & greet. From $85. Book 24/7.",
+    description: "Professional JFK airport car service. All terminals, flight tracking, meet & greet service. Competitive flat rates. Book 24/7.",
     images: ["/images/mercedes-s-class.png"],
   },
   alternates: {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Wedding Transportation NYC | Luxury Car Service | Noble",
-  description: "NYC wedding transportation. Bride & groom getaway cars, bridal party shuttles, guest transport. S-Class fleet, red carpet service. Packages from $450.",
+  description: "NYC wedding transportation. Bride & groom getaway cars, bridal party shuttles, guest transport. S-Class fleet, red carpet service. Custom packages available.",
   keywords: [
     "wedding transportation nyc",
     "wedding car service nyc",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Wedding Transportation NYC | Luxury Wedding Car Service | Noble",
-    description: "Elegant wedding transportation in NYC. Bride & groom getaway cars, bridal party shuttles, guest transportation. Red carpet service, champagne. Packages from $450.",
+    description: "Elegant wedding transportation in NYC. Bride & groom getaway cars, bridal party shuttles, guest transportation. Red carpet service, champagne. Custom packages available.",
     url: "https://nobleblackcarservice.com/services/wedding",
     type: "website",
     images: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Wedding Transportation NYC | Luxury Wedding Car Service",
-    description: "Elegant wedding transportation. Bride & groom getaway cars, bridal party shuttles. Red carpet service, champagne. Packages from $450.",
+    description: "Elegant wedding transportation. Bride & groom getaway cars, bridal party shuttles. Red carpet service, champagne. Custom packages available.",
     images: ["/images/mercedes-s-class.png"],
   },
   alternates: {
