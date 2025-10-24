@@ -29,7 +29,7 @@ interface VehicleData {
 
 export default function Home() {
   const [currentVideo, setCurrentVideo] = useState(0);
-  const videos = ['/videos/hero-video.mp4', '/videos/hero-video-2.mp4'];
+  const videos = ['/videos/hero-video.mp4', '/videos/hero-video-3.mp4', '/videos/hero-video-2.mp4'];
 
   const [formData, setFormData] = useState({
     pickupLocation: '',
