@@ -479,7 +479,7 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover"
           aria-label="NYC skyline with Brooklyn Bridge - Noble Black Car Service coverage area"
         >
-          <source src="/videos/brooklyn bridge.mp4" type="video/mp4" />
+          <source src="/videos/hero-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 

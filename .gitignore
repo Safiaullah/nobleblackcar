@@ -40,9 +40,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Large video files
+# Large video files (but allow the hero video)
 public/videos/*.mp4
 public/videos/*.mov
+!public/videos/hero-video.mp4
 
 # Ahrefs reports
 ahrefs-report*/
