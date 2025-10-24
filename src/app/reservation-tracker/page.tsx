@@ -71,7 +71,7 @@ export default function ReservationTrackerPage() {
         <div className="bg-black text-white p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Questions About Your Reservation?</h2>
           <div className="flex gap-4 justify-center">
-            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call</a>
             <Link href="/contact" className="border-2 border-white px-6 py-3 font-semibold">Contact Us</Link>
           </div>
         </div>

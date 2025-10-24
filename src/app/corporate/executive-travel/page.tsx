@@ -65,7 +65,7 @@ export default function ExecutiveTravelPage() {
           <h2 className="text-3xl font-bold mb-4">Executive Travel Booking</h2>
           <p className="text-lg mb-6">First-class service for your C-suite and VIP guests</p>
           <div className="flex gap-4">
-            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call</a>
             <Link href="/services/executive-car-service" className="border-2 border-white px-6 py-3 font-semibold">Learn More</Link>
           </div>
         </div>

@@ -180,7 +180,7 @@ export default function PreBookJFKTransferPage() {
           <h2 className="text-3xl font-bold mb-4">Pre-Book Your JFK Transfer Now</h2>
           <p className="text-lg mb-6">Lock in flat-rate pricing, guarantee your pickup, eliminate stress</p>
           <div className="flex gap-4">
-            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call</a>
             <a href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white px-6 py-3 font-semibold">Book JFK Transfer</a>
           </div>
         </section>

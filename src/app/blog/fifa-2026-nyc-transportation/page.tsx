@@ -147,7 +147,7 @@ export default function FIFA2026TransportationPage() {
           <h2 className="text-3xl font-bold mb-4">Reserve FIFA 2026 Transportation NOW</h2>
           <p className="text-lg mb-6">Lock in today's rates. Guarantee your vehicle. Avoid surge pricing.</p>
           <div className="flex gap-4">
-            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call</a>
             <a href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white px-6 py-3 font-semibold">Book FIFA Package</a>
           </div>
           <p className="text-sm mt-4">Mention "FIFA 2026" for priority booking</p>

@@ -360,7 +360,7 @@ export default function TeterboroAirportPage() {
                     href="tel:+14045138803"
                     className="bg-white text-black px-8 py-3 rounded font-bold hover:bg-gray-200 transition-colors"
                   >
-                    Call (404) 513-8803
+                    Call
                   </a>
                   <a
                     href="https://book.mylimobiz.com/v4/nobleblackcar"

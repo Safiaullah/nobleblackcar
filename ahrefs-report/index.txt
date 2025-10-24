@@ -1,0 +1,12 @@
+Error-404_page-links.csv
+Error-404_page.csv
+Error-4XX_page-links.csv
+Error-4XX_page.csv
+Error-4XX_page_in_sitemap.csv
+Error-indexable-Orphan_page_(has_no_incoming_internal_links).csv
+Notice-HTTP_to_HTTPS_redirect.csv
+Notice-Pages_to_submit_to_IndexNow.csv
+Notice-Redirected_page_has_no_incoming_internal_links.csv
+Notice-indexable-Page_and_SERP_titles_do_not_match.csv
+Warning-3XX_redirect.csv
+Warning-indexable-Title_too_long.csv

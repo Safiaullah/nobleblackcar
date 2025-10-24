@@ -124,7 +124,7 @@ export default function CoverageAreaPage() {
         <div className="bg-white p-6 border border-gray-200 mb-12">
           <p className="text-gray-700 mb-4">If your destination isn&apos;t listed, contact us! We can arrange custom transportation to most Northeast destinations. For destinations outside the tri-state area, we may be able to coordinate service with our partner network.</p>
           <div className="flex gap-4">
-            <a href="tel:+14045138803" className="bg-black text-white px-6 py-3 font-semibold">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-black text-white px-6 py-3 font-semibold">Call</a>
             <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-black px-6 py-3 font-semibold">Request Quote</Link>
           </div>
         </div>

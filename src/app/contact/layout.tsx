@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact Noble Black Car Service NYC - 24/7 Reservations',
-  description: 'Contact Noble Black Car Service for reservations, questions, or corporate accounts. Available 24/7. Call (404) 513-8803 or email for immediate assistance.',
+  description: 'Contact Noble Black Car Service for reservations, questions, or corporate accounts. Available 24/7. Call or email for immediate assistance.',
   keywords: 'contact black car service NYC, Noble reservations, NYC limo contact, car service phone number',
   openGraph: {
     title: "Contact Noble Black Car Service - 24/7 Reservations",

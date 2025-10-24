@@ -129,7 +129,7 @@ export default function PartnerWithUsPage() {
           <h2 className="text-3xl font-bold mb-4">Start a Partnership Today</h2>
           <p className="text-lg mb-6">Contact us to discuss how we can work together</p>
           <div className="flex gap-4 justify-center">
-            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call</a>
             <Link href="/contact" className="border-2 border-white px-6 py-3 font-semibold">Email Us</Link>
           </div>
         </div>

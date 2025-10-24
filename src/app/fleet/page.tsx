@@ -18,7 +18,7 @@ export default function FleetPage() {
             href="tel:+14045138803"
             className="inline-block bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Call (404) 513-8803
+            Call
           </a>
         </div>
       </section>
@@ -424,7 +424,7 @@ export default function FleetPage() {
               href="tel:+14045138803"
               className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Call (404) 513-8803
+              Call
             </a>
             <Link
               href="https://book.mylimobiz.com/v4/nobleblackcar"

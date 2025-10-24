@@ -101,7 +101,7 @@ export default function TestimonialsPage() {
           <h2 className="text-4xl font-bold mb-6">Experience Noble Service Yourself</h2>
           <p className="text-xl mb-8 text-gray-300">Join hundreds of satisfied clients who trust Noble</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors">Call</a>
             <a href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-black transition-colors">Book Online</a>
           </div>
         </div>

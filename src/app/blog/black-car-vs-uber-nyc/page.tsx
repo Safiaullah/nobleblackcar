@@ -129,7 +129,7 @@ export default function BlackCarVsUberPage() {
             <h3 className="text-2xl font-bold mb-4">Experience the Noble Difference</h3>
             <p className="text-gray-300 mb-6">Professional black car service with flat-rate pricing, guaranteed availability, and luxury vehicles. No surge pricing, no uncertainty.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 text-center font-semibold hover:bg-gray-100 transition-colors">Call (404) 513-8803</a>
+              <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 text-center font-semibold hover:bg-gray-100 transition-colors">Call</a>
               <a href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white text-white px-6 py-3 text-center font-semibold hover:bg-white hover:text-black transition-colors">Book Online</a>
             </div>
           </div>

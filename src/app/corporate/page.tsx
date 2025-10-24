@@ -9,7 +9,7 @@ export default function CorporatePage() {
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">Corporate Car Service</h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8">Trusted transportation solutions for NYC businesses</p>
-          <a href="tel:+14045138803" className="inline-block bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors">Call (404) 513-8803</a>
+          <a href="tel:+14045138803" className="inline-block bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors">Call</a>
         </div>
       </section>
 
@@ -123,7 +123,7 @@ export default function CorporatePage() {
                 <div className="text-2xl font-bold text-black mr-4">1</div>
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-black">Contact Us</h3>
-                  <p className="text-gray-700">Call (404) 513-8803 or email to discuss your company&apos;s transportation needs. We&apos;ll assess volume, typical routes, and special requirements.</p>
+                  <p className="text-gray-700">Call or email to discuss your company&apos;s transportation needs. We&apos;ll assess volume, typical routes, and special requirements.</p>
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function CorporatePage() {
           <h2 className="text-4xl font-bold mb-6">Ready to Set Up Your Corporate Account?</h2>
           <p className="text-xl mb-8 text-gray-300">Join hundreds of NYC companies who trust Noble for their transportation needs</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors">Call</a>
             <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-black transition-colors">Request Quote</Link>
           </div>
         </div>

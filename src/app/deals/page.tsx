@@ -174,7 +174,7 @@ export default function DealsPage() {
           <h2 className="text-3xl font-bold mb-6 text-black">Ready to Save?</h2>
           <p className="text-xl text-gray-700 mb-8">Contact us to learn more about our current promotions and find the best deal for your transportation needs.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+14045138803" className="bg-black text-white px-8 py-4 text-lg font-semibold hover:bg-gray-800 transition-colors">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-black text-white px-8 py-4 text-lg font-semibold hover:bg-gray-800 transition-colors">Call</a>
             <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-black text-black px-8 py-4 text-lg font-semibold hover:bg-black hover:text-white transition-colors">Get Free Quote</Link>
           </div>
         </div>

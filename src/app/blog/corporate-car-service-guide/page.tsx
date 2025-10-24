@@ -95,7 +95,7 @@ export default function CorporateGuide() {
 
           <div className="bg-black text-white p-8">
             <h3 className="text-2xl font-bold mb-4">Start Your Corporate Account</h3>
-            <p className="text-gray-300 mb-4">Noble serves 500+ corporations in NYC. Setup takes 24 hours. Call (404) 513-8803 or visit our corporate page.</p>
+            <p className="text-gray-300 mb-4">Noble serves 500+ corporations in NYC. Setup takes 24 hours. Call or visit our corporate page.</p>
             <Link href="/corporate" className="text-white underline">Set up corporate account →</Link>
           </div>
         </div>

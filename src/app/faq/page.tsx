@@ -48,7 +48,7 @@ export default function FAQPage() {
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4 text-gray-700">
                 <li><strong>Online:</strong> Visit our website and use the booking form on the homepage</li>
-                <li><strong>Phone:</strong> Call (404) 513-8803 to speak with our dispatch team</li>
+                <li><strong>Phone:</strong> Call to speak with our dispatch team</li>
                 <li><strong>Email:</strong> Send your trip details to info@nobleblackcarservice.com</li>
               </ul>
               <p className="text-gray-700 mt-3">
@@ -288,7 +288,7 @@ export default function FAQPage() {
                 <li><strong>Luxury impression:</strong> First Class options (S-Class, Escalade ESV)</li>
               </ul>
               <p className="text-gray-700 mt-3">
-                Not sure? Call (404) 513-8803 and we'll recommend the best vehicle for your needs.
+                Not sure? Call and we'll recommend the best vehicle for your needs.
               </p>
             </div>
 
@@ -341,7 +341,7 @@ export default function FAQPage() {
             <div>
               <h3 className="text-xl font-bold mb-3 text-black">Can I modify my reservation?</h3>
               <p className="text-gray-700">
-                Yes, you can modify your reservation at no charge up to 2 hours before scheduled pickup. Changes include pickup/drop-off locations, time adjustments, vehicle upgrades, or passenger count. Call (404) 513-8803 or email info@nobleblackcarservice.com with your reservation number and requested changes. Last-minute changes (within 2 hours) are accommodated based on availability and may incur additional fees.
+                Yes, you can modify your reservation at no charge up to 2 hours before scheduled pickup. Changes include pickup/drop-off locations, time adjustments, vehicle upgrades, or passenger count. Call or email info@nobleblackcarservice.com with your reservation number and requested changes. Last-minute changes (within 2 hours) are accommodated based on availability and may incur additional fees.
               </p>
             </div>
 
@@ -504,7 +504,7 @@ export default function FAQPage() {
               href="tel:+14045138803"
               className="bg-black text-white px-8 py-4 text-lg font-semibold hover:bg-gray-800 transition-colors"
             >
-              Call (404) 513-8803
+              Call
             </a>
             <a
               href="https://book.mylimobiz.com/v4/nobleblackcar"

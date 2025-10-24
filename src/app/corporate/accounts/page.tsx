@@ -94,7 +94,7 @@ export default function CorporateAccountsPage() {
           <h2 className="text-3xl font-bold mb-4">Set Up Your Corporate Account</h2>
           <p className="text-lg mb-6">Join 500+ NYC companies using Noble for business transportation</p>
           <div className="flex gap-4">
-            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call</a>
             <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white px-6 py-3 font-semibold">Request Account Info</Link>
           </div>
         </div>

@@ -227,7 +227,7 @@ export default function ContactPage() {
           <div className="space-y-6">
             <div className="bg-white p-6 border border-gray-200">
               <h3 className="font-bold text-lg mb-2 text-black">How far in advance should I book?</h3>
-              <p className="text-gray-700">We recommend booking 24-48 hours in advance for guaranteed availability. However, we often accommodate same-day requests. Call (404) 513-8803 for immediate booking.</p>
+              <p className="text-gray-700">We recommend booking 24-48 hours in advance for guaranteed availability. However, we often accommodate same-day requests. Call for immediate booking.</p>
             </div>
             <div className="bg-white p-6 border border-gray-200">
               <h3 className="font-bold text-lg mb-2 text-black">Do you offer 24/7 service?</h3>

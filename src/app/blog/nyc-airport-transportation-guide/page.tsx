@@ -195,7 +195,7 @@ export default function AirportTransportationGuidePage() {
             <h3 className="text-2xl font-bold mb-4">Noble Airport Service</h3>
             <p className="text-gray-300 mb-6">Professional airport transportation with flight tracking, 60-minute wait time, and flat-rate pricing. Serving JFK, LaGuardia, Newark, Teterboro, and Westchester airports 24/7.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 text-center font-semibold hover:bg-gray-100 transition-colors">Call (404) 513-8803</a>
+              <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 text-center font-semibold hover:bg-gray-100 transition-colors">Call</a>
               <a href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white text-white px-6 py-3 text-center font-semibold hover:bg-white hover:text-black transition-colors">Book Airport Service</a>
             </div>
           </div>

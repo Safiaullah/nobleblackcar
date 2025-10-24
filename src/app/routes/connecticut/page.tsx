@@ -45,7 +45,7 @@ export default function ConnecticutPage() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-200 transition-colors">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-200 transition-colors">Call</a>
             <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-black transition-colors">Get Quote</Link>
           </div>
         </div>

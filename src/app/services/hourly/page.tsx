@@ -178,7 +178,7 @@ export default function HourlyPage() {
 
           <h3 className="text-2xl font-bold mt-8 mb-4 text-black">How to Book</h3>
           <p className="text-gray-700 mb-6">
-            Call (404) 513-8803 or use our online quote form. Provide your pickup time, estimated duration (minimum 3 hours), general itinerary, and preferred vehicle type. We recommend booking 24-48 hours in advance, especially for peak times and weekends.
+            Call or use our online quote form. Provide your pickup time, estimated duration (minimum 3 hours), general itinerary, and preferred vehicle type. We recommend booking 24-48 hours in advance, especially for peak times and weekends.
           </p>
 
           <h3 className="text-2xl font-bold mt-8 mb-4 text-black">Extending Your Booking</h3>
@@ -239,7 +239,7 @@ export default function HourlyPage() {
           <h2 className="text-4xl font-bold mb-6">Book Hourly Service</h2>
           <p className="text-xl mb-8 text-gray-300">3-hour minimum, unlimited stops</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors">Call</a>
             <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-black transition-colors">Get Quote Online</Link>
           </div>
         </div>

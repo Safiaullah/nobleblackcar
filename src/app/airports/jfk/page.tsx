@@ -456,7 +456,7 @@ export default function JFKAirportPage() {
               className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded font-bold text-lg hover:bg-gray-200 transition-colors"
             >
               <PhoneIcon className="h-6 w-6" />
-              Call (404) 513-8803
+              Call
             </a>
             <p className="text-gray-500 mt-4 text-sm">24/7 JFK airport service available</p>
           </div>

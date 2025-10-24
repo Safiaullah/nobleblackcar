@@ -30,7 +30,7 @@ export default function CorporateEventsPage() {
         <div className="bg-black text-white p-8">
           <h2 className="text-2xl font-bold mb-4">Plan Your Corporate Event Transport</h2>
           <div className="flex gap-4">
-            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call</a>
             <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white px-6 py-3 font-semibold">Request Group Quote</Link>
           </div>
         </div>

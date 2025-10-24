@@ -163,7 +163,7 @@ export default function PointToPointPage() {
             <li className="flex items-start">
               <strong className="mr-3 text-black">1.</strong>
               <div>
-                <strong className="text-black">Request Quote:</strong> Call (404) 513-8803, email, or use our online quote form. Provide pickup address, destination, date, and time.
+                <strong className="text-black">Request Quote:</strong> Call, email, or use our online quote form. Provide pickup address, destination, date, and time.
               </div>
             </li>
             <li className="flex items-start">
@@ -222,7 +222,7 @@ export default function PointToPointPage() {
           <h2 className="text-4xl font-bold mb-6">Book Your Point-to-Point Service</h2>
           <p className="text-xl mb-8 text-gray-300">Get a free quote in minutes</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors">Call</a>
             <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-black transition-colors">Get Quote Online</Link>
           </div>
         </div>

@@ -120,7 +120,7 @@ export default function BlogPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-black">Need Transportation Advice?</h2>
           <p className="text-xl text-gray-700 mb-8">Our team is here to help with your NYC travel questions</p>
-          <a href="tel:+14045138803" className="inline-block bg-black text-white px-8 py-4 text-lg font-semibold hover:bg-gray-800 transition-colors">Call (404) 513-8803</a>
+          <a href="tel:+14045138803" className="inline-block bg-black text-white px-8 py-4 text-lg font-semibold hover:bg-gray-800 transition-colors">Call</a>
         </div>
       </section>
     </main>

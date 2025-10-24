@@ -34,7 +34,7 @@ export default function HamptonsRoutePage() {
               Book Hamptons Trip
             </a>
             <a href="tel:+14045138803" className="border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-black transition-colors">
-              Call (404) 513-8803
+              Call
             </a>
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function HamptonsRoutePage() {
               <p className="text-lg mb-6">Reserve your luxury transportation to the Hamptons today</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:+14045138803" className="bg-white text-black px-8 py-3 rounded font-bold hover:bg-gray-200 transition-colors">
-                  Call (404) 513-8803
+                  Call
                 </a>
                 <a href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white text-white px-8 py-3 rounded font-bold hover:bg-white hover:text-black transition-colors">
                   Book Online

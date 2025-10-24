@@ -118,7 +118,7 @@ export default function MedicalTransportationPage() {
             <li>• Round-trip with wait time</li>
             <li>• Recurring weekly appointments</li>
           </ul>
-          <p className="text-sm text-gray-600 mt-4"><strong>Call (404) 513-8803 for exact quote based on your locations and needs.</strong> We offer discounted rates for regularly scheduled appointments.</p>
+          <p className="text-sm text-gray-600 mt-4"><strong>Call for exact quote based on your locations and needs.</strong> We offer discounted rates for regularly scheduled appointments.</p>
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-black">How to Book Medical Transportation</h2>
@@ -215,7 +215,7 @@ export default function MedicalTransportationPage() {
           <h2 className="text-4xl font-bold mb-6">Book Medical Transportation</h2>
           <p className="text-xl mb-8 text-gray-300">Reliable, compassionate service for your healthcare needs</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors">Call</a>
             <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-black transition-colors">Request Quote</Link>
           </div>
         </div>

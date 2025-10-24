@@ -135,7 +135,7 @@ export default function SportingEventsPage() {
           <h3 className="text-2xl font-bold mb-6 text-black">Book Game Day Transportation</h3>
           <p className="text-gray-700 mb-6">Reserve early for popular games—Yankees playoff games, Giants home openers, and Rangers playoffs book quickly!</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+14045138803" className="bg-black text-white px-8 py-4 text-lg font-semibold hover:bg-gray-800">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-black text-white px-8 py-4 text-lg font-semibold hover:bg-gray-800">Call</a>
             <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-black px-8 py-4 text-lg font-semibold hover:bg-black hover:text-white">Get Quote</Link>
           </div>
         </div>

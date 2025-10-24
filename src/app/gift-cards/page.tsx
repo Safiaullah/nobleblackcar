@@ -104,7 +104,7 @@ export default function GiftCardsPage() {
           <h2 className="text-2xl font-bold mb-4">Purchase Gift Cards Today</h2>
           <p className="text-lg mb-6">Give the gift of luxury transportation</p>
           <div className="flex gap-4 justify-center">
-            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call</a>
             <Link href="/contact" className="border-2 border-white px-6 py-3 font-semibold">Email Us</Link>
           </div>
         </div>

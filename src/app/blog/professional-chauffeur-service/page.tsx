@@ -212,7 +212,7 @@ export default function ProfessionalChauffeurServicePage() {
           <h2 className="text-3xl font-bold mb-4">Experience Professional Chauffeur Service</h2>
           <p className="text-lg mb-6">Book your next ride with a trained, vetted, professional chauffeur</p>
           <div className="flex gap-4">
-            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call</a>
             <a href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white px-6 py-3 font-semibold">Request Quote</a>
           </div>
         </section>

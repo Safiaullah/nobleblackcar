@@ -70,7 +70,7 @@ export default function TeamPage() {
           <h2 className="text-3xl font-bold mb-4">Experience Our Team's Excellence</h2>
           <p className="text-lg mb-6">Book your next ride with Noble Black Car Service</p>
           <div className="flex gap-4 justify-center">
-            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call (404) 513-8803</a>
+            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 font-semibold">Call</a>
             <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white px-6 py-3 font-semibold">Get Quote</Link>
           </div>
         </div>

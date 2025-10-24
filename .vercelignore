@@ -1,0 +1,35 @@
+# Ignore large video files not used in production
+public/videos/519865_Two_Bridge_3840x2160.mov
+public/videos/272515.mp4
+public/videos/272513.mp4
+public/videos/272511.mp4
+public/videos/5796436-uhd_3840_2160_30fps.mp4
+public/videos/6462521_Drone Bridge Brooklyn Cityscape_By_Oprea_Maxim_Artlist_HD.mp4
+
+# Ignore Ahrefs reports and CSVs
+public/videos/*.zip
+public/videos/*.csv
+public/videos/nobleblackcarservice_*.zip
+
+# Ignore SEO documentation files (not needed in production)
+AIRPORT_TRANSFER_PAGE_COMPLETE.md
+SEO_AUDIT_REPORT.md
+SEO_AUDIT_SUMMARY.md
+SEO_IMPLEMENTATION_COMPLETE.md
+SEO_IMPLEMENTATION_ROADMAP.md
+TESTING_CHECKLIST.md
+sitemap.md
+CREATE_ALL_PAGES_PLAN.md
+GOOGLE_BUSINESS_PROFILE_SETUP.md
+GBP_*.md
+REVIEW_*.md
+SESSION_*.md
+TOP_*.md
+PAGES_BEING_CREATED.md
+GOOGLE_POSTS_TEMPLATES.md
+AHREFS_FIXES_SUMMARY.md
+
+# Ignore Ahrefs reports
+ahrefs-report
+ahrefs-report-*
+noble-black-car-service
