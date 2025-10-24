@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   PhoneIcon,
   ClockIcon,
@@ -30,6 +30,17 @@ interface VehicleData {
 export default function Home() {
   const [currentVideo, setCurrentVideo] = useState(0);
   const videos = ['/videos/hero-video.mp4', '/videos/hero-video-3.mp4', '/videos/hero-video-2.mp4'];
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  // Ensure next video is ready to play
+  useEffect(() => {
+    const currentVideoElement = videoRefs.current[currentVideo];
+    if (currentVideoElement) {
+      currentVideoElement.play().catch(() => {
+        // Auto-play might be blocked, but user interaction will trigger it
+      });
+    }
+  }, [currentVideo]);
 
   const [formData, setFormData] = useState({
     pickupLocation: '',
@@ -472,20 +483,29 @@ export default function Home() {
 
       {/* Hero Section with Video Background */}
       <section className="relative w-full min-h-screen h-[100vh] overflow-hidden bg-black" aria-label="Brooklyn Bridge NYC background video">
-        {/* Video Background */}
-        <video
-          key={currentVideo}
-          autoPlay
-          muted
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover"
-          aria-label="NYC skyline with Brooklyn Bridge - Noble Black Car Service coverage area"
-          onEnded={() => setCurrentVideo((prev) => (prev + 1) % videos.length)}
-        >
-          <source src={videos[currentVideo]} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        {/* Video Background - Render all videos and show current one */}
+        {videos.map((video, index) => (
+          <video
+            key={video}
+            ref={(el) => { videoRefs.current[index] = el; }}
+            autoPlay={index === currentVideo}
+            muted
+            playsInline
+            preload="auto"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              index === currentVideo ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            }`}
+            aria-label="NYC skyline with Brooklyn Bridge - Noble Black Car Service coverage area"
+            onEnded={() => {
+              if (index === currentVideo) {
+                setCurrentVideo((prev) => (prev + 1) % videos.length);
+              }
+            }}
+          >
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ))}
 
         {/* Subtle dark overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
