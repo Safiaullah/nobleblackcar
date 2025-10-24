@@ -29,14 +29,14 @@ export default function JFKAirportPage() {
   ];
 
   const neighborhoods = [
-    { name: "Midtown Manhattan", time: "45-60 min", distance: "17 miles", price: "$85" },
-    { name: "Lower Manhattan / Financial District", time: "50-70 min", distance: "19 miles", price: "$90" },
-    { name: "Upper East Side", time: "45-65 min", distance: "18 miles", price: "$85" },
-    { name: "Upper West Side", time: "50-70 min", distance: "19 miles", price: "$90" },
-    { name: "Brooklyn (Williamsburg)", time: "40-60 min", distance: "15 miles", price: "$80" },
-    { name: "Brooklyn (DUMBO)", time: "45-65 min", distance: "17 miles", price: "$85" },
-    { name: "Long Island City", time: "25-40 min", distance: "10 miles", price: "$70" },
-    { name: "Astoria", time: "30-45 min", distance: "12 miles", price: "$75" },
+    { name: "Midtown Manhattan", time: "45-60 min", distance: "17 miles" },
+    { name: "Lower Manhattan / Financial District", time: "50-70 min", distance: "19 miles" },
+    { name: "Upper East Side", time: "45-65 min", distance: "18 miles" },
+    { name: "Upper West Side", time: "50-70 min", distance: "19 miles" },
+    { name: "Brooklyn (Williamsburg)", time: "40-60 min", distance: "15 miles" },
+    { name: "Brooklyn (DUMBO)", time: "45-65 min", distance: "17 miles" },
+    { name: "Long Island City", time: "25-40 min", distance: "10 miles" },
+    { name: "Astoria", time: "30-45 min", distance: "12 miles" },
   ];
 
   const fleet = [
@@ -45,7 +45,6 @@ export default function JFKAirportPage() {
       vehicles: "Mercedes E-Class, Cadillac CT6",
       passengers: "1-3 passengers",
       luggage: "3 large bags",
-      price: "$85",
       bestFor: "Solo travelers, couples"
     },
     {
@@ -53,7 +52,6 @@ export default function JFKAirportPage() {
       vehicles: "Mercedes S-Class, BMW 7 Series",
       passengers: "1-3 passengers",
       luggage: "3 large bags",
-      price: "$120",
       bestFor: "VIP service, executives"
     },
     {
@@ -61,7 +59,6 @@ export default function JFKAirportPage() {
       vehicles: "Suburban, Yukon, Navigator",
       passengers: "4-6 passengers",
       luggage: "6-8 large bags",
-      price: "$135",
       bestFor: "Families, groups"
     },
     {
@@ -69,7 +66,6 @@ export default function JFKAirportPage() {
       vehicles: "Cadillac Escalade ESV",
       passengers: "4-6 passengers",
       luggage: "8+ large bags",
-      price: "$195",
       bestFor: "Luxury group travel"
     }
   ];
@@ -97,7 +93,7 @@ export default function JFKAirportPage() {
     },
     {
       question: "How much does a car service from JFK to Manhattan cost?",
-      answer: "Our flat rates start at $85 for a business sedan to Midtown Manhattan. Prices vary by vehicle type and destination. Unlike taxis with meters or rideshares with surge pricing, you know your exact price upfront. All tolls and fees are included - no hidden charges."
+      answer: "We offer competitive flat-rate pricing for all JFK transfers. Prices vary by vehicle type and destination. Unlike taxis with meters or rideshares with surge pricing, you know your exact price upfront when you book. All tolls and fees are included - no hidden charges. Contact us or book online for a quote."
     },
     {
       question: "Do you provide JFK airport service 24/7?",
@@ -145,16 +141,7 @@ export default function JFKAirportPage() {
         "@type": "City",
         "name": "New York City"
       }
-    ],
-    "offers": {
-      "@type": "Offer",
-      "priceSpecification": {
-        "@type": "PriceSpecification",
-        "price": "85.00",
-        "priceCurrency": "USD",
-        "valueAddedTaxIncluded": true
-      }
-    }
+    ]
   };
 
   const faqSchema = {
@@ -212,52 +199,50 @@ export default function JFKAirportPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-gray-900 to-black py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-block bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
-              JFK AIRPORT (IATA: JFK)
+      <section className="relative bg-gradient-to-br from-blue-900 via-black to-black py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-block bg-blue-900 bg-opacity-30 border border-blue-700 rounded-full px-6 py-2 mb-6">
+            <p className="text-blue-300 text-sm font-semibold">JOHN F. KENNEDY INTERNATIONAL AIRPORT (JFK)</p>
+          </div>
+          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+            JFK Airport Car Service
+            <br />
+            <span className="text-gray-300">Professional Black Car Service to All 8 Terminals</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Premium car service to and from JFK Airport. Serving all 8 terminals with professional chauffeurs, flight tracking, and guaranteed on-time service.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition-colors flex items-center gap-2">
+              <PhoneIcon className="h-6 w-6" />
+              CALL NOW
+            </a>
+            <a href="#booking" className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition-colors">
+              RESERVE ONLINE
+            </a>
+          </div>
+
+          {/* Info boxes */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <div className="bg-black bg-opacity-30 border border-blue-800 rounded-lg p-6 text-center">
+              <div className="text-blue-400 text-3xl mb-3"><MapPinIcon className="h-10 w-10 mx-auto" /></div>
+              <h3 className="text-xl font-bold text-white mb-1">~17 Miles</h3>
+              <p className="text-gray-300 text-sm">from Midtown</p>
             </div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
-              JFK Airport Car Service
-              <br />
-              <span className="text-gray-300">Professional Black Car Service to JFK</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Premium car service to and from JFK Airport. Serving all 8 terminals with professional chauffeurs, flight tracking, and guaranteed on-time service. Starting at $85.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="#booking"
-                className="bg-white text-black px-8 py-4 rounded font-bold text-lg hover:bg-gray-200 transition-colors"
-              >
-                BOOK JFK TRANSFER
-              </a>
-              <a
-                href="tel:+14045138803"
-                className="flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-black transition-colors"
-              >
-                <PhoneIcon className="h-6 w-6" />
-                (404) 513-8803
-              </a>
+            <div className="bg-black bg-opacity-30 border border-blue-800 rounded-lg p-6 text-center">
+              <div className="text-blue-400 text-3xl mb-3"><ClockIcon className="h-10 w-10 mx-auto" /></div>
+              <h3 className="text-xl font-bold text-white mb-1">45-75 Min</h3>
+              <p className="text-gray-300 text-sm">Travel Time</p>
             </div>
-            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-              <div className="bg-black border border-gray-700 rounded-lg p-4">
-                <p className="text-gray-400">Distance</p>
-                <p className="text-white font-bold text-lg">~17 miles</p>
-              </div>
-              <div className="bg-black border border-gray-700 rounded-lg p-4">
-                <p className="text-gray-400">Travel Time</p>
-                <p className="text-white font-bold text-lg">45-75 min</p>
-              </div>
-              <div className="bg-black border border-gray-700 rounded-lg p-4">
-                <p className="text-gray-400">Starting Price</p>
-                <p className="text-white font-bold text-lg">$85</p>
-              </div>
-              <div className="bg-black border border-gray-700 rounded-lg p-4">
-                <p className="text-gray-400">Terminals</p>
-                <p className="text-white font-bold text-lg">All 8</p>
-              </div>
+            <div className="bg-black bg-opacity-30 border border-blue-800 rounded-lg p-6 text-center">
+              <div className="text-blue-400 text-3xl mb-3"><PhoneIcon className="h-10 w-10 mx-auto" /></div>
+              <h3 className="text-xl font-bold text-white mb-1">24/7 Service</h3>
+              <p className="text-gray-300 text-sm">Available Anytime</p>
+            </div>
+            <div className="bg-black bg-opacity-30 border border-blue-800 rounded-lg p-6 text-center">
+              <div className="text-blue-400 text-3xl mb-3"><BuildingOffice2Icon className="h-10 w-10 mx-auto" /></div>
+              <h3 className="text-xl font-bold text-white mb-1">All 8 Terminals</h3>
+              <p className="text-gray-300 text-sm">Full Coverage</p>
             </div>
           </div>
         </div>
@@ -293,8 +278,8 @@ export default function JFKAirportPage() {
               },
               {
                 icon: <CurrencyDollarIcon className="h-8 w-8" />,
-                title: "Flat Rate to Manhattan",
-                description: "Know your exact price before you book. No meters, no surge pricing, no surprises. All tolls included."
+                title: "Flat Rate Pricing",
+                description: "Know your exact price before you book. No meters, no surge pricing, no surprises. All tolls and fees included."
               },
               {
                 icon: <UserGroupIcon className="h-8 w-8" />,
@@ -341,14 +326,14 @@ export default function JFKAirportPage() {
         </div>
       </section>
 
-      {/* Pricing by Neighborhood */}
+      {/* Travel Times by Neighborhood */}
       <section className="py-20 bg-black border-y border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4 text-white">
-            JFK to Manhattan: Pricing & Travel Times
+            JFK to Manhattan: Distance & Travel Times
           </h2>
           <p className="text-center text-gray-400 mb-12 text-lg">
-            Flat rate pricing from JFK Airport to popular NYC neighborhoods
+            Approximate travel times from JFK Airport to popular NYC neighborhoods
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {neighborhoods.map((neighborhood, index) => (
@@ -364,13 +349,12 @@ export default function JFKAirportPage() {
                   <p className="text-gray-400">
                     <span className="text-gray-500">Time:</span> {neighborhood.time}
                   </p>
-                  <p className="text-2xl font-bold text-white mt-3">{neighborhood.price}</p>
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-500 mt-8 text-sm">
-            *Prices shown for Business Sedan. All tolls and fees included. No hidden charges.
+          <p className="text-center text-gray-400 mt-8">
+            <a href="#booking" className="text-white font-semibold hover:underline">Contact us for pricing</a> or book online for an instant quote
           </p>
         </div>
       </section>
@@ -392,17 +376,16 @@ export default function JFKAirportPage() {
               >
                 <h3 className="text-xl font-bold text-white mb-2">{vehicle.name}</h3>
                 <p className="text-sm text-gray-400 mb-4">{vehicle.vehicles}</p>
-                <div className="space-y-2 text-sm text-gray-300 mb-4 pb-4 border-b border-gray-700">
+                <div className="space-y-2 text-sm text-gray-300 mb-6">
                   <p><UserGroupIcon className="h-4 w-4 inline mr-2 text-gray-500" />{vehicle.passengers}</p>
                   <p><MapPinIcon className="h-4 w-4 inline mr-2 text-gray-500" />{vehicle.luggage}</p>
                   <p className="text-xs text-gray-500 mt-2">Best for: {vehicle.bestFor}</p>
                 </div>
-                <p className="text-3xl font-bold text-white mb-4">{vehicle.price}</p>
                 <a
                   href="#booking"
-                  className="inline-block w-full text-center bg-white text-black px-4 py-2 rounded font-semibold hover:bg-gray-200 transition-colors"
+                  className="inline-block w-full text-center bg-white text-black px-4 py-3 rounded font-semibold hover:bg-gray-200 transition-colors"
                 >
-                  Select Vehicle
+                  Get Quote
                 </a>
               </div>
             ))}
@@ -456,12 +439,12 @@ export default function JFKAirportPage() {
           <p className="text-center text-gray-400 mb-8 text-lg">
             Reserve your JFK car service now - instant confirmation
           </p>
-          <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 shadow-sm min-h-[600px]">
+          <div className="bg-white border border-gray-700 rounded-lg p-4 shadow-sm min-h-[600px]">
             <a
               href="https://book.mylimobiz.com/v4/nobleblackcar"
               data-ores-widget="website"
               data-ores-alias="nobleblackcar"
-              className="text-white"
+              className="text-black"
             >
               Online Reservations
             </a>

@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nobleblackcarservice.com'),
   title: {
     default: "NYC Black Car Service | Luxury Airport Transport | Noble",
-    template: "%s | Noble Black Car Service"
+    template: "%s | Noble"
   },
-  description: "Premium NYC black car service since 2015. Luxury airport transfers to JFK, LaGuardia & Newark. Corporate shuttles, executive transport. Book 24/7.",
+  description: "Premium NYC black car service. Luxury airport transfers to JFK, LaGuardia & Newark. Corporate shuttles, executive transport. Book 24/7.",
   keywords: [
     "nyc black car service",
     "black car service nyc",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://nobleblackcarservice.com",
     siteName: "Noble Black Car Service",
-    title: "NYC Black Car Service | Luxury Airport Transportation Since 2015",
+    title: "NYC Black Car Service | Luxury Airport Transportation",
     description: "Premium black car service in NYC. Professional airport transfers to JFK, LaGuardia & Newark. Corporate shuttles, executive transportation. Book 24/7.",
     images: [
       {
@@ -81,9 +81,6 @@ export const metadata: Metadata = {
     // google: 'your-google-verification-code',
     // yandex: 'your-yandex-verification-code',
     // bing: 'your-bing-verification-code',
-  },
-  alternates: {
-    canonical: "https://nobleblackcarservice.com",
   },
   category: "Transportation",
 };

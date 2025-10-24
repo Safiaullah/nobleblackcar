@@ -505,6 +505,72 @@ export default function CorporateShuttlePage() {
         </div>
       </footer>
 
+      {/* Structured Data */}
+      <Script
+        id="corporate-shuttle-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Corporate Shuttle Service",
+            "provider": {
+              "@type": "LimousineService",
+              "name": "Noble Black Car Service",
+              "image": "https://nobleblackcarservice.com/images/mercedes-s-class.png",
+              "telephone": "+1-404-513-8803",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "New York",
+                "addressRegion": "NY",
+                "addressCountry": "US"
+              }
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "New York City"
+              },
+              {
+                "@type": "City",
+                "name": "Manhattan"
+              }
+            ],
+            "description": "Corporate shuttle service for NYC businesses. Employee airport transfers, office transport, corporate events. Volume discounts, monthly billing, dedicated account management.",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Corporate Shuttle Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Airport Shuttle Service",
+                    "description": "Scheduled employee transportation to/from JFK, LGA, EWR for business travel"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Office-to-Office Transfers",
+                    "description": "Daily shuttles between office locations with flexible scheduling"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Corporate Event Transportation",
+                    "description": "Conference shuttles, team outings, company parties, and trade shows"
+                  }
+                }
+              ]
+            }
+          })
+        }}
+      />
+
       {/* LimoAnywhere Booking Widget */}
       <Script
         src="https://book.limoanywhere.com/v3.0/consumer/js/scripts.min.js?affiliateid=2236"

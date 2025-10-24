@@ -445,6 +445,72 @@ export default function ExecutiveCarServicePage() {
         </div>
       </footer>
 
+      {/* Structured Data */}
+      <Script
+        id="executive-car-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Executive Car Service",
+            "provider": {
+              "@type": "LimousineService",
+              "name": "Noble Black Car Service",
+              "image": "https://nobleblackcarservice.com/images/mercedes-s-class.png",
+              "telephone": "+1-404-513-8803",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "New York",
+                "addressRegion": "NY",
+                "addressCountry": "US"
+              }
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "New York City"
+              },
+              {
+                "@type": "City",
+                "name": "Manhattan"
+              }
+            ],
+            "description": "Premium executive car service for business leaders in NYC. Mercedes S-Class and BMW 7-Series fleet with professional chauffeurs trained in corporate protocol. Discretion, reliability, and white-glove service for C-suite executives and VIP clients.",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Executive Transportation Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "C-Suite Transportation",
+                    "description": "Discreet, professional transportation for CEOs, CFOs, board members, and senior executives"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Client Entertainment",
+                    "description": "Impress clients and partners with first-class transportation to dinners, events, and entertainment venues"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Business Roadshows",
+                    "description": "Multi-city investor roadshows, sales presentations, or partnership meetings"
+                  }
+                }
+              ]
+            }
+          })
+        }}
+      />
+
       {/* LimoAnywhere Booking Widget */}
       <Script
         src="https://book.limoanywhere.com/v3.0/consumer/js/scripts.min.js?affiliateid=2236"

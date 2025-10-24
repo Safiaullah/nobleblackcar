@@ -42,14 +42,14 @@ export default function LaGuardiaAirportPage() {
   ];
 
   const neighborhoods = [
-    { name: "Midtown Manhattan", time: "25-40 min", distance: "9 miles", price: "$70" },
-    { name: "Lower Manhattan", time: "30-50 min", distance: "11 miles", price: "$75" },
-    { name: "Upper East Side", time: "20-35 min", distance: "8 miles", price: "$65" },
-    { name: "Upper West Side", time: "25-40 min", distance: "9 miles", price: "$70" },
-    { name: "Brooklyn (Williamsburg)", time: "30-45 min", distance: "12 miles", price: "$75" },
-    { name: "Long Island City", time: "15-25 min", distance: "5 miles", price: "$60" },
-    { name: "Astoria", time: "10-20 min", distance: "3 miles", price: "$55" },
-    { name: "Flushing", time: "15-25 min", distance: "6 miles", price: "$60" },
+    { name: "Midtown Manhattan", time: "25-40 min", distance: "9 miles" },
+    { name: "Lower Manhattan", time: "30-50 min", distance: "11 miles" },
+    { name: "Upper East Side", time: "20-35 min", distance: "8 miles" },
+    { name: "Upper West Side", time: "25-40 min", distance: "9 miles" },
+    { name: "Brooklyn (Williamsburg)", time: "30-45 min", distance: "12 miles" },
+    { name: "Long Island City", time: "15-25 min", distance: "5 miles" },
+    { name: "Astoria", time: "10-20 min", distance: "3 miles" },
+    { name: "Flushing", time: "15-25 min", distance: "6 miles" },
   ];
 
   const fleet = [
@@ -58,7 +58,6 @@ export default function LaGuardiaAirportPage() {
       vehicles: "Mercedes E-Class, Cadillac CT6",
       passengers: "1-3 passengers",
       luggage: "3 large bags",
-      price: "$70",
       bestFor: "Business travelers, quick trips"
     },
     {
@@ -66,7 +65,6 @@ export default function LaGuardiaAirportPage() {
       vehicles: "Mercedes S-Class, BMW 7 Series",
       passengers: "1-3 passengers",
       luggage: "3 large bags",
-      price: "$105",
       bestFor: "Executive service, comfort"
     },
     {
@@ -74,7 +72,6 @@ export default function LaGuardiaAirportPage() {
       vehicles: "Suburban, Yukon, Navigator",
       passengers: "4-6 passengers",
       luggage: "6-8 large bags",
-      price: "$120",
       bestFor: "Families, group travel"
     },
     {
@@ -82,7 +79,6 @@ export default function LaGuardiaAirportPage() {
       vehicles: "Cadillac Escalade ESV",
       passengers: "4-6 passengers",
       luggage: "8+ large bags",
-      price: "$175",
       bestFor: "Premium group service"
     }
   ];
@@ -106,7 +102,7 @@ export default function LaGuardiaAirportPage() {
     },
     {
       question: "How much does car service from LaGuardia to Manhattan cost?",
-      answer: "Our flat rates start at $70 for a business sedan to Midtown Manhattan. Unlike taxis with unpredictable meters or rideshares with surge pricing, you know your exact price upfront. All tolls and fees included - no surprises or hidden charges."
+      answer: "We offer competitive flat-rate pricing for all LaGuardia transfers. Prices vary by vehicle type and destination. Unlike taxis with unpredictable meters or rideshares with surge pricing, you know your exact price upfront when you book. All tolls and fees included - no surprises or hidden charges. Contact us or book online for a quote."
     },
     {
       question: "Do you serve all LaGuardia terminals?",
@@ -158,16 +154,7 @@ export default function LaGuardiaAirportPage() {
         "@type": "City",
         "name": "New York City"
       }
-    ],
-    "offers": {
-      "@type": "Offer",
-      "priceSpecification": {
-        "@type": "PriceSpecification",
-        "price": "70.00",
-        "priceCurrency": "USD",
-        "valueAddedTaxIncluded": true
-      }
-    }
+    ]
   };
 
   const faqSchema = {
@@ -225,56 +212,50 @@ export default function LaGuardiaAirportPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-gray-900 to-black py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-block bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
-              LAGUARDIA AIRPORT (IATA: LGA)
+      <section className="relative bg-gradient-to-br from-blue-900 via-black to-black py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-block bg-blue-900 bg-opacity-30 border border-blue-700 rounded-full px-6 py-2 mb-6">
+            <p className="text-blue-300 text-sm font-semibold">LAGUARDIA AIRPORT (LGA)</p>
+          </div>
+          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+            LaGuardia Airport Car Service
+            <br />
+            <span className="text-gray-300">Closest NYC Airport to Manhattan</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Premium car service to and from LaGuardia Airport. Serving all 4 terminals with professional chauffeurs and guaranteed on-time service. Only 9 miles from Manhattan.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition-colors flex items-center gap-2">
+              <PhoneIcon className="h-6 w-6" />
+              CALL NOW
+            </a>
+            <a href="#booking" className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition-colors">
+              RESERVE ONLINE
+            </a>
+          </div>
+
+          {/* Info boxes */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <div className="bg-black bg-opacity-30 border border-blue-800 rounded-lg p-6 text-center">
+              <div className="text-blue-400 text-3xl mb-3"><MapPinIcon className="h-10 w-10 mx-auto" /></div>
+              <h3 className="text-xl font-bold text-white mb-1">~9 Miles</h3>
+              <p className="text-gray-300 text-sm">Closest to Manhattan</p>
             </div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
-              LaGuardia Airport Car Service
-              <br />
-              <span className="text-gray-300">Closest NYC Airport to Manhattan</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Premium car service to and from LaGuardia Airport. Serving all 4 terminals with professional chauffeurs and guaranteed on-time service. Only 9 miles from Manhattan. Starting at $70.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="#booking"
-                className="bg-white text-black px-8 py-4 rounded font-bold text-lg hover:bg-gray-200 transition-colors"
-              >
-                BOOK LGA TRANSFER
-              </a>
-              <a
-                href="tel:+14045138803"
-                className="flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-black transition-colors"
-              >
-                <PhoneIcon className="h-6 w-6" />
-                (404) 513-8803
-              </a>
+            <div className="bg-black bg-opacity-30 border border-blue-800 rounded-lg p-6 text-center">
+              <div className="text-blue-400 text-3xl mb-3"><ClockIcon className="h-10 w-10 mx-auto" /></div>
+              <h3 className="text-xl font-bold text-white mb-1">25-40 Min</h3>
+              <p className="text-gray-300 text-sm">Fastest option</p>
             </div>
-            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-              <div className="bg-black border border-gray-700 rounded-lg p-4">
-                <p className="text-gray-400">Distance</p>
-                <p className="text-white font-bold text-lg">~9 miles</p>
-                <p className="text-green-400 text-xs mt-1">Closest to Manhattan!</p>
-              </div>
-              <div className="bg-black border border-gray-700 rounded-lg p-4">
-                <p className="text-gray-400">Travel Time</p>
-                <p className="text-white font-bold text-lg">25-40 min</p>
-                <p className="text-green-400 text-xs mt-1">Fastest option</p>
-              </div>
-              <div className="bg-black border border-gray-700 rounded-lg p-4">
-                <p className="text-gray-400">Starting Price</p>
-                <p className="text-white font-bold text-lg">$70</p>
-                <p className="text-gray-500 text-xs mt-1">All tolls included</p>
-              </div>
-              <div className="bg-black border border-gray-700 rounded-lg p-4">
-                <p className="text-gray-400">Terminals</p>
-                <p className="text-white font-bold text-lg">All 4</p>
-                <p className="text-gray-500 text-xs mt-1">A, B, C, D</p>
-              </div>
+            <div className="bg-black bg-opacity-30 border border-blue-800 rounded-lg p-6 text-center">
+              <div className="text-blue-400 text-3xl mb-3"><PhoneIcon className="h-10 w-10 mx-auto" /></div>
+              <h3 className="text-xl font-bold text-white mb-1">24/7 Service</h3>
+              <p className="text-gray-300 text-sm">Always Available</p>
+            </div>
+            <div className="bg-black bg-opacity-30 border border-blue-800 rounded-lg p-6 text-center">
+              <div className="text-blue-400 text-3xl mb-3"><BuildingOffice2Icon className="h-10 w-10 mx-auto" /></div>
+              <h3 className="text-xl font-bold text-white mb-1">All 4 Terminals</h3>
+              <p className="text-gray-300 text-sm">A, B, C, D Coverage</p>
             </div>
           </div>
         </div>
@@ -310,8 +291,8 @@ export default function LaGuardiaAirportPage() {
               },
               {
                 icon: <CurrencyDollarIcon className="h-8 w-8" />,
-                title: "Lowest Manhattan Rates",
-                description: "Starting at just $70 to Midtown. Flat rate pricing means no meter surprises. All tolls and fees included in your quote."
+                title: "Flat Rate Pricing",
+                description: "Competitive flat-rate pricing means no meter surprises. All tolls and fees included in your quote. Know your exact price before you book."
               },
               {
                 icon: <ClockIcon className="h-8 w-8" />,
@@ -359,14 +340,14 @@ export default function LaGuardiaAirportPage() {
         </div>
       </section>
 
-      {/* Pricing by Neighborhood */}
+      {/* Travel Times by Neighborhood */}
       <section className="py-20 bg-black border-y border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4 text-white">
-            LaGuardia to Manhattan: Rates & Times
+            LaGuardia to Manhattan: Distance & Travel Times
           </h2>
           <p className="text-center text-gray-400 mb-12 text-lg">
-            Transparent flat-rate pricing from LaGuardia to NYC neighborhoods
+            Approximate travel times from LaGuardia to NYC neighborhoods
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {neighborhoods.map((neighborhood, index) => (
@@ -382,13 +363,12 @@ export default function LaGuardiaAirportPage() {
                   <p className="text-gray-400">
                     <span className="text-gray-500">Time:</span> {neighborhood.time}
                   </p>
-                  <p className="text-2xl font-bold text-white mt-3">{neighborhood.price}</p>
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-500 mt-8 text-sm">
-            *Prices shown for Business Sedan. All tolls and fees included. SUVs available from $120.
+          <p className="text-center text-gray-400 mt-8">
+            <a href="#booking" className="text-white font-semibold hover:underline">Contact us for pricing</a> or book online for an instant quote
           </p>
         </div>
       </section>
@@ -410,17 +390,16 @@ export default function LaGuardiaAirportPage() {
               >
                 <h3 className="text-xl font-bold text-white mb-2">{vehicle.name}</h3>
                 <p className="text-sm text-gray-400 mb-4">{vehicle.vehicles}</p>
-                <div className="space-y-2 text-sm text-gray-300 mb-4 pb-4 border-b border-gray-700">
+                <div className="space-y-2 text-sm text-gray-300 mb-6">
                   <p><UserGroupIcon className="h-4 w-4 inline mr-2 text-gray-500" />{vehicle.passengers}</p>
                   <p><MapPinIcon className="h-4 w-4 inline mr-2 text-gray-500" />{vehicle.luggage}</p>
                   <p className="text-xs text-gray-500 mt-2">Perfect for: {vehicle.bestFor}</p>
                 </div>
-                <p className="text-3xl font-bold text-white mb-4">{vehicle.price}</p>
                 <a
                   href="#booking"
-                  className="inline-block w-full text-center bg-white text-black px-4 py-2 rounded font-semibold hover:bg-gray-200 transition-colors"
+                  className="inline-block w-full text-center bg-white text-black px-4 py-3 rounded font-semibold hover:bg-gray-200 transition-colors"
                 >
-                  Book This Vehicle
+                  Get Quote
                 </a>
               </div>
             ))}

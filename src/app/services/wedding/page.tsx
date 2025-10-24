@@ -502,6 +502,72 @@ export default function WeddingTransportationPage() {
         </div>
       </footer>
 
+      {/* Structured Data */}
+      <Script
+        id="wedding-transportation-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Wedding Transportation",
+            "provider": {
+              "@type": "LimousineService",
+              "name": "Noble Black Car Service",
+              "image": "https://nobleblackcarservice.com/images/mercedes-s-class.png",
+              "telephone": "+1-404-513-8803",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "New York",
+                "addressRegion": "NY",
+                "addressCountry": "US"
+              }
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "New York City"
+              },
+              {
+                "@type": "City",
+                "name": "Manhattan"
+              }
+            ],
+            "description": "Elegant wedding transportation in NYC. Bride & groom getaway cars, bridal party shuttles, guest transportation. Mercedes S-Class fleet with red carpet service and champagne.",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Wedding Transportation Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Bride & Groom Getaway Car",
+                    "description": "Elegant departure from reception in Mercedes S-Class or Escalade ESV with red carpet service and champagne"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Bridal Party Transportation",
+                    "description": "Transport bridesmaids and groomsmen in luxury SUVs or Sprinter vans"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Guest Shuttle Service",
+                    "description": "Coordinate hotel-to-venue shuttles for wedding guests"
+                  }
+                }
+              ]
+            }
+          })
+        }}
+      />
+
       {/* LimoAnywhere Booking Widget */}
       <Script
         src="https://book.limoanywhere.com/v3.0/consumer/js/scripts.min.js?affiliateid=2236"

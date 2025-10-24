@@ -41,14 +41,14 @@ export default function NewarkAirportPage() {
   ];
 
   const pricing = [
-    { neighborhood: "Midtown Manhattan", price: "$90-$95", distance: "16 miles", time: "35-50 min" },
-    { neighborhood: "Lower Manhattan", price: "$95-$100", distance: "18 miles", time: "40-55 min" },
-    { neighborhood: "Upper East Side", price: "$90-$95", distance: "17 miles", time: "35-50 min" },
-    { neighborhood: "Upper West Side", price: "$90-$95", distance: "18 miles", time: "40-55 min" },
-    { neighborhood: "Hudson Yards", price: "$85-$90", distance: "14 miles", time: "30-45 min" },
-    { neighborhood: "Chelsea", price: "$90-$95", distance: "16 miles", time: "35-50 min" },
-    { neighborhood: "Brooklyn", price: "$100-$120", distance: "20-25 miles", time: "45-70 min" },
-    { neighborhood: "Queens", price: "$80-$100", distance: "12-20 miles", time: "30-50 min" }
+    { neighborhood: "Midtown Manhattan", distance: "16 miles", time: "35-50 min" },
+    { neighborhood: "Lower Manhattan", distance: "18 miles", time: "40-55 min" },
+    { neighborhood: "Upper East Side", distance: "17 miles", time: "35-50 min" },
+    { neighborhood: "Upper West Side", distance: "18 miles", time: "40-55 min" },
+    { neighborhood: "Hudson Yards", distance: "14 miles", time: "30-45 min" },
+    { neighborhood: "Chelsea", distance: "16 miles", time: "35-50 min" },
+    { neighborhood: "Brooklyn", distance: "20-25 miles", time: "45-70 min" },
+    { neighborhood: "Queens", distance: "12-20 miles", time: "30-50 min" }
   ];
 
   const faqs = [
@@ -58,7 +58,7 @@ export default function NewarkAirportPage() {
     },
     {
       question: "What are the flat rates from Newark Airport to Manhattan?",
-      answer: "Our flat rates from Newark to Manhattan start at $85 for Hudson Yards and range from $90-$100 for most Manhattan neighborhoods. Prices include all tolls (Lincoln Tunnel, Holland Tunnel, or GWB), taxes, and gratuity. No hidden fees or surge pricing - you know your exact cost upfront."
+      answer: "We offer competitive flat-rate pricing from Newark to Manhattan for all neighborhoods. Prices include all tolls (Lincoln Tunnel, Holland Tunnel, or GWB), taxes, and gratuity when booked online. No hidden fees or surge pricing - you know your exact cost upfront when you request a quote."
     },
     {
       question: "Which Newark terminal will my flight arrive at?",
@@ -70,7 +70,7 @@ export default function NewarkAirportPage() {
     },
     {
       question: "Do you include tolls in your Newark Airport rates?",
-      answer: "Yes! All Newark airport transfers include tolls in our flat rate pricing. This covers the Lincoln Tunnel ($17), Holland Tunnel ($17), or George Washington Bridge ($17) - whichever route is fastest for your destination. No surprise charges at the end of your trip."
+      answer: "Yes! All Newark airport transfers include tolls in our flat rate pricing. This covers the Lincoln Tunnel, Holland Tunnel, or George Washington Bridge - whichever route is fastest for your destination. No surprise charges at the end of your trip."
     },
     {
       question: "How early should I leave Manhattan to catch my Newark flight?",
@@ -98,7 +98,7 @@ export default function NewarkAirportPage() {
     },
     {
       question: "Do you provide car service from Newark to other NYC airports?",
-      answer: "Yes, we offer inter-airport transfers between Newark (EWR), JFK, LaGuardia (LGA), and Teterboro (TEB). This is common for connecting flights on different airlines or private aviation transfers. Rates vary by route: EWR to JFK ($120-140), EWR to LGA ($100-120), EWR to TEB ($80-100). All vehicles are sanitized between transfers."
+      answer: "Yes, we offer inter-airport transfers between Newark (EWR), JFK, LaGuardia (LGA), and Teterboro (TEB). This is common for connecting flights on different airlines or private aviation transfers. Contact us for a quote based on your specific route. All vehicles are sanitized between transfers."
     }
   ];
 
@@ -130,7 +130,7 @@ export default function NewarkAirportPage() {
           ],
           "offers": {
             "@type": "Offer",
-            "priceRange": "$85-$120",
+            "priceRange": "$$",
             "priceCurrency": "USD"
           }
         })}
@@ -189,14 +189,14 @@ export default function NewarkAirportPage() {
             <span className="text-gray-300">Premium Transportation to All 3 Terminals</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional black car service from Newark Airport to Manhattan, Brooklyn, Queens & beyond. Flat rates from $85 with all tolls included. United Airlines hub with dedicated Terminal C service.
+            Professional black car service from Newark Airport to Manhattan, Brooklyn, Queens & beyond. Competitive flat rates with all tolls included. United Airlines hub with dedicated Terminal C service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition-colors flex items-center gap-2">
               <PhoneIcon className="h-6 w-6" />
               CALL NOW
             </a>
-            <a href="#contact" className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition-colors">
+            <a href="https://book.mylimobiz.com/v4/nobleblackcar" className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition-colors">
               RESERVE ONLINE
             </a>
           </div>
@@ -212,9 +212,9 @@ export default function NewarkAirportPage() {
               <p className="text-gray-400 text-sm">from Midtown</p>
             </div>
             <div className="bg-black bg-opacity-50 border border-blue-800 rounded-lg p-4">
-              <CurrencyDollarIcon className="h-8 w-8 text-blue-400 mx-auto mb-2" />
-              <p className="text-white font-semibold">From $85</p>
-              <p className="text-gray-400 text-sm">Flat Rate + Tolls</p>
+              <ClockIcon className="h-8 w-8 text-blue-400 mx-auto mb-2" />
+              <p className="text-white font-semibold">24/7</p>
+              <p className="text-gray-400 text-sm">Service Available</p>
             </div>
             <div className="bg-black bg-opacity-50 border border-blue-800 rounded-lg p-4">
               <BuildingOffice2Icon className="h-8 w-8 text-blue-400 mx-auto mb-2" />
@@ -249,7 +249,7 @@ export default function NewarkAirportPage() {
               {
                 icon: <CurrencyDollarIcon className="h-8 w-8" />,
                 title: "Tolls Included in Flat Rate",
-                description: "Lincoln Tunnel, Holland Tunnel, or GWB tolls ($17) included in your quoted price. No surprises, no meter running."
+                description: "Lincoln Tunnel, Holland Tunnel, or GWB tolls included in your quoted price. No surprises, no meter running."
               },
               {
                 icon: <UserGroupIcon className="h-8 w-8" />,
@@ -319,7 +319,6 @@ export default function NewarkAirportPage() {
                     <td className="px-6 py-4 text-white font-medium">{row.neighborhood}</td>
                     <td className="px-6 py-4 text-gray-300">{row.distance}</td>
                     <td className="px-6 py-4 text-gray-300">{row.time}</td>
-                    <td className="px-6 py-4 text-blue-400 font-bold">{row.price}</td>
                   </tr>
                 ))}
               </tbody>
@@ -343,29 +342,25 @@ export default function NewarkAirportPage() {
                 name: "Business Sedan",
                 vehicles: "Mercedes E-Class, Cadillac CT6",
                 capacity: "Up to 3 passengers",
-                luggage: "3 large bags",
-                rate: "From $85"
+                luggage: "3 large bags"
               },
               {
                 name: "First Class Sedan",
                 vehicles: "Mercedes S-Class, BMW 7-Series",
                 capacity: "Up to 3 passengers",
-                luggage: "3 large bags",
-                rate: "From $110"
+                luggage: "3 large bags"
               },
               {
                 name: "Business SUV",
                 vehicles: "Suburban, Yukon, Navigator",
                 capacity: "Up to 6 passengers",
-                luggage: "6 large bags",
-                rate: "From $120"
+                luggage: "6 large bags"
               },
               {
                 name: "Sprinter Van",
                 vehicles: "Mercedes Sprinter",
                 capacity: "Up to 14 passengers",
-                luggage: "12+ bags",
-                rate: "From $180"
+                luggage: "12+ bags"
               }
             ].map((vehicle, index) => (
               <div key={index} className="bg-gray-900 border border-gray-700 rounded-lg p-6 hover:border-blue-500 transition-all">
@@ -381,7 +376,6 @@ export default function NewarkAirportPage() {
                     <span className="text-sm text-gray-300">{vehicle.luggage}</span>
                   </div>
                 </div>
-                <p className="text-blue-400 font-bold text-lg">{vehicle.rate}</p>
               </div>
             ))}
           </div>
