@@ -42,7 +42,7 @@ export default function TestimonialsPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-black">
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-900">
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
@@ -54,21 +54,21 @@ export default function TestimonialsPage() {
       <section className="py-16 px-4 max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="text-5xl mb-4">⭐⭐⭐⭐⭐</div>
-          <p className="text-2xl font-bold text-black mb-2">Consistently 5-Star Service</p>
-          <p className="text-lg text-gray-700">Hundreds of satisfied clients trust Noble for their transportation needs</p>
+          <p className="text-2xl font-bold text-white mb-2">Consistently 5-Star Service</p>
+          <p className="text-lg text-gray-300">Hundreds of satisfied clients trust Noble for their transportation needs</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gray-50 p-8 border border-gray-200">
+            <div key={index} className="bg-gray-900 p-8 border border-gray-700">
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <span key={i} className="text-yellow-500 text-xl">★</span>
                 ))}
               </div>
-              <p className="text-gray-700 mb-6 italic">&quot;{testimonial.text}&quot;</p>
+              <p className="text-gray-300 mb-6 italic">&quot;{testimonial.text}&quot;</p>
               <div className="border-t border-gray-300 pt-4">
-                <p className="font-bold text-black">{testimonial.name}</p>
+                <p className="font-bold text-white">{testimonial.name}</p>
                 <p className="text-sm text-gray-600">{testimonial.title}</p>
               </div>
             </div>
@@ -76,21 +76,21 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-gray-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-black">What Our Clients Say</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center text-white">What Our Clients Say</h2>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-black mb-2">100%</div>
-              <p className="text-lg text-gray-700">On-Time Arrival Rate</p>
+              <div className="text-4xl font-bold text-white mb-2">100%</div>
+              <p className="text-lg text-gray-300">On-Time Arrival Rate</p>
             </div>
             <div>
-              <div className="text-4xl font-bold text-black mb-2">500+</div>
-              <p className="text-lg text-gray-700">Corporate Clients</p>
+              <div className="text-4xl font-bold text-white mb-2">500+</div>
+              <p className="text-lg text-gray-300">Corporate Clients</p>
             </div>
             <div>
-              <div className="text-4xl font-bold text-black mb-2">4.9/5</div>
-              <p className="text-lg text-gray-700">Average Rating</p>
+              <div className="text-4xl font-bold text-white mb-2">4.9/5</div>
+              <p className="text-lg text-gray-300">Average Rating</p>
             </div>
           </div>
         </div>
@@ -101,8 +101,8 @@ export default function TestimonialsPage() {
           <h2 className="text-4xl font-bold mb-6">Experience Noble Service Yourself</h2>
           <p className="text-xl mb-8 text-gray-300">Join hundreds of satisfied clients who trust Noble</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+14045138803" className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors">Call</a>
-            <a href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-black transition-colors">Book Online</a>
+            <a href="tel:+14045138803" className="bg-black text-white px-8 py-4 text-lg font-semibold hover:bg-gray-100 transition-colors">Call</a>
+            <a href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-black hover:text-white transition-colors">Book Online</a>
           </div>
         </div>
       </section>

@@ -90,7 +90,7 @@ export default function BlogPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-black">
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-900">
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
@@ -102,13 +102,13 @@ export default function BlogPage() {
       <section className="py-16 px-4 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8">
           {posts.map((post) => (
-            <article key={post.slug} className="bg-gray-50 border border-gray-200 p-8 hover:shadow-lg transition-shadow">
+            <article key={post.slug} className="bg-gray-900 border border-gray-700 p-8 hover:shadow-lg transition-shadow">
               <div className="text-sm text-gray-600 mb-2">{post.category} • {post.readTime}</div>
-              <h2 className="text-2xl font-bold mb-4 text-black">
+              <h2 className="text-2xl font-bold mb-4 text-white">
                 <Link href={`/blog/${post.slug}`} className="hover:underline">{post.title}</Link>
               </h2>
-              <p className="text-gray-700 mb-4">{post.excerpt}</p>
-              <Link href={`/blog/${post.slug}`} className="text-black font-bold hover:underline">
+              <p className="text-gray-300 mb-4">{post.excerpt}</p>
+              <Link href={`/blog/${post.slug}`} className="text-white font-bold hover:underline">
                 Read More →
               </Link>
             </article>
@@ -116,10 +116,10 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-gray-900">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-black">Need Transportation Advice?</h2>
-          <p className="text-xl text-gray-700 mb-8">Our team is here to help with your NYC travel questions</p>
+          <h2 className="text-3xl font-bold mb-6 text-white">Need Transportation Advice?</h2>
+          <p className="text-xl text-gray-300 mb-8">Our team is here to help with your NYC travel questions</p>
           <a href="tel:+14045138803" className="inline-block bg-black text-white px-8 py-4 text-lg font-semibold hover:bg-gray-800 transition-colors">Call</a>
         </div>
       </section>
