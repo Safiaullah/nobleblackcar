@@ -1088,9 +1088,9 @@ export default function Home() {
               <Link
                 key={index}
                 href={post.link}
-                className="bg-gray-900 border border-gray-700 rounded-lg overflow-hidden hover:border-gray-500 transition-all group"
+                className="bg-black border border-gray-700 rounded-lg overflow-hidden hover:border-gray-500 transition-all group"
               >
-                <div className="h-48 overflow-hidden bg-gray-800">
+                <div className="h-48 overflow-hidden bg-black">
                   <img
                     src={post.image}
                     alt={post.title}
