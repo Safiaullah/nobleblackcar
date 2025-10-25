@@ -1076,7 +1076,7 @@ export default function Home() {
                 title: "Wedding Transportation Checklist",
                 excerpt: "Essential planning tips for coordinating wedding day transportation for you and your guests.",
                 link: "/blog/wedding-transportation-checklist",
-                image: "/images/Escalade.webp"
+                image: "/images/limo-sprinter.png"
               },
               {
                 title: "Holiday Airport Travel Tips",
