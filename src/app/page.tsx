@@ -1145,38 +1145,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Location & Map */}
-      <section className="py-12 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-white">Location</h2>
-
-          {/* Map */}
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-black border border-gray-700 rounded-lg overflow-hidden h-[150px]">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6174486949193!2d-73.98419892346609!3d40.75368313490784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9aeb4c4c3%3A0x77733f95a0fe54a7!2s442%205th%20Ave%2C%20New%20York%2C%20NY%2010018!5e0!3m2!1sen!2sus!4v1729721241000!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Noble Black Car Service Location"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-black border-t border-gray-700 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-2xl font-bold mb-4 text-white">Noble Black Car Service</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-sm mb-4">
                 Providing premium 1st class transportation services.
               </p>
+
+              {/* Location Map */}
+              <div className="mt-4">
+                <h4 className="text-sm font-semibold mb-2 text-white">Location</h4>
+                <div className="bg-black border border-gray-700 rounded-lg overflow-hidden h-[180px]">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6174486949193!2d-73.98419892346609!3d40.75368313490784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9aeb4c4c3%3A0x77733f95a0fe54a7!2s442%205th%20Ave%2C%20New%20York%2C%20NY%2010018!5e0!3m2!1sen!2sus!4v1729721241000!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Noble Black Car Service Location"
+                  ></iframe>
+                </div>
+              </div>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4 text-white">Services</h4>
