@@ -623,6 +623,30 @@ export default function AirportTransferPage() {
         </div>
       </footer>
 
+      {/* Related Articles Section */}
+      <section className="py-16 px-4 bg-gray-900">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-white text-center">Related Travel Guides</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/blog/pre-book-jfk-transfer" className="bg-black p-6 border border-gray-700 hover:border-gray-500 transition-all">
+              <h3 className="text-xl font-bold mb-2 text-white">Why Pre-Book Your JFK Transfer</h3>
+              <p className="text-gray-400 mb-4">Discover the benefits of booking your airport transfer in advance and avoid last-minute stress.</p>
+              <span className="text-white font-semibold hover:text-gray-300">Read Article →</span>
+            </Link>
+            <Link href="/blog/holiday-airport-travel" className="bg-black p-6 border border-gray-700 hover:border-gray-500 transition-all">
+              <h3 className="text-xl font-bold mb-2 text-white">Holiday Airport Travel Tips</h3>
+              <p className="text-gray-400 mb-4">Navigate busy holiday airport travel with these expert tips for stress-free transportation.</p>
+              <span className="text-white font-semibold hover:text-gray-300">Read Article →</span>
+            </Link>
+            <Link href="/blog/nyc-airport-transportation-guide" className="bg-black p-6 border border-gray-700 hover:border-gray-500 transition-all">
+              <h3 className="text-xl font-bold mb-2 text-white">NYC Airport Transportation Guide</h3>
+              <p className="text-gray-400 mb-4">Complete guide to all airport transportation options in New York City.</p>
+              <span className="text-white font-semibold hover:text-gray-300">Read Article →</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <Script
         src="https://book.mylimobiz.com/v4/widgets/widget-loader.js"
         strategy="lazyOnload"
