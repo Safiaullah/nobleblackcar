@@ -1,0 +1,103 @@
+# Manual URL Indexing List for Google Search Console
+# Copy and paste these URLs one by one into GSC > URL Inspection > Request Indexing
+
+# PRIORITY 1: CRITICAL PAGES (Request these first)
+https://nobleblackcarservice.com/
+https://nobleblackcarservice.com/services/airport-transfer
+https://nobleblackcarservice.com/airports/jfk
+https://nobleblackcarservice.com/airports/laguardia
+https://nobleblackcarservice.com/airports/newark
+https://nobleblackcarservice.com/services/corporate-shuttle
+https://nobleblackcarservice.com/services/executive-car-service
+https://nobleblackcarservice.com/fleet
+https://nobleblackcarservice.com/contact
+https://nobleblackcarservice.com/quote
+
+# PRIORITY 2: ORPHANED PAGES (These have NO internal links - critical!)
+https://nobleblackcarservice.com/blog/black-car-vs-uber-nyc
+https://nobleblackcarservice.com/blog/hamptons-transportation-guide
+https://nobleblackcarservice.com/blog/holiday-airport-travel
+https://nobleblackcarservice.com/blog/pre-book-jfk-transfer
+https://nobleblackcarservice.com/blog/professional-chauffeur-service
+https://nobleblackcarservice.com/blog/wedding-transportation-checklist
+https://nobleblackcarservice.com/booking
+https://nobleblackcarservice.com/contact-us
+
+# PRIORITY 3: SERVICE PAGES
+https://nobleblackcarservice.com/services
+https://nobleblackcarservice.com/services/wedding
+https://nobleblackcarservice.com/services/cruise-terminal
+https://nobleblackcarservice.com/services/sightseeing-tours
+https://nobleblackcarservice.com/services/medical-transportation
+https://nobleblackcarservice.com/services/hourly
+https://nobleblackcarservice.com/services/point-to-point
+https://nobleblackcarservice.com/services/long-distance
+https://nobleblackcarservice.com/services/event-transportation
+https://nobleblackcarservice.com/services/sporting-events
+https://nobleblackcarservice.com/services/wine-tours
+
+# PRIORITY 4: AIRPORT PAGES
+https://nobleblackcarservice.com/airports/teterboro
+https://nobleblackcarservice.com/airports/westchester
+https://nobleblackcarservice.com/airports/islip
+https://nobleblackcarservice.com/airports/stewart
+
+# PRIORITY 5: ROUTE PAGES
+https://nobleblackcarservice.com/routes/hamptons
+https://nobleblackcarservice.com/routes/boston
+https://nobleblackcarservice.com/routes/washington-dc
+https://nobleblackcarservice.com/routes/philadelphia
+https://nobleblackcarservice.com/routes/long-island
+https://nobleblackcarservice.com/routes/new-jersey
+https://nobleblackcarservice.com/routes/connecticut
+
+# PRIORITY 6: FLEET PAGES
+https://nobleblackcarservice.com/fleet/business-sedan
+https://nobleblackcarservice.com/fleet/first-class-sedan
+https://nobleblackcarservice.com/fleet/business-suv
+https://nobleblackcarservice.com/fleet/first-class-suv
+https://nobleblackcarservice.com/fleet/sprinter
+
+# PRIORITY 7: BLOG POSTS
+https://nobleblackcarservice.com/blog
+https://nobleblackcarservice.com/blog/nyc-airport-transportation-guide
+https://nobleblackcarservice.com/blog/corporate-car-service-guide
+https://nobleblackcarservice.com/blog/manhattan-to-jfk-routes
+https://nobleblackcarservice.com/blog/business-travel-tips
+https://nobleblackcarservice.com/blog/fifa-2026-nyc-transportation
+https://nobleblackcarservice.com/blog/corporate-event-transportation
+
+# PRIORITY 8: EVENT PAGES
+https://nobleblackcarservice.com/events/fifa-2026
+https://nobleblackcarservice.com/events/sporting
+https://nobleblackcarservice.com/events/concerts
+https://nobleblackcarservice.com/events/corporate
+
+# PRIORITY 9: LOCATION PAGES
+https://nobleblackcarservice.com/locations/manhattan
+https://nobleblackcarservice.com/locations/brooklyn
+https://nobleblackcarservice.com/locations/queens
+
+# PRIORITY 10: CORPORATE PAGES
+https://nobleblackcarservice.com/corporate
+https://nobleblackcarservice.com/corporate/shuttle-service
+https://nobleblackcarservice.com/corporate/executive-travel
+https://nobleblackcarservice.com/corporate/accounts
+
+# PRIORITY 11: ABOUT/INFO PAGES
+https://nobleblackcarservice.com/about
+https://nobleblackcarservice.com/about/team
+https://nobleblackcarservice.com/about/safety
+https://nobleblackcarservice.com/pricing
+https://nobleblackcarservice.com/faq
+https://nobleblackcarservice.com/coverage-area
+https://nobleblackcarservice.com/testimonials
+
+# PRIORITY 12: UTILITY PAGES
+https://nobleblackcarservice.com/reservation-tracker
+https://nobleblackcarservice.com/deals
+https://nobleblackcarservice.com/gift-cards
+https://nobleblackcarservice.com/referral-program
+https://nobleblackcarservice.com/partner-with-us
+https://nobleblackcarservice.com/terms
+https://nobleblackcarservice.com/privacy
