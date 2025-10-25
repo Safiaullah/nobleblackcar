@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ManhattanPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-black">
       <section className="relative h-[40vh] bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center">
         <div className="text-center px-4 max-w-4xl mx-auto text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">Manhattan Car Service</h1>
@@ -18,11 +18,11 @@ export default function ManhattanPage() {
       </section>
 
       <section className="py-16 px-4 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-black">Neighborhoods We Serve</h2>
+        <h2 className="text-3xl font-bold mb-8 text-white">Neighborhoods We Serve</h2>
         <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-gray-50 p-6 border border-gray-200">
-            <h3 className="font-bold text-xl mb-3 text-black">Midtown</h3>
-            <ul className="space-y-1 text-gray-700 text-sm">
+          <div className="bg-gray-900 p-6 border border-gray-700">
+            <h3 className="font-bold text-xl mb-3 text-white">Midtown</h3>
+            <ul className="space-y-1 text-gray-300 text-sm">
               <li>• Times Square</li>
               <li>• Herald Square</li>
               <li>• Grand Central</li>
@@ -30,9 +30,9 @@ export default function ManhattanPage() {
               <li>• Bryant Park</li>
             </ul>
           </div>
-          <div className="bg-gray-50 p-6 border border-gray-200">
-            <h3 className="font-bold text-xl mb-3 text-black">Upper East Side</h3>
-            <ul className="space-y-1 text-gray-700 text-sm">
+          <div className="bg-gray-900 p-6 border border-gray-700">
+            <h3 className="font-bold text-xl mb-3 text-white">Upper East Side</h3>
+            <ul className="space-y-1 text-gray-300 text-sm">
               <li>• Carnegie Hill</li>
               <li>• Yorkville</li>
               <li>• Lenox Hill</li>
@@ -40,9 +40,9 @@ export default function ManhattanPage() {
               <li>• Central Park East</li>
             </ul>
           </div>
-          <div className="bg-gray-50 p-6 border border-gray-200">
-            <h3 className="font-bold text-xl mb-3 text-black">Upper West Side</h3>
-            <ul className="space-y-1 text-gray-700 text-sm">
+          <div className="bg-gray-900 p-6 border border-gray-700">
+            <h3 className="font-bold text-xl mb-3 text-white">Upper West Side</h3>
+            <ul className="space-y-1 text-gray-300 text-sm">
               <li>• Lincoln Center</li>
               <li>• Columbus Circle</li>
               <li>• Central Park West</li>
@@ -50,9 +50,9 @@ export default function ManhattanPage() {
               <li>• Cathedral Parkway</li>
             </ul>
           </div>
-          <div className="bg-gray-50 p-6 border border-gray-200">
-            <h3 className="font-bold text-xl mb-3 text-black">Downtown</h3>
-            <ul className="space-y-1 text-gray-700 text-sm">
+          <div className="bg-gray-900 p-6 border border-gray-700">
+            <h3 className="font-bold text-xl mb-3 text-white">Downtown</h3>
+            <ul className="space-y-1 text-gray-300 text-sm">
               <li>• SoHo</li>
               <li>• Tribeca</li>
               <li>• Greenwich Village</li>
@@ -60,9 +60,9 @@ export default function ManhattanPage() {
               <li>• NoHo</li>
             </ul>
           </div>
-          <div className="bg-gray-50 p-6 border border-gray-200">
-            <h3 className="font-bold text-xl mb-3 text-black">Financial District</h3>
-            <ul className="space-y-1 text-gray-700 text-sm">
+          <div className="bg-gray-900 p-6 border border-gray-700">
+            <h3 className="font-bold text-xl mb-3 text-white">Financial District</h3>
+            <ul className="space-y-1 text-gray-300 text-sm">
               <li>• Wall Street</li>
               <li>• Battery Park City</li>
               <li>• Seaport</li>
@@ -70,9 +70,9 @@ export default function ManhattanPage() {
               <li>• Stone Street</li>
             </ul>
           </div>
-          <div className="bg-gray-50 p-6 border border-gray-200">
-            <h3 className="font-bold text-xl mb-3 text-black">Chelsea & Flatiron</h3>
-            <ul className="space-y-1 text-gray-700 text-sm">
+          <div className="bg-gray-900 p-6 border border-gray-700">
+            <h3 className="font-bold text-xl mb-3 text-white">Chelsea & Flatiron</h3>
+            <ul className="space-y-1 text-gray-300 text-sm">
               <li>• Chelsea</li>
               <li>• Flatiron District</li>
               <li>• Gramercy</li>
@@ -82,19 +82,19 @@ export default function ManhattanPage() {
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold mb-6 text-black">Services Throughout Manhattan</h2>
+        <h2 className="text-3xl font-bold mb-6 text-white">Services Throughout Manhattan</h2>
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div>
-            <h3 className="font-bold text-xl mb-4 text-black">Airport Transfers</h3>
-            <ul className="space-y-2 text-gray-700">
+            <h3 className="font-bold text-xl mb-4 text-white">Airport Transfers</h3>
+            <ul className="space-y-2 text-gray-300">
               <li>• JFK Airport</li>
               <li>• LaGuardia Airport</li>
               <li>• Newark Airport</li>
             </ul>
           </div>
           <div>
-            <h3 className="font-bold text-xl mb-4 text-black">Point-to-Point Service</h3>
-            <ul className="space-y-2 text-gray-700">
+            <h3 className="font-bold text-xl mb-4 text-white">Point-to-Point Service</h3>
+            <ul className="space-y-2 text-gray-300">
               <li>• Within Manhattan</li>
               <li>• To Brooklyn</li>
               <li>• To Queens</li>
@@ -102,7 +102,7 @@ export default function ManhattanPage() {
             </ul>
           </div>
         </div>
-        <p className="text-center text-gray-700 mb-12">Contact us for flat-rate pricing from your Manhattan location</p>
+        <p className="text-center text-gray-300 mb-12">Contact us for flat-rate pricing from your Manhattan location</p>
 
         <div className="text-center">
           <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="bg-black text-white px-8 py-4 text-lg font-semibold inline-block hover:bg-gray-800">Get Manhattan Quote</Link>

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function DealsPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-black">
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-900">
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
@@ -15,7 +15,7 @@ export default function DealsPage() {
       <section className="py-16 px-4 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="bg-gradient-to-br from-black to-gray-800 text-white p-8 border-4 border-yellow-500">
-            <div className="bg-yellow-500 text-black px-4 py-2 inline-block font-bold mb-4">CORPORATE SPECIAL</div>
+            <div className="bg-yellow-500 text-white px-4 py-2 inline-block font-bold mb-4">CORPORATE SPECIAL</div>
             <h2 className="text-3xl font-bold mb-4">Corporate Account Discount</h2>
             <p className="text-xl mb-6">Save up to 15% on all rides with monthly volume</p>
             <ul className="space-y-3 mb-6 text-gray-200">
@@ -44,13 +44,13 @@ export default function DealsPage() {
                 <span>Priority booking and dispatch</span>
               </li>
             </ul>
-            <Link href="/corporate" className="bg-yellow-500 text-black px-6 py-3 inline-block font-bold hover:bg-yellow-400 transition-colors">
+            <Link href="/corporate" className="bg-yellow-500 text-white px-6 py-3 inline-block font-bold hover:bg-yellow-400 transition-colors">
               Set Up Corporate Account
             </Link>
           </div>
 
           <div className="bg-gradient-to-br from-gray-900 to-black text-white p-8 border-2 border-gray-700">
-            <div className="bg-white text-black px-4 py-2 inline-block font-bold mb-4">NEW CLIENT OFFER</div>
+            <div className="bg-black text-white px-4 py-2 inline-block font-bold mb-4">NEW CLIENT OFFER</div>
             <h2 className="text-3xl font-bold mb-4">First Ride Discount</h2>
             <p className="text-xl mb-6">10% off your first airport transfer</p>
             <ul className="space-y-3 mb-6 text-gray-200">
@@ -71,32 +71,32 @@ export default function DealsPage() {
                 <span>Cannot be combined with other offers</span>
               </li>
             </ul>
-            <a href="tel:+14045138803" className="bg-white text-black px-6 py-3 inline-block font-bold hover:bg-gray-100 transition-colors">
+            <a href="tel:+14045138803" className="bg-black text-white px-6 py-3 inline-block font-bold hover:bg-gray-100 transition-colors">
               Call to Book: (404) 513-8803
             </a>
           </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-gray-50 p-6 border border-gray-200">
-            <h3 className="text-xl font-bold mb-3 text-black">Round Trip Savings</h3>
-            <p className="text-3xl font-bold text-black mb-3">5% OFF</p>
-            <p className="text-gray-700 mb-4">Book your return trip when scheduling your outbound airport transfer and save 5% on the total cost.</p>
-            <p className="text-sm text-gray-600">Valid on all airport routes. Must book both trips simultaneously.</p>
+          <div className="bg-gray-900 p-6 border border-gray-700">
+            <h3 className="text-xl font-bold mb-3 text-white">Round Trip Savings</h3>
+            <p className="text-3xl font-bold text-white mb-3">5% OFF</p>
+            <p className="text-gray-300 mb-4">Book your return trip when scheduling your outbound airport transfer and save 5% on the total cost.</p>
+            <p className="text-sm text-gray-400">Valid on all airport routes. Must book both trips simultaneously.</p>
           </div>
 
-          <div className="bg-gray-50 p-6 border border-gray-200">
-            <h3 className="text-xl font-bold mb-3 text-black">Wedding Package</h3>
-            <p className="text-3xl font-bold text-black mb-3">Custom Pricing</p>
-            <p className="text-gray-700 mb-4">Special rates for wedding parties booking 3+ vehicles. Includes complimentary champagne service.</p>
-            <p className="text-sm text-gray-600">Contact us for personalized quote based on your needs.</p>
+          <div className="bg-gray-900 p-6 border border-gray-700">
+            <h3 className="text-xl font-bold mb-3 text-white">Wedding Package</h3>
+            <p className="text-3xl font-bold text-white mb-3">Custom Pricing</p>
+            <p className="text-gray-300 mb-4">Special rates for wedding parties booking 3+ vehicles. Includes complimentary champagne service.</p>
+            <p className="text-sm text-gray-400">Contact us for personalized quote based on your needs.</p>
           </div>
 
-          <div className="bg-gray-50 p-6 border border-gray-200">
-            <h3 className="text-xl font-bold mb-3 text-black">Referral Bonus</h3>
-            <p className="text-3xl font-bold text-black mb-3">$50 Credit</p>
-            <p className="text-gray-700 mb-4">Refer a corporate client and receive $50 credit toward your next ride. No limit on referrals!</p>
-            <p className="text-sm text-gray-600">Corporate client must complete first ride. Credit issued within 7 days.</p>
+          <div className="bg-gray-900 p-6 border border-gray-700">
+            <h3 className="text-xl font-bold mb-3 text-white">Referral Bonus</h3>
+            <p className="text-3xl font-bold text-white mb-3">$50 Credit</p>
+            <p className="text-gray-300 mb-4">Refer a corporate client and receive $50 credit toward your next ride. No limit on referrals!</p>
+            <p className="text-sm text-gray-400">Corporate client must complete first ride. Credit issued within 7 days.</p>
           </div>
         </div>
 
@@ -120,11 +120,11 @@ export default function DealsPage() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-black">Seasonal Promotions</h2>
-          <div className="bg-gray-50 p-8 border border-gray-200">
-            <h3 className="text-2xl font-bold mb-4 text-black">Holiday Travel - November & December 2025</h3>
-            <p className="text-lg text-gray-700 mb-4">Book your Thanksgiving or winter holiday airport transfers now and lock in current rates. Avoid last-minute availability issues and price increases.</p>
-            <ul className="space-y-2 text-gray-700 mb-4">
+          <h2 className="text-3xl font-bold mb-6 text-white">Seasonal Promotions</h2>
+          <div className="bg-gray-900 p-8 border border-gray-700">
+            <h3 className="text-2xl font-bold mb-4 text-white">Holiday Travel - November & December 2025</h3>
+            <p className="text-lg text-gray-300 mb-4">Book your Thanksgiving or winter holiday airport transfers now and lock in current rates. Avoid last-minute availability issues and price increases.</p>
+            <ul className="space-y-2 text-gray-300 mb-4">
               <li className="flex items-start">
                 <span className="mr-2">•</span>
                 <span>Guaranteed pickup during peak travel days</span>
@@ -145,20 +145,20 @@ export default function DealsPage() {
         </div>
 
         <div className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-black">Frequent Traveler Benefits</h2>
-          <p className="text-lg text-gray-700 mb-6">Join our loyalty program and earn benefits with every ride:</p>
+          <h2 className="text-3xl font-bold mb-6 text-white">Frequent Traveler Benefits</h2>
+          <p className="text-lg text-gray-300 mb-6">Join our loyalty program and earn benefits with every ride:</p>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-gray-50 p-6 border-l-4 border-black">
-              <h3 className="font-bold text-lg mb-3 text-black">Tier 1: 5-9 Rides</h3>
-              <ul className="space-y-2 text-gray-700">
+            <div className="bg-gray-900 p-6 border-l-4 border-black">
+              <h3 className="font-bold text-lg mb-3 text-white">Tier 1: 5-9 Rides</h3>
+              <ul className="space-y-2 text-gray-300">
                 <li>• Priority dispatch during peak hours</li>
                 <li>• Preferred driver assignment when available</li>
                 <li>• Email receipts automatically sent</li>
               </ul>
             </div>
-            <div className="bg-gray-50 p-6 border-l-4 border-black">
-              <h3 className="font-bold text-lg mb-3 text-black">Tier 2: 10+ Rides</h3>
-              <ul className="space-y-2 text-gray-700">
+            <div className="bg-gray-900 p-6 border-l-4 border-black">
+              <h3 className="font-bold text-lg mb-3 text-white">Tier 2: 10+ Rides</h3>
+              <ul className="space-y-2 text-gray-300">
                 <li>• All Tier 1 benefits</li>
                 <li>• 5% discount on future bookings</li>
                 <li>• Dedicated customer service line</li>
@@ -169,13 +169,13 @@ export default function DealsPage() {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-gray-900">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-black">Ready to Save?</h2>
-          <p className="text-xl text-gray-700 mb-8">Contact us to learn more about our current promotions and find the best deal for your transportation needs.</p>
+          <h2 className="text-3xl font-bold mb-6 text-white">Ready to Save?</h2>
+          <p className="text-xl text-gray-300 mb-8">Contact us to learn more about our current promotions and find the best deal for your transportation needs.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+14045138803" className="bg-black text-white px-8 py-4 text-lg font-semibold hover:bg-gray-800 transition-colors">Call</a>
-            <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-black text-black px-8 py-4 text-lg font-semibold hover:bg-black hover:text-white transition-colors">Get Free Quote</Link>
+            <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-black text-white px-8 py-4 text-lg font-semibold hover:bg-black hover:text-white transition-colors">Get Free Quote</Link>
           </div>
         </div>
       </section>
