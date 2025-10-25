@@ -1076,7 +1076,7 @@ export default function Home() {
                 title: "Wedding Transportation Checklist",
                 excerpt: "Essential planning tips for coordinating wedding day transportation for you and your guests.",
                 link: "/blog/wedding-transportation-checklist",
-                image: "/images/cadillac-escalade-stretch.avif"
+                image: "/images/Escalade.webp"
               },
               {
                 title: "Holiday Airport Travel Tips",
