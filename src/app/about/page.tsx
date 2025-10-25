@@ -18,11 +18,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="relative py-16 px-4 max-w-4xl mx-auto">
-        <div className="absolute inset-0 z-0">
-          <img src="/images/our-story-bg.jpg" alt="" className="w-full h-full object-cover opacity-10" />
-        </div>
-        <div className="relative z-10">
+      <section className="py-16 px-4 max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-black">Our Story</h2>
         <div className="prose prose-lg max-w-none">
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
@@ -34,7 +30,6 @@ export default function AboutPage() {
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
             Today, Noble operates a premium fleet of late-model luxury vehicles, employs only the most professional chauffeurs, and provides 24/7 service throughout NYC and beyond. Whether it's a critical airport pickup for a C-suite executive, a wedding day that needs to be perfect, or a family vacation that should start stress-free, we bring the same dedication to every single ride.
           </p>
-        </div>
         </div>
       </section>
 
