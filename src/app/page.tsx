@@ -1052,7 +1052,7 @@ export default function Home() {
                 title: "Black Car vs Uber in NYC: Which is Better?",
                 excerpt: "Compare the pros and cons of black car services versus rideshare apps for your NYC transportation.",
                 link: "/blog/black-car-vs-uber-nyc",
-                image: "/images/mercedes-s-class.png"
+                image: "/images/why-choose-us-bg.jpg"
               },
               {
                 title: "Why You Should Pre-Book Your JFK Transfer",
