@@ -9,21 +9,21 @@ export const metadata: Metadata = {
 
 export default function HolidayTravelPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-black">
       <article className="max-w-4xl mx-auto px-4 py-16">
-        <Link href="/blog" className="text-black hover:underline mb-4 inline-block">← Back to Blog</Link>
+        <Link href="/blog" className="text-white hover:underline mb-4 inline-block">← Back to Blog</Link>
         <header className="mb-12">
-          <div className="text-sm text-gray-600 mb-4">Holiday Travel • 6 min read</div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-black">Holiday Airport Travel Survival Guide for NYC</h1>
+          <div className="text-sm text-gray-400 mb-4">Holiday Travel • 6 min read</div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Holiday Airport Travel Survival Guide for NYC</h1>
         </header>
 
-        <div className="prose prose-lg max-w-none text-gray-700 space-y-8">
+        <div className="prose prose-lg max-w-none text-gray-300 space-y-8">
           <p className="text-lg">NYC airports during Thanksgiving, Christmas, and New Year are among the busiest in the world. Here's how to navigate holiday travel stress-free.</p>
 
-          <h2 className="text-3xl font-bold text-black">Book Transportation NOW</h2>
+          <h2 className="text-3xl font-bold text-white">Book Transportation NOW</h2>
           <p>This is the #1 mistake travelers make. Black car services book solid during peak travel days (the Wednesday before Thanksgiving can sell out 2-3 weeks in advance).</p>
           <div className="bg-red-50 p-6 border-l-4 border-red-500">
-            <p className="font-bold text-black">Critical Booking Windows:</p>
+            <p className="font-bold text-white">Critical Booking Windows:</p>
             <ul className="mt-2 space-y-1">
               <li>• Thanksgiving week: Book 3-4 weeks ahead</li>
               <li>• Christmas week: Book 4-6 weeks ahead</li>
@@ -31,7 +31,7 @@ export default function HolidayTravelPage() {
             </ul>
           </div>
 
-          <h2 className="text-3xl font-bold text-black">Expect DOUBLE Travel Times</h2>
+          <h2 className="text-3xl font-bold text-white">Expect DOUBLE Travel Times</h2>
           <p>Normal 45-minute JFK trip can easily become 90+ minutes during peak holiday periods. Add extra buffer:</p>
           <ul className="list-disc ml-6">
             <li>Domestic flights: Arrive 3 hours early (vs. normal 2)</li>
@@ -39,8 +39,8 @@ export default function HolidayTravelPage() {
             <li>Account for TSA PreCheck lines being 30+ minutes vs. usual 5</li>
           </ul>
 
-          <h2 className="text-3xl font-bold text-black">Worst Travel Days to Avoid</h2>
-          <div className="bg-gray-50 p-6 border border-gray-200">
+          <h2 className="text-3xl font-bold text-white">Worst Travel Days to Avoid</h2>
+          <div className="bg-gray-900 p-6 border border-gray-700">
             <p className="font-bold mb-3">Thanksgiving 2025</p>
             <ul className="space-y-2">
               <li><strong>Wednesday, Nov 26:</strong> Absolute worst (fly Tuesday if possible)</li>
@@ -53,7 +53,7 @@ export default function HolidayTravelPage() {
             </ul>
           </div>
 
-          <h2 className="text-3xl font-bold text-black">Why Black Car vs Rideshare During Holidays</h2>
+          <h2 className="text-3xl font-bold text-white">Why Black Car vs Rideshare During Holidays</h2>
           <ul className="list-disc ml-6 space-y-2">
             <li><strong>No Surge Pricing:</strong> Flat rates vs. potential 3-5x surge</li>
             <li><strong>Guaranteed Pickup:</strong> Pre-booked, no risk of driver cancellation</li>
@@ -61,7 +61,7 @@ export default function HolidayTravelPage() {
             <li><strong>Luggage Capacity:</strong> SUVs for gifts + suitcases</li>
           </ul>
 
-          <h2 className="text-3xl font-bold text-black">Pro Tips</h2>
+          <h2 className="text-3xl font-bold text-white">Pro Tips</h2>
           <ol className="list-decimal ml-6 space-y-3">
             <li><strong>Choose Off-Peak Flights:</strong> 6 AM or 9 PM flights are less crowded</li>
             <li><strong>Lock in Rates Early:</strong> Prices don't increase once booked</li>
@@ -78,25 +78,25 @@ export default function HolidayTravelPage() {
         </div>
       </article>
 
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-gray-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-black">Related Articles</h2>
+          <h2 className="text-3xl font-bold mb-8 text-white">Related Articles</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/pre-book-jfk-transfer" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold mb-2 text-black">Why Pre-Book Your JFK Transfer</h3>
-              <p className="text-gray-700">Benefits of booking your airport transfer in advance</p>
+            <Link href="/blog/pre-book-jfk-transfer" className="bg-black p-6 border border-gray-700 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-white">Why Pre-Book Your JFK Transfer</h3>
+              <p className="text-gray-300">Benefits of booking your airport transfer in advance</p>
             </Link>
-            <Link href="/blog/nyc-airport-transportation-guide" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold mb-2 text-black">NYC Airport Transportation Guide</h3>
-              <p className="text-gray-700">Complete guide to all NYC airport options</p>
+            <Link href="/blog/nyc-airport-transportation-guide" className="bg-black p-6 border border-gray-700 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-white">NYC Airport Transportation Guide</h3>
+              <p className="text-gray-300">Complete guide to all NYC airport options</p>
             </Link>
-            <Link href="/airports/jfk" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold mb-2 text-black">JFK Airport Car Service</h3>
-              <p className="text-gray-700">Reliable transportation to/from JFK Airport</p>
+            <Link href="/airports/jfk" className="bg-black p-6 border border-gray-700 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-white">JFK Airport Car Service</h3>
+              <p className="text-gray-300">Reliable transportation to/from JFK Airport</p>
             </Link>
-            <Link href="/airports/laguardia" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold mb-2 text-black">LaGuardia Airport Service</h3>
-              <p className="text-gray-700">Professional transfers to/from LaGuardia</p>
+            <Link href="/airports/laguardia" className="bg-black p-6 border border-gray-700 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-white">LaGuardia Airport Service</h3>
+              <p className="text-gray-300">Professional transfers to/from LaGuardia</p>
             </Link>
           </div>
         </div>

@@ -9,18 +9,18 @@ export const metadata: Metadata = {
 
 export default function CorporateGuide() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-black">
       <article className="max-w-4xl mx-auto px-4 py-16">
-        <Link href="/blog" className="text-black hover:underline mb-4 inline-block">← Back to Blog</Link>
+        <Link href="/blog" className="text-white hover:underline mb-4 inline-block">← Back to Blog</Link>
         <header className="mb-12">
-          <div className="text-sm text-gray-600 mb-4">Corporate Guide • 10 min read</div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-black">Corporate Car Service Guide: Everything You Need to Know</h1>
+          <div className="text-sm text-gray-400 mb-4">Corporate Guide • 10 min read</div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Corporate Car Service Guide: Everything You Need to Know</h1>
         </header>
 
-        <div className="prose prose-lg max-w-none text-gray-700 space-y-8">
+        <div className="prose prose-lg max-w-none text-gray-300 space-y-8">
           <p className="text-lg">For companies sending employees to NYC regularly or entertaining clients, a corporate car service account can save time, money, and administrative headaches. This guide covers everything from selection to implementation.</p>
 
-          <h2 className="text-3xl font-bold text-black">Why Corporate Car Service?</h2>
+          <h2 className="text-3xl font-bold text-white">Why Corporate Car Service?</h2>
           <ul className="list-disc ml-6 space-y-2">
             <li><strong>Cost Control:</strong> Flat rates prevent surprise expenses from surge pricing</li>
             <li><strong>Simplified Billing:</strong> One monthly invoice vs. dozens of expense reports</li>
@@ -29,8 +29,8 @@ export default function CorporateGuide() {
             <li><strong>Volume Discounts:</strong> Save 5-15% based on monthly usage</li>
           </ul>
 
-          <h2 className="text-3xl font-bold text-black">Selecting a Provider</h2>
-          <div className="bg-gray-50 p-6 border border-gray-200">
+          <h2 className="text-3xl font-bold text-white">Selecting a Provider</h2>
+          <div className="bg-gray-900 p-6 border border-gray-700">
             <h3 className="font-bold mb-3">Key Criteria</h3>
             <ul className="space-y-2">
               <li>✓ Fleet quality and variety (sedans, SUVs, vans)</li>
@@ -42,7 +42,7 @@ export default function CorporateGuide() {
             </ul>
           </div>
 
-          <h2 className="text-3xl font-bold text-black">Setting Up Your Account</h2>
+          <h2 className="text-3xl font-bold text-white">Setting Up Your Account</h2>
           <ol className="list-decimal ml-6 space-y-3">
             <li><strong>Initial Consultation:</strong> Discuss volume, needs, and pricing</li>
             <li><strong>Submit Company Information:</strong> W-9, credit references</li>
@@ -52,10 +52,10 @@ export default function CorporateGuide() {
             <li><strong>Billing Setup:</strong> Monthly invoicing, NET 30 terms</li>
           </ol>
 
-          <h2 className="text-3xl font-bold text-black">Managing Corporate Usage</h2>
+          <h2 className="text-3xl font-bold text-white">Managing Corporate Usage</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 border border-gray-200">
-              <h3 className="font-bold mb-3 text-black">Usage Policies</h3>
+            <div className="bg-black p-6 border border-gray-700">
+              <h3 className="font-bold mb-3 text-white">Usage Policies</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Define approved use cases</li>
                 <li>• Set vehicle class by role</li>
@@ -63,8 +63,8 @@ export default function CorporateGuide() {
                 <li>• Create approval thresholds</li>
               </ul>
             </div>
-            <div className="bg-white p-6 border border-gray-200">
-              <h3 className="font-bold mb-3 text-black">Cost Control</h3>
+            <div className="bg-black p-6 border border-gray-700">
+              <h3 className="font-bold mb-3 text-white">Cost Control</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Monthly usage reports</li>
                 <li>• Department cost allocation</li>
@@ -74,8 +74,8 @@ export default function CorporateGuide() {
             </div>
           </div>
 
-          <h2 className="text-3xl font-bold text-black">Typical Pricing Structure</h2>
-          <div className="bg-gray-50 p-6 border border-gray-200">
+          <h2 className="text-3xl font-bold text-white">Typical Pricing Structure</h2>
+          <div className="bg-gray-900 p-6 border border-gray-700">
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-300">
