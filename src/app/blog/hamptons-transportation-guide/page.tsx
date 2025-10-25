@@ -112,6 +112,30 @@ export default function HamptonsTransportationPage() {
           </div>
         </section>
       </article>
+
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-black">Related Articles</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/blog/black-car-vs-uber-nyc" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-black">Black Car vs Uber in NYC</h3>
+              <p className="text-gray-700">Compare luxury black car service to rideshare apps</p>
+            </Link>
+            <Link href="/blog/professional-chauffeur-service" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-black">Professional Chauffeur Service</h3>
+              <p className="text-gray-700">What to expect from premium chauffeur service</p>
+            </Link>
+            <Link href="/blog/pre-book-jfk-transfer" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-black">Why Pre-Book Airport Transfers</h3>
+              <p className="text-gray-700">Benefits of reserving your airport ride in advance</p>
+            </Link>
+            <Link href="/routes/hamptons" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-black">NYC to Hamptons Service</h3>
+              <p className="text-gray-700">Luxury transportation from Manhattan to the Hamptons</p>
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

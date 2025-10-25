@@ -88,6 +88,30 @@ export default function WeddingChecklistPage() {
           </div>
         </div>
       </article>
+
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-black">Related Articles</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/blog/professional-chauffeur-service" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-black">Professional Chauffeur Service</h3>
+              <p className="text-gray-700">What to expect from premium chauffeur service</p>
+            </Link>
+            <Link href="/blog/corporate-event-transportation" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-black">Corporate Event Transportation</h3>
+              <p className="text-gray-700">Planning transportation for corporate events</p>
+            </Link>
+            <Link href="/services/wedding" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-black">Wedding Transportation Service</h3>
+              <p className="text-gray-700">Luxury wedding transportation packages</p>
+            </Link>
+            <Link href="/services/event-transportation" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-black">Special Event Transportation</h3>
+              <p className="text-gray-700">Professional service for all special occasions</p>
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

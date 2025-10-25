@@ -77,6 +77,30 @@ export default function HolidayTravelPage() {
           </div>
         </div>
       </article>
+
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-black">Related Articles</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link href="/blog/pre-book-jfk-transfer" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-black">Why Pre-Book Your JFK Transfer</h3>
+              <p className="text-gray-700">Benefits of booking your airport transfer in advance</p>
+            </Link>
+            <Link href="/blog/nyc-airport-transportation-guide" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-black">NYC Airport Transportation Guide</h3>
+              <p className="text-gray-700">Complete guide to all NYC airport options</p>
+            </Link>
+            <Link href="/airports/jfk" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-black">JFK Airport Car Service</h3>
+              <p className="text-gray-700">Reliable transportation to/from JFK Airport</p>
+            </Link>
+            <Link href="/airports/laguardia" className="bg-white p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold mb-2 text-black">LaGuardia Airport Service</h3>
+              <p className="text-gray-700">Professional transfers to/from LaGuardia</p>
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }
