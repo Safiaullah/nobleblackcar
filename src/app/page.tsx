@@ -1038,6 +1038,91 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Blog Section */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-4 text-white">Latest Travel Insights</h2>
+          <p className="text-center text-gray-400 mb-12 text-lg">
+            Expert tips and guides for your NYC transportation needs
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                title: "Black Car vs Uber in NYC: Which is Better?",
+                excerpt: "Compare the pros and cons of black car services versus rideshare apps for your NYC transportation.",
+                link: "/blog/black-car-vs-uber-nyc",
+                image: "/images/mercedes-s-class.png"
+              },
+              {
+                title: "Why You Should Pre-Book Your JFK Transfer",
+                excerpt: "Discover the benefits of booking your airport transfer in advance and avoid last-minute stress.",
+                link: "/blog/pre-book-jfk-transfer",
+                image: "/images/twa-exterior-sunset.jpg"
+              },
+              {
+                title: "Hamptons Transportation Guide",
+                excerpt: "Everything you need to know about luxury transportation to the Hamptons from NYC.",
+                link: "/blog/hamptons-transportation-guide",
+                image: "/images/where-are-the-hamptons-montauk-lighthouse-2b0469.webp"
+              },
+              {
+                title: "Professional Chauffeur Service: What to Expect",
+                excerpt: "Learn what sets professional chauffeur service apart from standard transportation options.",
+                link: "/blog/professional-chauffeur-service",
+                image: "/images/CT6.jpg"
+              },
+              {
+                title: "Wedding Transportation Checklist",
+                excerpt: "Essential planning tips for coordinating wedding day transportation for you and your guests.",
+                link: "/blog/wedding-transportation-checklist",
+                image: "/images/Escalade.webp"
+              },
+              {
+                title: "Holiday Airport Travel Tips",
+                excerpt: "Navigate busy holiday airport travel with these expert tips for stress-free transportation.",
+                link: "/blog/holiday-airport-travel",
+                image: "/images/LGA-4.jpg"
+              }
+            ].map((post, index) => (
+              <Link
+                key={index}
+                href={post.link}
+                className="bg-gray-900 border border-gray-700 rounded-lg overflow-hidden hover:border-gray-500 transition-all group"
+              >
+                <div className="h-48 overflow-hidden bg-gray-800">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-gray-300 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-4">
+                    {post.excerpt}
+                  </p>
+                  <span className="text-white font-semibold hover:text-gray-300 transition-colors">
+                    Read More →
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/blog"
+              className="inline-block bg-white text-black px-8 py-3 rounded-md font-semibold hover:bg-gray-200 transition-colors"
+            >
+              View All Articles
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
