@@ -1070,13 +1070,13 @@ export default function Home() {
                 title: "Professional Chauffeur Service: What to Expect",
                 excerpt: "Learn what sets professional chauffeur service apart from standard transportation options.",
                 link: "/blog/professional-chauffeur-service",
-                image: "/images/CT6.jpg"
+                image: "/images/headerimage_retail_5119f1277b.webp"
               },
               {
                 title: "Wedding Transportation Checklist",
                 excerpt: "Essential planning tips for coordinating wedding day transportation for you and your guests.",
                 link: "/blog/wedding-transportation-checklist",
-                image: "/images/Escalade.webp"
+                image: "/images/NJHeader2-1568x790.jpg.webp"
               },
               {
                 title: "Holiday Airport Travel Tips",
