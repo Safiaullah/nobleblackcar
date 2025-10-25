@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function CruiseTerminalPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-black">
       <section className="relative h-[50vh] bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center">
         <div className="text-center px-4 max-w-4xl mx-auto text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">Cruise Terminal Transportation</h1>
@@ -18,14 +18,14 @@ export default function CruiseTerminalPage() {
       </section>
 
       <section className="py-16 px-4 max-w-4xl mx-auto">
-        <p className="text-gray-700 text-lg mb-12">Start or end your cruise vacation stress-free with Noble&apos;s luxury cruise terminal transportation. We provide door-to-door service from anywhere in NYC to Manhattan and Brooklyn cruise terminals, with professional luggage assistance and timing coordination.</p>
+        <p className="text-gray-300 text-lg mb-12">Start or end your cruise vacation stress-free with Noble&apos;s luxury cruise terminal transportation. We provide door-to-door service from anywhere in NYC to Manhattan and Brooklyn cruise terminals, with professional luggage assistance and timing coordination.</p>
 
-        <h2 className="text-3xl font-bold mb-6 text-black">NYC Cruise Terminals We Serve</h2>
+        <h2 className="text-3xl font-bold mb-6 text-white">NYC Cruise Terminals We Serve</h2>
         <div className="space-y-6 mb-12">
-          <div className="bg-gray-50 p-6 border border-gray-200">
-            <h3 className="font-bold text-xl mb-3 text-black">Manhattan Cruise Terminal (Hell&apos;s Kitchen)</h3>
-            <p className="text-gray-700 mb-3">Located on the Hudson River at W 55th Street</p>
-            <ul className="space-y-2 text-gray-700">
+          <div className="bg-gray-900 p-6 border border-gray-700">
+            <h3 className="font-bold text-xl mb-3 text-white">Manhattan Cruise Terminal (Hell&apos;s Kitchen)</h3>
+            <p className="text-gray-300 mb-3">Located on the Hudson River at W 55th Street</p>
+            <ul className="space-y-2 text-gray-300">
               <li>• <strong>Cruise Lines:</strong> Norwegian, Carnival, Princess, MSC, Cunard</li>
               <li>• <strong>Service from:</strong> Manhattan Hotels, JFK Airport, LaGuardia, Newark</li>
               <li>• <strong>Early Morning Available:</strong> 4 AM pickups for embarkation</li>
@@ -33,10 +33,10 @@ export default function CruiseTerminalPage() {
             </ul>
           </div>
 
-          <div className="bg-gray-50 p-6 border border-gray-200">
-            <h3 className="font-bold text-xl mb-3 text-black">Brooklyn Cruise Terminal (Red Hook)</h3>
-            <p className="text-gray-700 mb-3">Located at Pier 12, Atlantic Basin</p>
-            <ul className="space-y-2 text-gray-700">
+          <div className="bg-gray-900 p-6 border border-gray-700">
+            <h3 className="font-bold text-xl mb-3 text-white">Brooklyn Cruise Terminal (Red Hook)</h3>
+            <p className="text-gray-300 mb-3">Located at Pier 12, Atlantic Basin</p>
+            <ul className="space-y-2 text-gray-300">
               <li>• <strong>Cruise Lines:</strong> Queen Mary 2, Cunard, select seasonal cruises</li>
               <li>• <strong>Service from:</strong> Manhattan Hotels, JFK Airport, LaGuardia, Newark</li>
               <li>• <strong>Note:</strong> Less accessible than Manhattan terminal—car service recommended</li>
@@ -45,12 +45,12 @@ export default function CruiseTerminalPage() {
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold mb-6 text-black">Service Options</h2>
+        <h2 className="text-3xl font-bold mb-6 text-white">Service Options</h2>
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white p-6 border border-gray-200">
-            <h3 className="font-bold text-lg mb-3 text-black">Pre-Cruise Transfer</h3>
-            <p className="text-gray-700 mb-4">Get to the ship on time, relaxed and ready to vacation</p>
-            <ul className="space-y-2 text-gray-700 text-sm">
+          <div className="bg-black p-6 border border-gray-700">
+            <h3 className="font-bold text-lg mb-3 text-white">Pre-Cruise Transfer</h3>
+            <p className="text-gray-300 mb-4">Get to the ship on time, relaxed and ready to vacation</p>
+            <ul className="space-y-2 text-gray-300 text-sm">
               <li>✓ Airport to cruise terminal direct</li>
               <li>✓ Hotel to cruise terminal</li>
               <li>✓ Home to cruise terminal</li>
@@ -60,10 +60,10 @@ export default function CruiseTerminalPage() {
             </ul>
           </div>
 
-          <div className="bg-white p-6 border border-gray-200">
-            <h3 className="font-bold text-lg mb-3 text-black">Post-Cruise Transfer</h3>
-            <p className="text-gray-700 mb-4">Continue your vacation comfort through the last mile</p>
-            <ul className="space-y-2 text-gray-700 text-sm">
+          <div className="bg-black p-6 border border-gray-700">
+            <h3 className="font-bold text-lg mb-3 text-white">Post-Cruise Transfer</h3>
+            <p className="text-gray-300 mb-4">Continue your vacation comfort through the last mile</p>
+            <ul className="space-y-2 text-gray-300 text-sm">
               <li>✓ Cruise terminal to airport</li>
               <li>✓ Cruise terminal to hotel</li>
               <li>✓ Cruise terminal to home</li>
@@ -73,10 +73,10 @@ export default function CruiseTerminalPage() {
             </ul>
           </div>
 
-          <div className="bg-white p-6 border border-gray-200">
-            <h3 className="font-bold text-lg mb-3 text-black">Round-Trip Package</h3>
-            <p className="text-gray-700 mb-4">Book both directions and save 5%</p>
-            <ul className="space-y-2 text-gray-700 text-sm">
+          <div className="bg-black p-6 border border-gray-700">
+            <h3 className="font-bold text-lg mb-3 text-white">Round-Trip Package</h3>
+            <p className="text-gray-300 mb-4">Book both directions and save 5%</p>
+            <ul className="space-y-2 text-gray-300 text-sm">
               <li>✓ Pre-cruise and post-cruise service</li>
               <li>✓ Same reliable driver when possible</li>
               <li>✓ Discounted pricing on round-trip bookings</li>
@@ -85,10 +85,10 @@ export default function CruiseTerminalPage() {
             </ul>
           </div>
 
-          <div className="bg-white p-6 border border-gray-200">
-            <h3 className="font-bold text-lg mb-3 text-black">Pre-Cruise Hotel + Terminal</h3>
-            <p className="text-gray-700 mb-4">Stay overnight near port before departure</p>
-            <ul className="space-y-2 text-gray-700 text-sm">
+          <div className="bg-black p-6 border border-gray-700">
+            <h3 className="font-bold text-lg mb-3 text-white">Pre-Cruise Hotel + Terminal</h3>
+            <p className="text-gray-300 mb-4">Stay overnight near port before departure</p>
+            <ul className="space-y-2 text-gray-300 text-sm">
               <li>✓ Airport to Manhattan hotel</li>
               <li>✓ Next morning: hotel to cruise terminal</li>
               <li>✓ Recommended for early departures</li>
@@ -98,23 +98,23 @@ export default function CruiseTerminalPage() {
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold mb-6 text-black">Why Choose Noble for Cruise Transportation?</h2>
+        <h2 className="text-3xl font-bold mb-6 text-white">Why Choose Noble for Cruise Transportation?</h2>
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <div className="bg-gray-50 p-6 border-l-4 border-black">
-            <h3 className="font-bold mb-2 text-black">Timing Expertise</h3>
-            <p className="text-gray-700">We know cruise check-in times (typically noon-4 PM) and build in buffer time. For disembarkation, we monitor ship arrival and adjust pickup time if needed.</p>
+          <div className="bg-gray-900 p-6 border-l-4 border-black">
+            <h3 className="font-bold mb-2 text-white">Timing Expertise</h3>
+            <p className="text-gray-300">We know cruise check-in times (typically noon-4 PM) and build in buffer time. For disembarkation, we monitor ship arrival and adjust pickup time if needed.</p>
           </div>
-          <div className="bg-gray-50 p-6 border-l-4 border-black">
-            <h3 className="font-bold mb-2 text-black">Luggage Capacity</h3>
-            <p className="text-gray-700">SUVs accommodate 4-6 passengers plus 6+ large suitcases—perfect for cruise luggage. Sprinter van available for larger groups or extra baggage.</p>
+          <div className="bg-gray-900 p-6 border-l-4 border-black">
+            <h3 className="font-bold mb-2 text-white">Luggage Capacity</h3>
+            <p className="text-gray-300">SUVs accommodate 4-6 passengers plus 6+ large suitcases—perfect for cruise luggage. Sprinter van available for larger groups or extra baggage.</p>
           </div>
-          <div className="bg-gray-50 p-6 border-l-4 border-black">
-            <h3 className="font-bold mb-2 text-black">Terminal Navigation</h3>
-            <p className="text-gray-700">Drivers know exactly where to drop-off and pick up at each terminal. For disembarkation, we meet you inside with luggage assistance to the vehicle.</p>
+          <div className="bg-gray-900 p-6 border-l-4 border-black">
+            <h3 className="font-bold mb-2 text-white">Terminal Navigation</h3>
+            <p className="text-gray-300">Drivers know exactly where to drop-off and pick up at each terminal. For disembarkation, we meet you inside with luggage assistance to the vehicle.</p>
           </div>
-          <div className="bg-gray-50 p-6 border-l-4 border-black">
-            <h3 className="font-bold mb-2 text-black">No Surge Pricing</h3>
-            <p className="text-gray-700">Flat rates locked in when you book. Cruise embarkation days can see 3x surge pricing with rideshare—our rates never change.</p>
+          <div className="bg-gray-900 p-6 border-l-4 border-black">
+            <h3 className="font-bold mb-2 text-white">No Surge Pricing</h3>
+            <p className="text-gray-300">Flat rates locked in when you book. Cruise embarkation days can see 3x surge pricing with rideshare—our rates never change.</p>
           </div>
         </div>
 
@@ -140,9 +140,9 @@ export default function CruiseTerminalPage() {
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold mb-6 text-black">Booking Tips</h2>
-        <div className="bg-gray-50 p-6 border border-gray-200 mb-12">
-          <ul className="space-y-3 text-gray-700">
+        <h2 className="text-3xl font-bold mb-6 text-white">Booking Tips</h2>
+        <div className="bg-gray-900 p-6 border border-gray-700 mb-12">
+          <ul className="space-y-3 text-gray-300">
             <li>• <strong>Book early:</strong> Reserve when you book your cruise. Popular sail dates fill up.</li>
             <li>• <strong>Provide details:</strong> Ship name, sail date, embarkation/disembarkation times</li>
             <li>• <strong>Pre-cruise timing:</strong> Arrive 90-120 minutes before boarding starts (usually 11 AM-12 PM)</li>
@@ -152,7 +152,7 @@ export default function CruiseTerminalPage() {
         </div>
 
         <div className="text-center">
-          <h3 className="text-2xl font-bold mb-6 text-black">Book Cruise Terminal Transportation</h3>
+          <h3 className="text-2xl font-bold mb-6 text-white">Book Cruise Terminal Transportation</h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+14045138803" className="bg-black text-white px-8 py-4 text-lg font-semibold hover:bg-gray-800">Call</a>
             <Link href="https://book.mylimobiz.com/v4/nobleblackcar" className="border-2 border-black px-8 py-4 text-lg font-semibold hover:bg-black hover:text-white">Get Quote</Link>
