@@ -93,6 +93,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Ahrefs Web Analytics */}
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="EnvcPLQlpzTCEO5pbrvtYA"
+          strategy="afterInteractive"
+        />
+
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7TVTDLV2FF"
