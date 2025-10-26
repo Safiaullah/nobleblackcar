@@ -94,12 +94,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Ahrefs Web Analytics */}
-        <Script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="EnvcPLQIpzTCEO5pbrvtYA"
-          async
-          strategy="afterInteractive"
-        />
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="EnvcPLQIpzTCEO5pbrvtYA" async></script>
 
         {/* Google Analytics */}
         <Script
