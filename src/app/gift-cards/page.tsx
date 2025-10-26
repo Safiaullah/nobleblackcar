@@ -25,27 +25,27 @@ export default function GiftCardsPage() {
         <h2 className="text-3xl font-bold mb-6 text-white">Gift Card Options</h2>
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="bg-gray-900 p-8 border border-gray-700">
-            <h3 className="font-bold text-2xl text-white mb-4">$100 Gift Card</h3>
+            <h3 className="font-bold text-2xl text-white mb-4">Single Trip</h3>
             <p className="text-gray-300 mb-4">Perfect for a Manhattan to JFK airport transfer or point-to-point service</p>
-            <p className="text-3xl font-bold text-white">$100</p>
+            <p className="text-lg font-bold text-white">Contact for pricing</p>
           </div>
 
           <div className="bg-gray-900 p-8 border border-gray-700">
-            <h3 className="font-bold text-2xl text-white mb-4">$250 Gift Card</h3>
+            <h3 className="font-bold text-2xl text-white mb-4">Round Trip</h3>
             <p className="text-gray-300 mb-4">Ideal for round-trip airport service or hourly chauffeur service</p>
-            <p className="text-3xl font-bold text-white">$250</p>
+            <p className="text-lg font-bold text-white">Contact for pricing</p>
           </div>
 
           <div className="bg-gray-900 p-8 border border-gray-700">
-            <h3 className="font-bold text-2xl text-white mb-4">$500 Gift Card</h3>
+            <h3 className="font-bold text-2xl text-white mb-4">Multiple Rides</h3>
             <p className="text-gray-300 mb-4">Great for long-distance trips or multiple rides</p>
-            <p className="text-3xl font-bold text-white">$500</p>
+            <p className="text-lg font-bold text-white">Contact for pricing</p>
           </div>
 
           <div className="bg-black text-white p-8">
             <h3 className="font-bold text-2xl mb-4">Custom Amount</h3>
-            <p className="mb-4">Choose any amount from $50 to $5,000</p>
-            <p className="text-xl font-bold">Your Choice</p>
+            <p className="mb-4">Choose any amount that suits your needs</p>
+            <p className="text-lg font-bold">Contact for pricing</p>
           </div>
         </div>
 

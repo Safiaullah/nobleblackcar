@@ -48,22 +48,22 @@ export default function WeddingChecklistPage() {
             <div className="bg-black p-6 border border-gray-700">
               <h3 className="font-bold text-lg mb-3 text-white">Bride & Groom</h3>
               <p className="mb-2">First Class Sedan (Mercedes S-Class) or First Class SUV (Escalade ESV)</p>
-              <p className="text-sm text-gray-400">$300-400 for full day coverage</p>
+              <p className="text-sm text-gray-400">Contact us for full day coverage pricing</p>
             </div>
             <div className="bg-black p-6 border border-gray-700">
               <h3 className="font-bold text-lg mb-3 text-white">Bridal Party (6-8 people)</h3>
               <p className="mb-2">Sprinter Van or 2 SUVs</p>
-              <p className="text-sm text-gray-400">$500-700 for ceremony to reception</p>
+              <p className="text-sm text-gray-400">Contact us for pricing</p>
             </div>
             <div className="bg-black p-6 border border-gray-700">
               <h3 className="font-bold text-lg mb-3 text-white">Parents & VIP Family</h3>
               <p className="mb-2">Luxury SUV or Sedan</p>
-              <p className="text-sm text-gray-400">$250-350 per vehicle</p>
+              <p className="text-sm text-gray-400">Contact us for pricing</p>
             </div>
             <div className="bg-black p-6 border border-gray-700">
               <h3 className="font-bold text-lg mb-3 text-white">Guest Shuttles</h3>
               <p className="mb-2">Multiple Sprinter vans based on guest count</p>
-              <p className="text-sm text-gray-400">$150-200 per shuttle run</p>
+              <p className="text-sm text-gray-400">Contact us for pricing</p>
             </div>
           </div>
 

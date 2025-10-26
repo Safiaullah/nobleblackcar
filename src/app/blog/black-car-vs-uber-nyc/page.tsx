@@ -28,11 +28,11 @@ export default function BlackCarVsUberPage() {
           <h2 className="text-3xl font-bold mt-12 mb-6 text-white">Cost Comparison</h2>
 
           <p className="text-gray-300 mb-6">
-            <strong>Uber:</strong> Pricing varies dramatically based on demand. A ride from Manhattan to JFK might cost $50 during off-peak hours but surge to $90-120 during rush hour, bad weather, or high-demand periods. You never know the exact price until you request the ride.
+            <strong>Uber:</strong> Pricing varies dramatically based on demand. A ride from Manhattan to JFK can be affordable during off-peak hours but surge significantly during rush hour, bad weather, or high-demand periods. You never know the exact price until you request the ride.
           </p>
 
           <p className="text-gray-300 mb-6">
-            <strong>Black Car Service:</strong> Flat-rate pricing regardless of time, traffic, or demand. The same Manhattan to JFK trip costs $95-130 depending on vehicle type—whether it&apos;s 3 AM or 5 PM rush hour. No surge pricing, ever.
+            <strong>Black Car Service:</strong> Flat-rate pricing regardless of time, traffic, or demand. The same Manhattan to JFK trip has a consistent rate depending on vehicle type—whether it&apos;s 3 AM or 5 PM rush hour. No surge pricing, ever. Contact us for exact pricing.
           </p>
 
           <div className="bg-gray-900 p-6 border-l-4 border-black my-8">

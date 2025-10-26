@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Referral Program | Earn $50 Credits | Noble Black Car Service',
-  description: 'Refer friends to Noble Black Car Service and earn $50 credit per referral. Your friend saves $25 on first ride. Unlimited referrals accepted.',
+  title: 'Referral Program | Earn Credits | Noble Black Car Service',
+  description: 'Refer friends to Noble Black Car Service and earn credits per referral. Your friends save on their first ride. Unlimited referrals accepted.',
 }
 
 export default function ReferralProgramPage() {
@@ -12,13 +12,13 @@ export default function ReferralProgramPage() {
       <section className="relative h-[40vh] bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center">
         <div className="text-center px-4 max-w-4xl mx-auto text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">Referral Program</h1>
-          <p className="text-xl md:text-2xl">Earn $50 for every friend you refer</p>
+          <p className="text-xl md:text-2xl">Earn credits for every friend you refer</p>
         </div>
       </section>
 
       <section className="py-16 px-4 max-w-4xl mx-auto">
         <div className="bg-black text-white p-12 mb-12 text-center">
-          <h2 className="text-4xl font-bold mb-6">You Get $50. They Save $25.</h2>
+          <h2 className="text-4xl font-bold mb-6">You Earn. They Save.</h2>
           <p className="text-2xl mb-4">It's that simple.</p>
           <p className="text-lg">Refer unlimited friends and earn credits for every booking they make.</p>
         </div>
@@ -33,24 +33,25 @@ export default function ReferralProgramPage() {
           <div className="text-center">
             <div className="bg-black text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
             <h3 className="font-bold text-lg text-white mb-2">They Book</h3>
-            <p className="text-gray-300">Your friend gets $25 off their first ride when they mention your name</p>
+            <p className="text-gray-300">Your friend gets a discount on their first ride when they mention your name</p>
           </div>
           <div className="text-center">
             <div className="bg-black text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
             <h3 className="font-bold text-lg text-white mb-2">You Earn</h3>
-            <p className="text-gray-300">You receive $50 credit toward your next ride</p>
+            <p className="text-gray-300">You receive credit toward your next ride</p>
           </div>
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-white">Program Details</h2>
         <div className="bg-gray-900 p-8 border border-gray-700 mb-12">
           <ul className="space-y-3 text-gray-300">
-            <li>✓ <strong className="text-white">Your benefit:</strong> $50 credit per successful referral (no limit)</li>
-            <li>✓ <strong className="text-white">Friend's benefit:</strong> $25 off first ride (minimum $75 booking)</li>
+            <li>✓ <strong className="text-white">Your benefit:</strong> Earn credit per successful referral (no limit)</li>
+            <li>✓ <strong className="text-white">Friend's benefit:</strong> Discount on first ride</li>
             <li>✓ <strong className="text-white">Eligibility:</strong> Both parties must be new or existing Noble customers</li>
             <li>✓ <strong className="text-white">Credit validity:</strong> 12 months from date of issue</li>
             <li>✓ <strong className="text-white">How to redeem:</strong> Credits automatically applied to your next booking</li>
             <li>✓ <strong className="text-white">Unlimited referrals:</strong> Refer as many friends as you'd like</li>
+            <li>✓ <strong className="text-white">Contact us for pricing details:</strong> Call <a href="tel:+14045138803" className="text-white underline">(404) 513-8803</a></li>
           </ul>
         </div>
 
