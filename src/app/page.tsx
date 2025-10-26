@@ -269,10 +269,113 @@ export default function Home() {
           background-color: black !important;
           color: white !important;
         }
+
+        /* Smooth page load animation */
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideInRight {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        /* Section animations */
+        section {
+          animation: fadeIn 0.8s ease-out;
+        }
+
+        /* Smooth transitions for all interactive elements */
+        * {
+          transition-property: transform, opacity, background-color, border-color, color, box-shadow;
+          transition-duration: 0.3s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Enhanced hover states */
+        a, button {
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Card hover effect */
+        .card-hover {
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Stagger animation for grid items */
+        .grid > * {
+          animation: fadeInUp 0.6s ease-out;
+          animation-fill-mode: backwards;
+        }
+
+        .grid > *:nth-child(1) { animation-delay: 0.1s; }
+        .grid > *:nth-child(2) { animation-delay: 0.2s; }
+        .grid > *:nth-child(3) { animation-delay: 0.3s; }
+        .grid > *:nth-child(4) { animation-delay: 0.4s; }
+        .grid > *:nth-child(5) { animation-delay: 0.5s; }
+        .grid > *:nth-child(6) { animation-delay: 0.6s; }
+        .grid > *:nth-child(7) { animation-delay: 0.7s; }
+        .grid > *:nth-child(8) { animation-delay: 0.8s; }
+        .grid > *:nth-child(9) { animation-delay: 0.9s; }
+
+        /* Pulse animation for call-to-action */
+        @keyframes pulse {
+          0%, 100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.8;
+          }
+        }
+
+        .pulse-hover:hover {
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        /* Smooth image zoom on hover */
+        .image-zoom {
+          transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .image-zoom:hover {
+          transform: scale(1.05);
+        }
+
+        /* Smooth section title animations */
+        h2, h3 {
+          animation: fadeIn 0.8s ease-out;
+        }
       `}</style>
 
       {/* Navigation */}
-      <nav className="bg-black border-b border-gray-700 sticky top-0 z-50">
+      <nav className="bg-black/95 backdrop-blur-md border-b border-gray-700 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Left Side - Company Name & Menu Items */}
@@ -295,9 +398,10 @@ export default function Home() {
                   </button>
                   {openDropdown === 'services-main' && (
                     <div
-                      className="absolute top-full left-0 mt-0 w-64 bg-black border border-gray-700 rounded-lg shadow-lg py-2 z-50"
+                      className="absolute top-full left-0 mt-0 w-64 bg-black/95 backdrop-blur-md border border-gray-700 rounded-lg shadow-lg py-2 z-50 animate-fadeIn"
                       onMouseEnter={() => setOpenDropdown('services-main')}
                       onMouseLeave={() => setOpenDropdown(null)}
+                      style={{animation: 'fadeInUp 0.2s ease-out'}}
                     >
                       <a href="/services" className="block px-4 py-2 text-white hover:bg-gray-900 transition-colors font-semibold">All Services</a>
                       <div className="border-t border-gray-700 my-2"></div>
@@ -333,7 +437,8 @@ export default function Home() {
                   </button>
                   {openDropdown === 'business-main' && (
                     <div
-                      className="absolute top-full left-0 mt-0 w-56 bg-black border border-gray-700 rounded-lg shadow-lg py-2 z-50"
+                      className="absolute top-full left-0 mt-0 w-56 bg-black/95 backdrop-blur-md border border-gray-700 rounded-lg shadow-lg py-2 z-50"
+                      style={{animation: 'fadeInUp 0.2s ease-out'}}
                       onMouseEnter={() => setOpenDropdown('business-main')}
                       onMouseLeave={() => setOpenDropdown(null)}
                     >
@@ -359,7 +464,8 @@ export default function Home() {
                   </button>
                   {openDropdown === 'events-main' && (
                     <div
-                      className="absolute top-full left-0 mt-0 w-56 bg-black border border-gray-700 rounded-lg shadow-lg py-2 z-50"
+                      className="absolute top-full left-0 mt-0 w-56 bg-black/95 backdrop-blur-md border border-gray-700 rounded-lg shadow-lg py-2 z-50"
+                      style={{animation: 'fadeInUp 0.2s ease-out'}}
                       onMouseEnter={() => setOpenDropdown('events-main')}
                       onMouseLeave={() => setOpenDropdown(null)}
                     >
@@ -384,7 +490,8 @@ export default function Home() {
                   </button>
                   {openDropdown === 'fleet-main' && (
                     <div
-                      className="absolute top-full left-0 mt-0 w-56 bg-black border border-gray-700 rounded-lg shadow-lg py-2 z-50"
+                      className="absolute top-full left-0 mt-0 w-56 bg-black/95 backdrop-blur-md border border-gray-700 rounded-lg shadow-lg py-2 z-50"
+                      style={{animation: 'fadeInUp 0.2s ease-out'}}
                       onMouseEnter={() => setOpenDropdown('fleet-main')}
                       onMouseLeave={() => setOpenDropdown(null)}
                     >
@@ -513,26 +620,26 @@ export default function Home() {
         {/* Hero Content Overlay */}
         <div className="relative h-full flex items-center justify-center pb-32 z-30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-2xl" style={{animation: 'fadeInUp 0.8s ease-out'}}>
               Premium NYC Black Car Service
               <br />
               <span className="text-4xl lg:text-6xl text-gray-100">Luxury Airport Transportation</span>
             </h1>
-            <p className="text-2xl lg:text-3xl text-white mb-12 max-w-4xl mx-auto italic font-light drop-shadow-lg">
+            <p className="text-2xl lg:text-3xl text-white mb-12 max-w-4xl mx-auto italic font-light drop-shadow-lg" style={{animation: 'fadeInUp 1s ease-out 0.2s backwards'}}>
               It&apos;s Not Just The Ride, It&apos;s The Experience!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" style={{animation: 'fadeInUp 1.2s ease-out 0.4s backwards'}}>
               <a
                 href="https://book.mylimobiz.com/v4/nobleblackcar"
                 onClick={() => gtag.trackBookingClick('Hero Section')}
-                className="bg-white text-black px-10 py-4 rounded-md font-bold text-lg hover:bg-gray-200 transition-all transform hover:scale-105 shadow-2xl min-w-[200px]"
+                className="bg-white text-black px-10 py-4 rounded-md font-bold text-lg hover:bg-gray-200 hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 shadow-xl min-w-[200px]"
               >
                 RESERVE NOW
               </a>
               <a
                 href="tel:+14045138803"
                 onClick={() => gtag.trackPhoneClick('Hero Section')}
-                className="flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-white hover:text-black transition-all transform hover:scale-105 shadow-2xl min-w-[200px]"
+                className="flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-white hover:text-black hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 shadow-xl min-w-[200px]"
               >
                 <PhoneIcon className="h-6 w-6" />
                 CALL NOW
@@ -604,7 +711,7 @@ export default function Home() {
                 link: "/events/fifa-2026"
               }
             ].map((service, index) => (
-              <div key={index} className="bg-black border border-gray-700 rounded-lg p-6 hover:border-gray-500 hover:shadow-md transition-all">
+              <div key={index} className="bg-black border border-gray-700 rounded-lg p-6 hover:border-gray-500 card-hover">
                 <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <div className="flex gap-4">
@@ -645,10 +752,10 @@ export default function Home() {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                className={`px-5 py-2 rounded-full text-sm font-medium transform hover:scale-105 ${
                   activeCategory === category
-                    ? "bg-white text-black"
-                    : "bg-transparent text-white border border-gray-700 hover:border-white hover:bg-gray-900"
+                    ? "bg-white text-black shadow-lg"
+                    : "bg-transparent text-white border border-gray-700 hover:border-white hover:bg-gray-900 hover:shadow-md"
                 }`}
               >
                 {category}
@@ -661,13 +768,13 @@ export default function Home() {
             {/* Navigation Arrows */}
             <button
               onClick={scrollLeft}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-10 z-10 bg-gray-900 border border-gray-700 rounded-full p-2 hover:bg-gray-800 transition-colors"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-10 z-10 bg-gray-900 border border-gray-700 rounded-full p-2 hover:bg-gray-800 hover:scale-110 hover:border-white transform"
             >
               <ChevronLeftIcon className="h-5 w-5 text-white" />
             </button>
             <button
               onClick={scrollRight}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-10 z-10 bg-gray-900 border border-gray-700 rounded-full p-2 hover:bg-gray-800 transition-colors"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-10 z-10 bg-gray-900 border border-gray-700 rounded-full p-2 hover:bg-gray-800 hover:scale-110 hover:border-white transform"
             >
               <ChevronRightIcon className="h-5 w-5 text-white" />
             </button>
@@ -684,7 +791,7 @@ export default function Home() {
               {currentVehicles.map((vehicle, index) => (
                 <div
                   key={index}
-                  className="bg-black rounded-2xl overflow-hidden border border-gray-700 hover:shadow-xl hover:border-gray-500 transition-all duration-300 flex-shrink-0 w-[320px]"
+                  className="bg-black rounded-2xl overflow-hidden border border-gray-700 hover:shadow-xl hover:border-gray-500 card-hover flex-shrink-0 w-[320px]"
                 >
                   <div className="bg-white p-6 flex items-center justify-center h-[220px] overflow-hidden">
                     <img
@@ -741,7 +848,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-12">
                 <Link
                   href="/airports/jfk"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/twa-exterior-sunset.jpg)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -749,7 +856,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/airports/laguardia"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/LGA-4.jpg)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -757,7 +864,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/airports/newark"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/newark-liberty-international-airport-ewr-in-newark-nj-v0-whkd3fn1u7na1.webp)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -765,7 +872,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/airports/teterboro"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/headerimage_retail_5119f1277b.webp)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -773,7 +880,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/airports/westchester"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/74469048007-ts-071924-airport-04.webp)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -781,7 +888,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/routes/philadelphia"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/28148aea-d477-46ac-955c-3b2340d69041.webp)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -789,7 +896,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/airports/islip"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/macarthur-airport-judy-walker.jpg)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -797,7 +904,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/airports/stewart"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/New-York-Stewart-International-Airport-SWF-Stewart-Airport-Express-700x400.jpg)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -809,7 +916,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 <Link
                   href="/routes/hamptons"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/where-are-the-hamptons-montauk-lighthouse-2b0469.webp)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -817,7 +924,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/routes/new-jersey"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/NJHeader2-1568x790.jpg.webp)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -825,7 +932,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/routes/philadelphia"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/philadelphia-1140x684.jpg)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -833,7 +940,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/routes/long-island"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/181107112022-long-island-city-restricted.jpg)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -841,7 +948,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/routes/boston"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/boston-massachusetts-BOSTONTG0221-719aef2eeb1c4929b6c839715e34a69e.jpg)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -849,7 +956,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/routes/washington-dc"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/Washington-DC-Banner-1-1.png)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -857,7 +964,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/routes/connecticut"
-                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 hover:shadow-sm transition-all overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
+                  className="block relative bg-black border border-gray-700 rounded px-8 py-12 text-white hover:border-gray-500 card-hover overflow-hidden bg-cover bg-center text-2xl font-bold min-h-[200px] flex items-center justify-center"
                   style={{backgroundImage: 'url(/images/hartford-connecticut-at-night.jpg)'}}
                 >
                   <div className="absolute inset-0 bg-black/60"></div>
@@ -1002,7 +1109,7 @@ export default function Home() {
                 date: "3 weeks ago"
               }
             ].map((testimonial, index) => (
-              <div key={index} className="bg-gray-900 border border-gray-700 rounded-lg p-6 hover:border-gray-500 transition-all">
+              <div key={index} className="bg-gray-900 border border-gray-700 rounded-lg p-6 hover:border-gray-500 card-hover">
                 <div className="flex items-center gap-4 mb-4">
                   <img
                     src={testimonial.image}
@@ -1088,7 +1195,7 @@ export default function Home() {
               <Link
                 key={index}
                 href={post.link}
-                className="bg-black border border-gray-700 rounded-lg overflow-hidden hover:border-gray-500 transition-all group"
+                className="bg-black border border-gray-700 rounded-lg overflow-hidden hover:border-gray-500 card-hover group"
               >
                 <div className="h-48 overflow-hidden bg-black">
                   <img
@@ -1135,7 +1242,7 @@ export default function Home() {
                 required
                 value={contactForm.name}
                 onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
-                className="bg-black border border-gray-600 text-white px-4 py-3 rounded focus:outline-none focus:border-white placeholder-gray-500"
+                className="bg-black border border-gray-600 text-white px-4 py-3 rounded focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 placeholder-gray-500"
               />
               <input
                 type="email"
@@ -1143,7 +1250,7 @@ export default function Home() {
                 required
                 value={contactForm.email}
                 onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
-                className="bg-black border border-gray-600 text-white px-4 py-3 rounded focus:outline-none focus:border-white placeholder-gray-500"
+                className="bg-black border border-gray-600 text-white px-4 py-3 rounded focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 placeholder-gray-500"
               />
               <input
                 type="tel"
@@ -1151,7 +1258,7 @@ export default function Home() {
                 required
                 value={contactForm.phone}
                 onChange={(e) => setContactForm({...contactForm, phone: e.target.value})}
-                className="bg-black border border-gray-600 text-white px-4 py-3 rounded focus:outline-none focus:border-white placeholder-gray-500"
+                className="bg-black border border-gray-600 text-white px-4 py-3 rounded focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 placeholder-gray-500"
               />
               <select
                 value={contactForm.service}
@@ -1171,7 +1278,7 @@ export default function Home() {
               required
               value={contactForm.message}
               onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
-              className="w-full mt-6 bg-black border border-gray-600 text-white px-4 py-3 rounded focus:outline-none focus:border-white placeholder-gray-500"
+              className="w-full mt-6 bg-black border border-gray-600 text-white px-4 py-3 rounded focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 placeholder-gray-500"
             />
             {submitMessage && (
               <div className={`mt-4 p-4 rounded ${submitMessage.includes('successfully') ? 'bg-green-900 text-green-200' : 'bg-red-900 text-red-200'}`}>
