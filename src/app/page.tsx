@@ -525,6 +525,8 @@ export default function Home() {
               {/* Book Now Button */}
               <a
                 href="https://book.mylimobiz.com/v4/nobleblackcar"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => gtag.trackBookingClick('Navigation Bar')}
                 className="bg-white text-black px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition-colors text-base"
               >
@@ -631,6 +633,8 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" style={{animation: 'fadeInUp 1.2s ease-out 0.4s backwards'}}>
               <a
                 href="https://book.mylimobiz.com/v4/nobleblackcar"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => gtag.trackBookingClick('Hero Section')}
                 className="bg-white text-black px-10 py-4 rounded-md font-bold text-lg hover:bg-gray-200 hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 shadow-xl min-w-[200px]"
               >
@@ -726,6 +730,8 @@ export default function Home() {
                   </Link>
                   <a
                     href="https://book.mylimobiz.com/v4/nobleblackcar"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => {
                       gtag.trackBookingClick(`Service - ${service.title}`);
                     }}
@@ -822,6 +828,8 @@ export default function Home() {
                       </Link>
                       <a
                         href="https://book.mylimobiz.com/v4/nobleblackcar"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         onClick={() => gtag.trackBookingClick(`Fleet - ${vehicle.name}`)}
                         className="text-gray-400 text-sm font-semibold hover:text-gray-300 transition-colors"
                       >
