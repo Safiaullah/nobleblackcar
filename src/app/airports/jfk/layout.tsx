@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "JFK Airport Car Service | Black Car to JFK | Noble",
-  description: "Premium JFK airport car service to all 8 terminals. Professional chauffeurs, flight tracking, meet & greet service. Competitive flat rates to Manhattan. Book 24/7.",
+  description: "Premium JFK airport car service to all 8 terminals. Professional chauffeurs, flight tracking, meet & greet. Flat rates to Manhattan 24/7.",
   keywords: [
     "jfk black car service",
     "jfk airport car service",

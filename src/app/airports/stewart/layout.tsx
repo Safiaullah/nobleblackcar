@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Stewart Airport Car Service | SWF Hudson Valley NY | Noble",
-  description: "Premium car service to New York Stewart International Airport (SWF). Hudson Valley, Orange County, Westchester service. Professional chauffeurs, 24/7 availability.",
+  description: "Premium car service to Stewart Airport (SWF). Serving Hudson Valley, Orange County, Westchester. Professional chauffeurs available 24/7.",
   keywords: [
     "stewart airport car service",
     "swf car service",

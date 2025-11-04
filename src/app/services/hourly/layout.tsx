@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Hourly Car Service NYC - Black Car by the Hour | Noble',
-  description: 'Hourly black car service in NYC. 3-hour minimum. Perfect for multiple stops, business meetings, events. Professional chauffeur at your disposal. Competitive hourly rates.',
+  description: 'Hourly black car service in NYC. 3-hour minimum. Perfect for multiple stops, business meetings, events. Professional chauffeurs available.',
   keywords: 'hourly car service NYC, black car by the hour, NYC chauffeur service, car service multiple stops',
   openGraph: {
     title: "Hourly Car Service NYC - Black Car by the Hour",

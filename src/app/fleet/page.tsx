@@ -455,12 +455,16 @@ export default function FleetPage() {
                   "@type": "Product",
                   "name": "Business Sedan - Lincoln MKZ",
                   "description": "Professional business sedan for executive airport transfers and corporate transportation",
-                  "brand": "Lincoln",
+                  "brand": {
+                    "@type": "Brand",
+                    "name": "Lincoln"
+                  },
                   "category": "Business Sedan",
                   "offers": {
                     "@type": "Offer",
                     "availability": "https://schema.org/InStock",
-                    "url": "https://nobleblackcarservice.com/fleet/business-sedan"
+                    "url": "https://nobleblackcarservice.com/fleet/business-sedan",
+                    "priceCurrency": "USD"
                   }
                 }
               },
@@ -492,12 +496,16 @@ export default function FleetPage() {
                   "@type": "Product",
                   "name": "Business SUV - Chevrolet Suburban",
                   "description": "Spacious SUV for group airport transfers and corporate events",
-                  "brand": "Chevrolet",
+                  "brand": {
+                    "@type": "Brand",
+                    "name": "Chevrolet"
+                  },
                   "category": "Business SUV",
                   "offers": {
                     "@type": "Offer",
                     "availability": "https://schema.org/InStock",
-                    "url": "https://nobleblackcarservice.com/fleet/business-suv"
+                    "url": "https://nobleblackcarservice.com/fleet/business-suv",
+                    "priceCurrency": "USD"
                   }
                 }
               },
@@ -529,12 +537,16 @@ export default function FleetPage() {
                   "@type": "Product",
                   "name": "Sprinter Van - Mercedes-Benz",
                   "description": "14-passenger luxury van for large group events and airport transfers",
-                  "brand": "Mercedes-Benz",
+                  "brand": {
+                    "@type": "Brand",
+                    "name": "Mercedes-Benz"
+                  },
                   "category": "Sprinter Van",
                   "offers": {
                     "@type": "Offer",
                     "availability": "https://schema.org/InStock",
-                    "url": "https://nobleblackcarservice.com/fleet/sprinter"
+                    "url": "https://nobleblackcarservice.com/fleet/sprinter",
+                    "priceCurrency": "USD"
                   }
                 }
               }
