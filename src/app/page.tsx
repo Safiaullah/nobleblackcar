@@ -658,7 +658,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 className="text-3xl font-bold text-center mb-6 text-white">Reserve Your Noble Ride Now</h3>
           <div className="bg-black rounded-lg p-4 min-h-[600px]">
-            <a href="https://book.mylimobiz.com/v4/nobleblackcar" data-ores-widget="website" data-ores-alias="nobleblackcar" className="text-white">Online Reservations</a>
+            <a href="https://book.mylimobiz.com/v4/nobleblackcar" data-ores-widget="website" data-ores-alias="nobleblackcar">Online Reservations</a>
           </div>
         </div>
       </section>
@@ -1234,79 +1234,6 @@ export default function Home() {
             >
               View All Articles
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-white">Contact Us</h2>
-          <form onSubmit={handleContactSubmit} className="bg-black border border-gray-700 rounded-lg p-8 shadow-sm">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <input
-                type="text"
-                placeholder="Your Name"
-                required
-                value={contactForm.name}
-                onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
-                className="bg-black border border-gray-600 text-white px-4 py-3 rounded focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 placeholder-gray-500"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                required
-                value={contactForm.email}
-                onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
-                className="bg-black border border-gray-600 text-white px-4 py-3 rounded focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 placeholder-gray-500"
-              />
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                required
-                value={contactForm.phone}
-                onChange={(e) => setContactForm({...contactForm, phone: e.target.value})}
-                className="bg-black border border-gray-600 text-white px-4 py-3 rounded focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 placeholder-gray-500"
-              />
-              <select
-                value={contactForm.service}
-                onChange={(e) => setContactForm({...contactForm, service: e.target.value})}
-                className="bg-black border border-gray-600 text-white px-4 py-3 rounded focus:outline-none focus:border-white"
-              >
-                <option value="">Select a Service</option>
-                <option value="Airport Transfer">Airport Transfer</option>
-                <option value="Corporate Service">Corporate Service</option>
-                <option value="Hourly Service">Hourly Service</option>
-                <option value="Event Transportation">Event Transportation</option>
-              </select>
-            </div>
-            <textarea
-              placeholder="Your Message"
-              rows={4}
-              required
-              value={contactForm.message}
-              onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
-              className="w-full mt-6 bg-black border border-gray-600 text-white px-4 py-3 rounded focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 placeholder-gray-500"
-            />
-            {submitMessage && (
-              <div className={`mt-4 p-4 rounded ${submitMessage.includes('successfully') ? 'bg-green-900 text-green-200' : 'bg-red-900 text-red-200'}`}>
-                {submitMessage}
-              </div>
-            )}
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full mt-6 bg-white text-black px-6 py-4 rounded font-bold text-lg hover:bg-gray-200 transition-colors disabled:bg-gray-600 disabled:cursor-not-allowed"
-            >
-              {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}
-            </button>
-          </form>
-          <div className="text-center mt-8">
-            <a href="tel:+14045138803" className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-black transition-colors">
-              <PhoneIcon className="h-6 w-6" />
-              CALL NOW
-            </a>
-            <p className="text-gray-400 mt-4">Available 24/7 for your convenience</p>
           </div>
         </div>
       </section>
