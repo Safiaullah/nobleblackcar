@@ -1,5 +1,3 @@
-import Script from 'next/script';
-
 export default function StructuredData() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -178,28 +176,28 @@ export default function StructuredData() {
 
   return (
     <>
-      <Script
+      <script
         id="local-business-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(localBusinessSchema)
         }}
       />
-      <Script
+      <script
         id="website-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteSchema)
         }}
       />
-      <Script
+      <script
         id="organization-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(organizationSchema)
         }}
       />
-      <Script
+      <script
         id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
