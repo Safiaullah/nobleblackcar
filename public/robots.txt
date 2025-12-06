@@ -4,26 +4,13 @@
 User-agent: *
 Allow: /
 
-# Disallow specific paths (if any)
+# Disallow specific paths
 Disallow: /api/
 Disallow: /admin/
-Disallow: /_next/
+
+# Allow Next.js static files for crawling (CSS, JS needed for rendering)
+Allow: /_next/static/
+Allow: /_next/image
 
 # Sitemap location
 Sitemap: https://nobleblackcarservice.com/sitemap.xml
-
-# Crawl delay (optional - adjust if needed)
-# Crawl-delay: 1
-
-# Specific rules for major search engines (optional)
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
