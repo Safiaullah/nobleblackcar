@@ -77,78 +77,38 @@ export default function StructuredData() {
       "itemListElement": [
         {
           "@type": "Offer",
-          "image": "https://nobleblackcarservice.com/images/mercedes-s-class.png",
-          "price": "0",
-          "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "price": "0",
-            "priceCurrency": "USD",
-            "valueAddedTaxIncluded": "false"
-          },
           "itemOffered": {
             "@type": "Service",
             "name": "Airport Car Service",
-            "description": "Professional airport transfers to JFK, LaGuardia, Newark and all NYC airports",
-            "image": "https://nobleblackcarservice.com/images/mercedes-s-class.png"
+            "description": "Professional airport transfers to JFK, LaGuardia, Newark and all NYC airports"
           }
         },
         {
           "@type": "Offer",
-          "image": "https://nobleblackcarservice.com/images/cadillac-escalade.png",
-          "price": "0",
-          "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "price": "0",
-            "priceCurrency": "USD",
-            "valueAddedTaxIncluded": "false"
-          },
           "itemOffered": {
             "@type": "Service",
             "name": "Corporate Shuttle Service",
-            "description": "Professional transportation for business executives and corporate events",
-            "image": "https://nobleblackcarservice.com/images/cadillac-escalade.png"
+            "description": "Professional transportation for business executives and corporate events"
           }
         },
         {
           "@type": "Offer",
-          "image": "https://nobleblackcarservice.com/images/lincoln-continental.png",
-          "price": "0",
-          "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "price": "0",
-            "priceCurrency": "USD",
-            "valueAddedTaxIncluded": "false"
-          },
           "itemOffered": {
             "@type": "Service",
             "name": "Executive Car Service",
-            "description": "Luxury vehicles and experienced drivers for executive transportation",
-            "image": "https://nobleblackcarservice.com/images/lincoln-continental.png"
+            "description": "Luxury vehicles and experienced drivers for executive transportation"
           }
         },
         {
           "@type": "Offer",
-          "image": "https://nobleblackcarservice.com/images/cadillac-escalade-esv.png",
-          "price": "0",
-          "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "price": "0",
-            "priceCurrency": "USD",
-            "valueAddedTaxIncluded": "false"
-          },
           "itemOffered": {
             "@type": "Service",
             "name": "Wedding Transportation",
-            "description": "Luxurious transportation for weddings and special occasions",
-            "image": "https://nobleblackcarservice.com/images/cadillac-escalade-esv.png"
+            "description": "Luxurious transportation for weddings and special occasions"
           }
         }
       ]
